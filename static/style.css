@@ -1,0 +1,436 @@
+body {
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 10vh 0 0 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ui.menu {
+    height: 10vh;
+    background: url('the-school-of-athens.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 0px;
+}
+.ui.menu .item {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+/* Menu icon*/
+.menu-icon {
+    color: #FFFFFF;
+    display: inline-block; /* Allows it to sit inline with text */
+    width: 10px; /* Width of the image - can adjust as needed */
+    height: 10px; /* Height of the image - can adjust as needed */
+    vertical-align: middle; /* Aligns the middle of the image with the middle of the line height of its parent */
+    margin-right: 10px; /* Some space between the icon and the text */
+}
+
+.active_item {
+    background: url('marble.jpg') no-repeat;
+    background-size:cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    font-size: 2em;
+    color: #82e6ff;
+    position: relative;
+    right: 50px;
+    top: 30px;
+}
+
+.showcase {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.video-container {
+
+    padding: 2em;  /* Give some space for the plots and the buttons */
+    box-sizing: border-box;
+    float: right;
+    position: relative;
+}
+.plot-container {
+    padding: 2em;  /* Give some space for the plots and the buttons */
+    box-sizing: border-box;
+    width: 100%;
+}
+* { box-sizing: border-box; }
+/* ---- grid ---- */
+.grid {
+    background: #e9f5d2;
+  }
+  
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .grid-item ---- */
+  .grid-sizer,.grid-item {
+    width: 33%;
+  }
+  .grid-item img {
+    display: block;
+    max-width: 100%;
+  }
+  .grid-item--video { 
+    display: block;
+    width: 50%; 
+}
+  .grid-item--video video{
+    width: 100%; 
+}
+.article-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.article-cat span {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+}
+
+.article-copy {
+    padding: 10px;
+}
+
+.article-title {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.plot-grid {
+    flex-direction: column;
+    width: 100%;
+}
+
+.plot-grid-item {
+    margin: 10px;
+}
+.plot-container-item {
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+}
+
+.personal-info {
+    width: 20%;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Set to relative so the video can be positioned absolutely inside it */
+    overflow: hidden;    /* Hide any part of the video that overflows */
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;   /* Scale the video to cover the element */
+    z-index: -1;        /* Place it behind your content */
+}
+
+.hidden {
+    display: none;
+}
+.profile-picture {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+    align-items: center;
+}
+.scrollable-section {
+    width: 80%;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 5px;
+}
+.scrollable-section h2 {
+    font-family: 'Arvo', cursive;  /* This will give a bubbly appearance to the headings */
+    font-size: 2.5em; /* This makes the heading text bigger */
+    color: #333; /* Adjust color if needed */
+    margin-bottom: 20px;
+}
+
+.scrollable-section p {
+    font-family: 'Arvo', cursive; /* This will give a bubbly appearance to the paragraph text */
+    font-size: 1.5em; /* This makes the paragraph text bigger */
+    color: #555; /* Adjust color if needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+.social-links a {
+    margin-right: 15px;
+}
+
+.info-boxes {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    width: 250px;
+    margin: 15px;
+    box-sizing: border-box;
+}
+.text-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.econ-topic {
+    width: 100%;
+    margin-bottom: 20px;
+}    
+.sticky-sidebar {
+    width: 20%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+.sidebar {
+    float: left;
+    padding: 15px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+}
+.sidebar-section {
+    flex: 1;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inner-box {
+    height: 300px;  /* adjust this value as per your preference */
+    overflow-y: auto;  /* this will add a scrollbar if content overflows */
+    border: 1px solid #ddd;
+    padding: 15px;
+    flex: 1;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+#related-links {
+    height: 300px;  /* adjust this value as per your preference */
+    overflow-y: auto;  /* this will add a scrollbar if content overflows */
+}
+.date-links {
+    display: flex;  /* Changes the layout to flexbox */
+    flex-direction: row;  /* Ensures the items align horizontally */
+    flex-wrap: nowrap;  /* Prevents items from wrapping to the next line */
+    justify-content: flex-start;  /* Aligns items to the start of the container */
+    align-items: center;  /* Aligns items vertically in the center */
+    margin-bottom: 1em;  /* Adds some bottom margin for spacing */
+}
+.video-section {
+    color: #fff;
+    width: 100%;
+
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space items evenly */
+    box-sizing: border-box;
+    overflow-y: scroll;
+    font-size: 11;
+    color: #fff;
+    height: 300px;
+}
+.video-box {
+    flex-basis: calc(33.33%-10px);
+    box-sizing: border-box;
+    vertical-align: top; /* Align to the top to ensure it lines up correctly */
+    margin-right: 5px; /* Add some spacing between each box */
+    margin-left: 5px;
+    color: #000000;
+}
+
+.video-details {
+    width: 250px;  /* Width set to match the iframe */
+    padding: 5px;
+    box-sizing: border-box;
+    word-wrap: break-word;  /* Ensures that the text wraps */
+}
+.video-section h2 {
+    background-image: url('greektexture.jpeg');
+    background-size: 20%;  /* Cover the entire area */
+    background-repeat: repeat;
+    background-position: center;  /* Center the image */
+    color: white;  /* Set text color to white for better visibility */
+    text-shadow: 2px 2px 4px #000000;  /* Optional: Add text shadow for better readability */
+    text-align: center;  /* Align the text to the center */
+}
+
+iframe {
+    margin-top: 5px;
+    width: 250px;  /* Width of iframe */
+    height: auto;  /* Height of iframe */
+    margin-bottom: 5px;  /* Spacing at the bottom */
+}
+  
+/* for contact box */
+/* Add these styles to your existing CSS */
+.hidden {
+    display: none;
+}
+
+#contact-form {
+    margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+/* Main Blog Content */
+#blog-content {
+    background-image: url('papyrus.jpeg');
+    filter: brightness(1.02); /* Adjust the value greater than 1 to increase brightness */
+    border-radius: 5%;
+    width: 66%;
+    padding: 20px;
+    margin: 20px;
+    overflow-y: scroll;
+}
+
+#blog-content h1, #blog-content h2, #blog-content h3 {
+    color: #333;
+}
+
+#blog-content p {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+/* Comment icon */
+.comment-icon {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 2px;
+    border-radius: 50%;
+    z-index: 100;
+}
+/* Highlight colors */
+.highlight-positive { 
+    background-color: #a4d391; /* Light green */
+}
+.highlight-negative { 
+    background-color: #e97f7f; /* Light red */
+}
+.highlight-questionable { 
+    background-color: #ffeb7a; /* Light yellow */
+}
+/* Buttons for Highlighting - Matching Colors */
+#positive {
+    background-color: #a4d391; /* Light green for positive highlight */
+}
+#negative {
+    background-color: #e97f7f; /* Light red for negative highlight */
+}
+#questionable {
+    background-color: #ffeb7a; /* Light yellow for questionable highlight */
+}
+/* Buttons for Highlighting */
+#highlight-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+#highlight-icons button {
+    align-self: center;
+    justify-content: center;
+    display: inline-block;
+    flex-direction: row;
+    background-color: #b6fffa;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+/* On hover effects */
+#positive:hover {
+    background-color: #8bbf6d; /* Darker green */
+}
+#negative:hover {
+    background-color: #d46767; /* Darker red */
+}
+#questionable:hover {
+    background-color: #ffd54f; /* Darker yellow */
+}
+/* Tooltip styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 200;
+}
+
+#highlight-icons button:hover .tooltip {
+    display: block;
+}
+
+/* scrollable videos for blog posts */
+.video-scroll-container {
+    height: 100%;
+    overflow-y: auto;
+    gap: 10px; /* space between the videos */
+    padding: 10px 0;
+}
+
+.video-scroll-container iframe {
+    min-width: 250px; /* adjust this value for your desired video width */
+    height: fit-content; /* adjust this value for your desired video height */
+    flex-shrink: 0; /* prevents videos from shrinking */
+}

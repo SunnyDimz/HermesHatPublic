@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.plot.ly/plotly-2.25.2.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economics</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- ...existing style and other head content... -->
+</head>
+<body>
+    <div class="ui large top fixed menu">
+        <div class="ui container">
+            <a class="active_item" href="/">SunnyDimz</a>
+            <div class="right menu">
+                <a class="item" href="/economics">Economics</a>
+                <a class="item" href="/photographs">Photography</a>
+                <a class="item" href="/media">Media</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui grid">
+        <!-- Sidebar Menu -->
+        <div class="four wide column">
+            <div class="ui vertical fluid tabular menu">
+                {% for code in ['UNRATE', 'CIVPART', 'EMRATIO','FEDFUNDS', 'GS10', 'DTWEXB', 'NETFI', 'GFDEBTN', 'HOUST'] %}
+                    <a class="item" href="#{{ code }}">
+                        {{ code }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="twelve wide stretched column">
+            <div class="plot-grid">
+                {% for plot_divs, code, text in zip(plots, ['UNRATE', 'CIVPART', 'EMRATIO','FEDFUNDS', 'GS10', 'DTWEXB', 'NETFI', 'GFDEBTN', 'HOUST'],['Text for Unemployment', 'Text for Civilian Participation','Text for Employment Ratio', 'Text for Fed Funds', 'Text for 10-Year Treasury', 'Text for Dollar Index', 'Text for Net Investment', 'Text for Public Debt', 'Text for Housing Starts']) %}
+                <section class="econ-topic" id="{{code}}">
+                        <h3>{{ code }}</h3>
+
+                        <!-- Linked windows for Date Ranges -->
+                        <div class="date-links">
+                            <a href="#" onclick="updateGraphForCode('{{ code }}', '1Y',document.getElementById('units-{{ code }}').value)">1 Year</a>
+                            <a href="#" onclick="updateGraphForCode('{{ code }}', '3Y',document.getElementById('units-{{ code }}').value)">3 Years</a>
+                            <a href="#" onclick="updateGraphForCode('{{ code }}', '5Y',document.getElementById('units-{{ code }}').value)">5 Years</a>
+                            <a href="#" onclick="updateGraphForCode('{{ code }}', '10Y',document.getElementById('units-{{ code }}').value)">10 Years</a>
+                            <a href="#" onclick="updateGraphForCode('{{ code }}', 'ALL',document.getElementById('units-{{ code }}').value)">All</a>
+                        </div>
+
+                        <label for="units-{{ code }}">Transformation:</label>
+                        <select id="units-{{ code }}" name="units" onchange="updateGraphForCode('{{ code }}', null, this.value)">
+                            <option value="lin">Levels (No transformation)</option>
+                            <option value="chg">Change</option>
+                            <option value="ch1">Change from Year Ago</option>
+                            <option value="pch">Percent Change</option>
+                            <option value="pc1">Percent Change from Year Ago</option>
+                            <option value="pca">Compounded Annual Rate of Change</option>
+                            <option value="cch">Continuously Compounded Rate of Change</option>
+                            <option value="cca">Continuously Compounded Annual Rate of Change</option>
+                            <option value="log">Natural Log</option>
+                        </select>
+
+                        <div class="plot-container" id="plot-container-{{ code }}">
+                            {{plot_divs|safe}}
+                        </div>
+                        <div class='text-box'>
+                            {{ text }}
+                        </div>
+                </section>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+        function renderPlotlyGraph(data, code) {
+            var layout = {
+                title: code,
+                xaxis: {
+                    title: 'Time',
+                    linecolor: 'black',
+                    linewidth: 1,
+                    mirror: true
+                },
+                yaxis: {
+                    title: 'Value',
+                    linecolor: 'black',
+                    linewidth: 1,
+                    mirror: true
+                },
+                plot_bgcolor: "#F5F5F5",
+                paper_bgcolor: "#E5E5E5"
+            };
+            var trace = {
+                x: data.date,
+                y: data.value,
+                mode: 'lines',
+                line: { color: '#1f77b4' }
+            };
+
+            Plotly.newPlot(`plot-container-${code}`, [trace], layout);
+            const container = document.getElementById(`plot-container-${code}`);
+            container.setAttribute('data-start-date', data.date[0]);
+            container.setAttribute('data-end-date', data.date[data.date.length - 1]);
+        }
+
+        function updateGraphForCode(code, windowPeriod) {
+            const currentDate = new Date();
+            let observation_end = currentDate.toISOString().split('T')[0]; // Today's date in UTC
+        
+            // Set defaults from current graph data
+            let observation_start = document.getElementById(`plot-container-${code}`).getAttribute('data-start-date') || currentDate.toISOString().split('T')[0];
+        
+            if(windowPeriod) {
+                observation_start = new Date(Date.UTC(currentDate.getUTCFullYear(), currentDate.getUTCMonth(), currentDate.getUTCDate()));
+        
+                const dayInMilliseconds = 24 * 60 * 60 * 1000; 
+                let subtractedDate = new Date(currentDate - dayInMilliseconds);
+                observation_end = subtractedDate.toISOString().split('T')[0];
+        
+                switch (windowPeriod) {
+                    case '1Y':
+                        observation_start.setUTCFullYear(observation_start.getUTCFullYear() - 1);
+                        break;
+                    case '3Y':
+                        observation_start.setUTCFullYear(observation_start.getUTCFullYear() - 3);
+                        break;
+                    case '5Y':
+                        observation_start.setUTCFullYear(observation_start.getUTCFullYear() - 5);
+                        break;
+                    case '10Y':
+                        observation_start.setUTCFullYear(observation_start.getUTCFullYear() - 10);
+                        break;
+                    case 'ALL':
+                        observation_start = null; 
+                        break;
+                }
+                if(observation_start) {
+                    observation_start = observation_start.toISOString().split('T')[0];
+                }
+            }
+            const units = document.getElementById(`units-${code}`).value;
+            const apiUrl = `/update?code=${code}&observation_end=${observation_end}&units=${units}${observation_start ? `&observation_start=${observation_start}` : ''}`;
+            fetch(apiUrl)        
+                .then(response => {
+                    if (!response.ok) {
+                        // Convert non-2xx HTTP responses inxto errors
+                        return response.json().then(err => {
+                            throw new Error(`Error ${response.status}: ${err.error_message || 'Unknown error'}`);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.error) {
+                        console.error('Error updating graph:', data.error);
+                    } else {
+                        renderPlotlyGraph(data, code);
+                    }
+                })
+                .catch(error => console.error('Error updating graph:', error));
+        }
+    </script>
+    <!-- ...existing JavaScript code... -->
+</body>
+</html>

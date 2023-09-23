@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dmitriy's Bio</title>
+    <!-- SEO meta tags -->
+    <meta name="description" content="Bio page of Dmitriy Borzhkovskiy">
+    <meta name="keywords" content="Dmitriy Borzhkovskiy, Bio, Economics, Technologies">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="ui large top fixed menu">
+        <div class="ui container">
+            <a class="active_item" href="/">Hermes Hat</a>
+            <div class="right menu">
+                <!-- <a class="item" href="/economics">Economics</a> -->
+                <a class="item" href="/photographs">Photography</a>
+                <a class="item" href="/media">Media</a>
+                <a class="item" href="/about">About</a>
+                {% if not g.user_logged_in %}
+                    <a class="item" href="/login">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Personal Info Section -->
+            <div class="personal-info sticky-sidebar">
+                <video autoplay muted loop id="myVideo">
+                    <source src="static/winter.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <img class="profile-picture" src="/static/profile.jpeg" alt="Profile Picture">
+                <h2>Dmitriy Borzhkovskiy</h2>
+                <a href="#" id="contact-me-link">Contact Me</a>
+                <div id="contact-form" class="hidden">
+                    <form action="/submit_contact" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@sunnydimz">YouTube</a>
+                    <a href="https://www.linkedin.com/in/dmitriy-borzhkovskiy-0371a1128/">LinkedIn</a>
+                    <a href="https://instagram.com/sunnydimz/">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Scrollable Section -->
+            <div class="scrollable-section">
+                <section id="welcome">
+                    <h2>Welcome</h2>
+                    <p>Pleased to have you on my site! Born in Kyiv, Ukraine and emigrated to the Chicago suburbs when I was 6. I consider myself an avid learner. History, philosophy, political science, economics, and their confluence are what I am focused on. I believe in empowering oneself with knowledge, recognizing that we only have some control over our experiences. Grateful every day for the opportunities available if we reach for them, grateful for enjoying the fruits of my predecessor’s sacrifices, grateful for all those who have supported me along my journey. This project is a simple way for me to express my interests and values while applying many of the skills I’ve acquired or learned by doing.</p>
+                </section>
+                <section id="engagements">
+                    <h2>Engagements</h2>
+                    <h3>Professional Experience</h3>
+                    <h4>KPMG Advisory, Financial Services Solutions, Capital Markets</h4>
+                    <p>Associate (May 2021 – August 2023): Lead on discovery, design, and development for loan commitment accounting and reporting features in a cloud migration project. Used technologies like Oracle DB, Alteryx, AWS CLI, Amazon S3, and Lambda. Responsible for delivering design requirements, communicating status to scrum teams, sprint planning, and presentations to internal and client leadership. Supported discovery work on interface with pricing vendor and conducted testing and QA for SimCorp development.</p>
+                
+                    <h4>Enfusion Systems</h4>
+                    <p>Senior Product Analyst (January 2021 – May 2021) & Product Analyst (June 2019 – January 2021): Supported clients in portfolio management, reporting, and third-party connectivity. Led initiatives to improve internal workflows and centralize information. Assisted in custom reporting using Java and run SQL queries for data reconciliation and legal entity mappings.</p>
+                
+                    <h3>Projects</h3>
+                    <h4>Stress Testing Bank’s Financial Statements</h4>
+                    <p>Conducted stress testing on banks' income statements to assess financial robustness under different economic scenarios. Reviewed risk management strategies, regulatory compliance, and made actionable recommendations on the dividend schedule.</p>
+                    
+                    <h4>Special Olympics of Missouri Contestant Population Analysis</h4>
+                    <p>Managed a group of KPMG employees to cross-analyze SOMO’s demographic and event data against location and Census data. Visualized data analysis and identified areas to increase contestant participation.</p>
+
+                </section>
+                <section id="technologies">
+                    <h2>Technologies</h2>
+                    <h3>Programming Languages</h3>
+                    <p>R, Java, Python</p>
+
+                    <h3>Database Management Systems</h3>
+                    <p>SQL, MongoDB, Oracle, Postgres, Amazon Redshift</p>
+
+                    <h3>Data Integration/ETL Tools</h3>
+                    <p>Alteryx, Abinitio, Informatica</p>
+
+                    <h3>Cloud Services</h3>
+                    <p>AWS (S3, SQS, Elastic Beanstalk), GCP, MongoDB Atlas</p>
+
+                    <h3>Other</h3>
+                    <p>Power Bi, Microsoft Suite, Jenkins, Git, RESTful APIs, Workday, Simcorp</p>
+                </section>
+                <section id="education">
+                    <h2>Education</h2>
+                    <p>Boston College : Masters in Applied Economics</p>
+                    <p>University of Illinois @ Urbana-Champaign: Econometrics</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const contactLink = document.getElementById('contact-me-link');
+            const contactForm = document.getElementById('contact-form');
+            
+            contactLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                contactForm.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

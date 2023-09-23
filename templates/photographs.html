@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+        <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+        <title>Photographs</title>
+    </head>
+<body>
+    <div class="ui large top fixed menu">
+        <div class="ui container">
+            <a class="active_item" href="/">Hermes Hat</a>
+            <div class="right menu">
+                <!-- <a class="item" href="/economics">Economics</a> -->
+                <a class="item" href="/photographs">Photography</a>
+                <a class="item" href="/media">Media</a>
+                <a class="item" href="/about">About</a>
+                {% if not g.user_logged_in %}
+                    <a class="item" href="/login">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        {% for image_url in object_keys %}
+            <div class="grid-item">
+                <img src="{{ image_url }}" loading="lazy" alt="Image">
+            </div>
+        {% endfor %}
+    </div>
+    <script>
+        // Initialize Packery after all images have loaded
+        var elem = document.querySelector('.grid');
+
+        imagesLoaded( elem, function() {
+            // Make the grid visible
+            elem.style.visibility = 'visible';
+            
+            // Initialize Packery after a delay of 500ms
+            setTimeout(function(){
+                var pckry = new Packery( elem, {
+                    itemSelector: '.grid-item',
+                    gutter: 0
+                });
+            }, 500); // 500ms delay
+        });
+    </script>
+</body>
+</html>

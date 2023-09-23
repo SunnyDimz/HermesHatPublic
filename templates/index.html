@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconWiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="ui large top fixed menu">
+        <div class="ui container">
+\            <a class="active_item" href="/">Hermes Hat</a>
+            <div class="right menu">
+                <!-- <a class="item" href="/economics">Economics</a> -->
+                <a class="item" href="/photographs">Photography</a>
+                <a class="item" href="/media">Media</a>
+                <a class="item" href="/about">About</a>
+                {% if not g.user_logged_in %}
+                    <a class="item" href="/login">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <!-- Boxes for links -->
+        <div class="info-boxes">
+            <a href="/economics" class="info-box">
+                <div class="article-image" style="background-image: url('/static/dark clouds.jpg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>Economics</span></div>
+                    <h3>Understanding Economic Indicators</h3>
+                </div>
+            </a>
+            <!-- New box for blog post -->
+            <a href="{{ url_for('blog', section='economics', post='natural_rate_of_interest') }}" class="info-box">
+                <div class="article-image" style="background-image: url('/static/blog_image1.jpg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>Blog</span></div>
+                    <h3>The Natural Rate of Interest</h3>
+                </div>
+            </a>
+            <a href="{{ url_for('blog', section='economics', post='test') }}" class="info-box">
+                <div class="article-image" style="background-image: url('/static/blog_image1.jpg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>Blog</span></div>
+                    <h3>Test</h3>
+                </div>
+            </a>
+            <a href="{{ url_for('blog', section='economics', post='Civility') }}" class="info-box">
+                <div class="article-image" style="background-image: url('/static/blog_image1.jpg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>Blog</span></div>
+                    <h3>Civility</h3>
+                </div>
+            </a>
+            <a href="{{ url_for('blog', section='economics', post='Trade Finance') }}" class="info-box">
+                <div class="article-image" style="background-image: url('/static/blog_image1.jpg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>Blog</span></div>
+                    <h3>Trade Finance</h3>
+                </div>
+            </a>            
+        </div>
+        <script>
+            // Add this script at the bottom of your HTML file
+            document.addEventListener("DOMContentLoaded", function() {
+                const contactLink = document.getElementById('contact-me-link');
+                const contactForm = document.getElementById('contact-form');
+                
+                contactLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    contactForm.classList.toggle('hidden');
+                });
+            });
+        </script>        
+    </div>
+</body>
+</html>

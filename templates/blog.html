@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="ui large top fixed menu">
+        <div class="ui container">
+            <a class="active_item" href="/">Hermes Hat</a>
+            <div class="right menu">
+                <!-- <a class="item" href="/economics">Economics</a> -->
+                <a class="item" href="/photographs">Photography</a>
+                <a class="item" href="/media">Media</a>
+                <a class="item" href="/about">About</a>
+                {% if not g.user_logged_in %}
+                    <a class="item" href="/login">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <!-- Main Blog Content -->
+        <div id="blog-content" style="width: 66%;">
+            <!-- <div id="highlight-icons">
+                <button id="positive"><div class="tooltip">Highlight text as positive</div>+</button>
+                <button id="negative"><div class="tooltip">Highlight text as negative</div>-</button>
+                <button id="questionable"><div class="tooltip">Highlight text as questionable</div>?</button>
+            </div> -->                 
+            <div id="content-area">
+                {{ content_html | safe }}
+            </div>
+        </div>
+
+        <!-- Sidebar for Related Links and Comments -->
+        <div id="sidebar" style="width: 34%; gap: 20px;">
+
+            <!-- Related Links Section -->
+            <div id="related-links" class="sidebar-section" style="height: 300px; overflow-y: auto;">
+                {% if related_links %}
+                <h3>Related Links</h3>
+                <div class="inner-box" style="height: fit; overflow-y: auto;">
+                    <ul>
+                        {% for link in related_links %}
+                        <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                </div>
+            </div>
+            
+            <!-- Comments Section 
+            <div id="comments" class="sidebar-section">
+                <h3>Comments</h3>
+                <div class="inner-box">
+                </div>
+            </div> -->
+            <!-- Comments Section -->
+            <div id="related_videos" class="sidebar-section" style="overflow-y: auto;">
+                <h3>Related Videos</h3>
+                <div class="video-scroll-container">
+                    <!-- Videos will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript for Highlighting and Commenting -->
+    <script>
+        // JavaScript code for highlighting and commenting
+        let selectedText = '';
+        let selectedClass = '';
+
+        // Function to get selected text
+        function getSelectionText() {
+            var text = "";
+            if (window.getSelection) {
+                text = window.getSelection().toString();
+            } else if (document.selection && document.selection.type !== "Control") {
+                text = document.selection.createRange().text;
+            }
+            return text;
+        }
+
+        // Highlighting text logic
+        $('#highlight-icons button').click(function() {
+            selectedClass = `highlight-${this.id}`;
+        });
+
+        $('#content-area').mouseup(function() {
+            selectedText = getSelectionText();
+            if (selectedText && selectedClass) {
+                const selection = window.getSelection();
+                const range = selection.getRangeAt(0);
+                const span = document.createElement('span');
+                span.className = selectedClass;
+                range.surroundContents(span);
+        
+                const commentIcon = document.createElement('span');
+                commentIcon.className = 'comment-icon';
+                commentIcon.innerText = '🗨️';
+        
+                span.parentNode.insertBefore(commentIcon, span.nextSibling);
+            }
+        });
+
+        // Adding comments
+        $('#content-area').on('mouseover', '.highlight-positive, .highlight-negative, .highlight-questionable', function() {
+            $(this).find('.comment-icon').show();
+        });
+
+        $('#content-area').on('click', '.comment-icon', function() {
+            let comment = prompt('Enter your comment:');
+            if (comment) {
+                // Add logic to store this comment in your MongoDB database
+                alert(`Comment added: ${comment}`);
+            }
+        });
+
+        // Related Videos
+        $(document).ready(function() {
+            // Assuming you have a route named '/api/youtube_details' that returns video details
+            $.get('/api/youtube_details?section=economics', function(data) {
+                const videoContainer = $('.video-scroll-container');
+                data.forEach(video => {
+                    const videoElement = `
+                        <div class="video-wrapper">
+                            <iframe width="250" height="140" src="https://www.youtube.com/embed/${video.video_id}" frameborder="0" allowfullscreen></iframe>
+                            <div class="video-title">${video.title}</div>
+                            <div class="video-channel">${video.channel}</div>
+                        </div>`;
+                    videoContainer.append(videoElement);
+                });
+                adjustVideoHeight();
+            });
+            // Adjust the video section height
+            function adjustVideoHeight() {
+                let blogHeight = $('#blog-content').height();
+                let relatedHeight = $('#related-links').height();
+                let videoHeight = blogHeight - relatedHeight;
+                $('.video-scroll-container').height(videoHeight);
+            }
+
+            adjustVideoHeight(); // Call it initially
+
+            // Update height when window is resized
+            $(window).on('resize', adjustVideoHeight);
+        });
+        
+    </script>
+</body>
+</html>
