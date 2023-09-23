@@ -12,7 +12,7 @@ import logging
 logging.basicConfig(filename='models.log', level=logging.INFO)
 import ssl
 import certifi
-from hermesvirtual.main_app import app
+from config import app
 
 mongo_password = os.getenv("MONGO_PASSWORD")
 
