@@ -3,7 +3,7 @@ import logging
 import pandas as pd
 import plotly.graph_objs as go
 from plotly.offline import plot
-from hermesvirtual.config import cache
+from config import cache
 import os
 import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
