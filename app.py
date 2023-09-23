@@ -1,4 +1,4 @@
-from hermesvirtual.config import application
-from hermesvirtual.routes import *
+from config import application
+from routes import *
 if __name__ == '__main__':
     application.run()
