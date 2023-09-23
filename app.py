@@ -1,4 +1,4 @@
-from config import application
+from config import app
 from routes import *
 if __name__ == '__main__':
-    application.run()
+    app.run()

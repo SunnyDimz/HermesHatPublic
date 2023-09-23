@@ -16,10 +16,10 @@ import time
 from models import YouTubeVideo, BlogPost
 from markdown import Markdown
 import logging
-from hermesvirtual.main_app import application
+from app import app
 import jwt
 load_dotenv()
-application.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET')
+app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET')
 
 
 #fetching images from AWS S3 bucket for the Photography page
@@ -174,7 +174,7 @@ def upload_markdown_to_mongo(md_file_path):
 
 def verify_jwt(token):
     try:
-        decoded_token = jwt.decode(token, application.config['SECRET_KEY'], algorithms=["HS256"])
+        decoded_token = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
         return decoded_token['user_id']
     except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
         logging.error("Invalid token.")

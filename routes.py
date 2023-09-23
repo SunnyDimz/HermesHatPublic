@@ -14,11 +14,13 @@ import urllib3
 import logging
 import boto3
 import os
+from pymongo import MongoClient
+from flask_pymongo import PyMongo
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 from utils import *
 from markdown import markdown
 from config import *
-from models import BlogPost, User, Comment, mongo
+from models import BlogPost, YouTubeVideo, User, Comment
 import yaml
 from flask_oauthlib.client import OAuth
 import jwt
@@ -34,9 +36,9 @@ ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 ssl_context.load_verify_locations(cafile=certifi.where())
 # Endpoint for fetching data.
 # Set the secret key from an environment variable
-application.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET')
+app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET')
 
-oauth = OAuth(application)
+oauth = OAuth(app)
 google = oauth.remote_app(
     'google',
     consumer_key=os.environ.get('GOOGLE_CLIENT'),
@@ -51,11 +53,11 @@ google = oauth.remote_app(
 @cache.memoize(timeout=3600)
 
 
-@application.route('/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@application.route('/blog/<string:section>/<string:post>')
+@app.route('/blog/<string:section>/<string:post>')
 @cache.memoize(timeout=200)
 def blog(section, post):
     markdown_file_path = os.path.join("blog_posts", section, f"{post}.md")
@@ -83,7 +85,7 @@ def blog(section, post):
 
     return render_template('blog.html', content_html=content_html, related_links=related_links)
 
-@application.route('/economics')
+@app.route('/economics')
 @cache.memoize(timeout=200)
 def labor_market():
     indicators = ['UNRATE', 'CIVPART', 'EMRATIO','FEDFUNDS', 'GS10', 'DTWEXB', 'NETFI', 'GFDEBTN', 'HOUST']
@@ -128,7 +130,7 @@ def labor_market():
 
     return render_template('economics.html', plots=plot_divs, zip=zip)
 
-@application.route('/update', methods=['GET'])
+@app.route('/update', methods=['GET'])
 def update_graph():
     cache.delete_memoized(labor_market)
     code = request.args.get('code')
@@ -158,18 +160,18 @@ def update_graph():
 
     return jsonify(response_data)
 
-@application.route('/photographs')
+@app.route('/photographs')
 def photography():
     # Fetch S3 images with caching and error handling
     object_keys = fetch_s3_images()
     return render_template('photographs.html', object_keys=object_keys)
 
-@application.route('/media')
+@app.route('/media')
 def media():
     # Simply render the template without passing video details
     return render_template('media.html')
        
-@application.route('/api/youtube_details')
+@app.route('/api/youtube_details')
 def youtube_details():
     section = request.args.get('section')
     # Separate dictionaries for each category
@@ -187,8 +189,8 @@ def youtube_details():
     logging.info(f"Fetched YouTube video details for section: {section}")
     return jsonify(details)
 
-mail = Mail(application)
-@application.route('/about', methods=['GET', 'POST'])  # New endpoint
+mail = Mail(app)
+@app.route('/about', methods=['GET', 'POST'])  # New endpoint
 def about():
     if request.method == 'POST':
         name = request.form['name']
@@ -207,7 +209,7 @@ def about():
     return render_template('about.html')
 
 
-@application.before_request
+@app.before_request
 def before_request():
     if 'token' in session:
         user_id = verify_jwt(session['token'])
@@ -215,7 +217,7 @@ def before_request():
         if not user_id:
             session.pop('token', None)
 
-@application.route('/login')
+@app.route('/login')
 def login():
     
     next_url = request.args.get('next')
@@ -224,13 +226,13 @@ def login():
     return google.authorize(callback=url_for('authorized', _external=True))
 
 
-@application.route('/logout')
+@app.route('/logout')
 def logout():
     session.pop('token', None)
     logging.info("Successfully logged out.")
     return redirect(url_for('index'))
 
-@application.route('/login/authorized')
+@app.route('/login/authorized')
 def authorized():
     response = google.authorized_response()
     if response is None or response.get('access_token') is None:

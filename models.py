@@ -12,16 +12,16 @@ import logging
 logging.basicConfig(filename='models.log', level=logging.INFO)
 import ssl
 import certifi
-from hermesvirtual.main_app import application
+from hermesvirtual.main_app import app
 
 mongo_password = os.getenv("MONGO_PASSWORD")
 
 # URL encode the MongoDB password
 encoded_mongo_password = quote_plus(mongo_password)
-application.config["MONGO_URI"] = f"mongodb+srv://dborzhko:{encoded_mongo_password}@sunnydimz.lrqdhvy.mongodb.net/EconWizardDB"
+app.config["MONGO_URI"] = f"mongodb+srv://dborzhko:{encoded_mongo_password}@sunnydimz.lrqdhvy.mongodb.net/EconWizardDB"
 
 try:
-    mongo = PyMongo(application)
+    mongo = PyMongo(app)
     print("MongoDB Databases:", mongo.cx.list_database_names())
     logging.debug("Successfully connected to MongoDB.")
 except Exception as e:
