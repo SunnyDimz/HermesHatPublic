@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import frontmatter
 import re
 import time
-from hermesvirtual.models.models import YouTubeVideo, BlogPost
+from models import YouTubeVideo, BlogPost
 from markdown import Markdown
 import logging
 from hermesvirtual.main_app import application
