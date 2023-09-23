@@ -18,7 +18,7 @@ from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 from utils import *
 from markdown import markdown
 from config import *
-from hermesvirtual.models.models import BlogPost, User, Comment, mongo
+from models import BlogPost, User, Comment, mongo
 import yaml
 from flask_oauthlib.client import OAuth
 import jwt
