@@ -55,7 +55,7 @@ google = oauth.remote_app(
 
 @app.route('/')
 def index():
-    return render_template('template/index.html')
+    return render_template('index.html')
 
 @app.route('/blog/<string:section>/<string:post>')
 @cache.memoize(timeout=200)
