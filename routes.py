@@ -20,7 +20,7 @@ from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 from utils import *
 from markdown import markdown
 from config import *
-from models import BlogPost, YouTubeVideo, User, Comment
+from models import BlogPost, YouTubeVideo, User, Comment, mongo
 import yaml
 from flask_oauthlib.client import OAuth
 import jwt
@@ -55,7 +55,7 @@ google = oauth.remote_app(
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('template/index.html')
 
 @app.route('/blog/<string:section>/<string:post>')
 @cache.memoize(timeout=200)
