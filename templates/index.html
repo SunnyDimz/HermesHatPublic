@@ -18,9 +18,13 @@
                 <a class="item" href="/photographs">Photography</a>
                 <a class="item" href="/media">Media</a>
                 <a class="item" href="/about">About</a>
-                {% if not g.user_logged_in %}
+                {% if user_logged_in %}
                     <a class="item" href="/login">
                         <i class="fas fa-lock"></i>
+                    </a>
+                {% else %}
+                    <a class="item" href="/logout">
+                        <i class="fas fa-unlock"></i>
                     </a>
                 {% endif %}
             </div>

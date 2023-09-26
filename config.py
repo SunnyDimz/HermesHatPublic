@@ -3,9 +3,11 @@ from flask_compress import Compress
 from flask_caching import Cache
 from flask_mail import Mail
 import logging
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
 Compress(app)
+socketio = SocketIO(app)
 logging.basicConfig(level=logging.DEBUG)
 
 # Cache configuration

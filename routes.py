@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, session
+from flask import Flask, render_template, jsonify, request, session, g
 from flask_mail import Mail, Message
 from flask import flash, redirect, url_for
 from flask_compress import Compress
@@ -50,15 +50,13 @@ google = oauth.remote_app(
     access_token_url='https://accounts.google.com/o/oauth2/token',
     authorize_url='https://accounts.google.com/o/oauth2/auth',
 )
-@cache.memoize(timeout=3600)
-
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    user_logged_in = 'google_token' in session
+    return render_template('index.html', user_logged_in=user_logged_in)
 
 @app.route('/blog/<string:section>/<string:post>')
-@cache.memoize(timeout=200)
 def blog(section, post):
     markdown_file_path = os.path.join("blog_posts", section, f"{post}.md")
     logging.info(f"Loading Markdown file from {markdown_file_path}")
@@ -86,7 +84,6 @@ def blog(section, post):
     return render_template('blog.html', content_html=content_html, related_links=related_links)
 
 @app.route('/economics')
-@cache.memoize(timeout=200)
 def labor_market():
     indicators = ['UNRATE', 'CIVPART', 'EMRATIO','FEDFUNDS', 'GS10', 'DTWEXB', 'NETFI', 'GFDEBTN', 'HOUST']
     plot_divs = []
@@ -216,6 +213,10 @@ def before_request():
         logging.info(f"User ID from JWT: {user_id}")
         if not user_id:
             session.pop('token', None)
+        else:
+            g.user_logged_in = True  # Setting the global variable
+    else:
+        g.user_logged_in = False  # Default value
 
 @app.route('/login')
 def login():
@@ -223,6 +224,7 @@ def login():
     next_url = request.args.get('next')
     session['next_url'] = next_url or request.referrer or None
     logging.info(f"Redirecting to {session['next_url']} after login.")
+    logging.info(f"session = {session}")
     return google.authorize(callback=url_for('authorized', _external=True))
 
 
