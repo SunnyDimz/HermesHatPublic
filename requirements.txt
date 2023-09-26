@@ -4,7 +4,10 @@ async-timeout==4.0.3
 attrs==23.1.0
 base58==2.1.1
 beautifulsoup4==4.12.2
+<<<<<<< HEAD
 bidict==0.22.1
+=======
+>>>>>>> 697da4470eda5495e4f22be4cba50387c8e4a55a
 bitarray==2.8.1
 blinker==1.6.2
 boto3==1.28.35
@@ -31,12 +34,18 @@ Flask-Compress==1.13
 Flask-Mail==0.9.1
 Flask-OAuthlib==0.9.6
 Flask-PyMongo==2.3.0
+<<<<<<< HEAD
 Flask-SocketIO==5.3.6
 fredapi==0.5.1
 frontmatter==3.0.7
 frozenlist==1.4.0
 gunicorn==21.2.0
 h11==0.14.0
+=======
+fredapi==0.5.1
+frontmatter==3.0.7
+frozenlist==1.4.0
+>>>>>>> 697da4470eda5495e4f22be4cba50387c8e4a55a
 hexbytes==0.3.1
 idna==3.4
 importlib-metadata==6.7.0
@@ -72,9 +81,13 @@ pytest==7.4.2
 python-dateutil==2.8.2
 python-decouple==3.8
 python-dotenv==0.21.1
+<<<<<<< HEAD
 python-engineio==4.7.1
 python-frontmatter==1.0.0
 python-socketio==5.9.0
+=======
+python-frontmatter==1.0.0
+>>>>>>> 697da4470eda5495e4f22be4cba50387c8e4a55a
 pytz==2023.3
 PyYAML==5.1
 referencing==0.30.2
@@ -85,10 +98,15 @@ rpds-py==0.10.3
 s3transfer==0.6.2
 scikit-learn==1.0.2
 scipy==1.7.3
+<<<<<<< HEAD
 simple-websocket==0.10.1
 six==1.16.0
 soupsieve==2.5
 stripe==6.6.0
+=======
+six==1.16.0
+soupsieve==2.5
+>>>>>>> 697da4470eda5495e4f22be4cba50387c8e4a55a
 tenacity==8.2.2
 threadpoolctl==3.1.0
 tomli==2.0.1
@@ -100,6 +118,9 @@ watchdog==3.0.0
 web3==5.31.4
 websockets==9.1
 Werkzeug==2.2.3
+<<<<<<< HEAD
 wsproto==1.2.0
+=======
+>>>>>>> 697da4470eda5495e4f22be4cba50387c8e4a55a
 yarl==1.9.2
 zipp==3.15.0

@@ -146,12 +146,22 @@ class YouTubeVideo:
         }
         mongo.db.youtube_videos.insert_one(video_data)
 class User:
-    def __init__(self, user_id, email):
+    def __init__(self, user_id, email, has_purchased_photos=False):
         self.user_id = user_id
         self.email = email
+        self.has_purchased_photos = has_purchased_photos
+
     def save_to_mongo(self):
         user_data = {
             "_id": self.user_id,
             "email": self.email,
+            "has_purchased_photos": self.has_purchased_photos,
         }
         mongo.db.users.insert_one(user_data)
+
+    @classmethod
+    def update_purchase_status(cls, user_id, status=True):
+        mongo.db.users.update_one(
+            {"_id": user_id},
+            {"$set": {"has_purchased_photos": status}}
+        )
