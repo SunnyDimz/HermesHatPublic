@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Add your Stripe API Key and Webhook Secret here
 stripe.api_key = os.getenv("STRIPE_PUBLIC")
-endpoint_secret = "whsec_9f82e25f36acf91047a38dc22cefb0a00124ff3be8c069873bb23f37f6662328"
+endpoint_secret = os.getenv("STRIPE_WEBHOOK")
 
 def webhook_received():
     logging.info("Received a webhook event.")
