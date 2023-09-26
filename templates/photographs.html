@@ -25,6 +25,13 @@
             </div>
         </div>
     </div>
+    <!-- Stripe Payment Banner -->
+    <div class="stripe-banner">
+        <div class="stripe-text">Unlock Access to Exclusive Photos. Once you purchase you will receive a link to download a zip file with every photo! Thank you for your support :)</div>
+        <div class="stripe-button-wrapper">
+        <a href="https://buy.stripe.com/test_7sIeXWa7agvlfuw9AA" class="buy-button">Buy Photos</a>
+        </div>
+    </div>
     <div class="grid">
         <div class="grid-sizer"></div>
         {% for image_url in object_keys %}
@@ -47,7 +54,7 @@
                     itemSelector: '.grid-item',
                     gutter: 0
                 });
-            }, 500); // 500ms delay
+            }, 1500); // 500ms delay
         });
     </script>
 </body>

@@ -434,3 +434,35 @@ iframe {
     height: fit-content; /* adjust this value for your desired video height */
     flex-shrink: 0; /* prevents videos from shrinking */
 }
+
+/* Stripe handling */
+.stripe-banner {
+    background-color: #fc7070; /* Background color */
+    padding: 15px; /* Padding */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Vertically align items */
+  }
+  
+  .stripe-text {
+    font-size: 1.2em; /* Font size */
+    text-align: center; /* Center text */
+  }
+  
+  .stripe-button-wrapper {
+    text-align: right; /* Right-align button */
+  }
+  
+  .buy-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .buy-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  

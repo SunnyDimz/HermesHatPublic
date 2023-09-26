@@ -262,3 +262,10 @@ def authorized():
 @google.tokengetter
 def get_google_oauth_token():
     return session.get('google_token')
+
+# handling stripe payments
+from webhooks import webhook_received
+
+@app.route("/webhook", methods=["POST"])
+def stripe_webhook():
+    return webhook_received()
