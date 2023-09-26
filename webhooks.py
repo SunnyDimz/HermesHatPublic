@@ -5,7 +5,7 @@ from flask import request, Response, Flask, jsonify
 import logging
 from config import app
 from flask_socketio import SocketIO, emit, join_room
-from jwt
+import jwt
 from utils import verify_jwt
 logging.basicConfig(level=logging.INFO)
 
