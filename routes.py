@@ -265,7 +265,7 @@ def get_google_oauth_token():
 
 # handling stripe payments
 from webhooks import webhook_received
-
 @app.route("/webhook", methods=["POST"])
 def stripe_webhook():
+    logging.info("Received webhook from Stripe.")
     return webhook_received()
