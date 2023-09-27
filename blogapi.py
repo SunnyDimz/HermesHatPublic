@@ -64,6 +64,13 @@ def blog(section, post):
     markdown_file_path = os.path.join("blog_posts", section, f"{post}.md")
     logging.info(f"Loading Markdown file from {markdown_file_path}")
     print(f"Loading markdown file from {markdown_file_path}")
+    blog_posts = db.blog_posts
+    logging.info(f"blog_posts: {blog_posts}")
+    post_data = blog_posts.find_one({"section": section, "post": post})
+    if not post_data:
+        return "Post not found", 404
+    blog_post_id = post_data.get('_id')
+    logging.info(f"blog_post_id: {blog_post_id}")
     try:
         with open(markdown_file_path, 'r') as f:
             # Split the file into metadata and content
@@ -83,8 +90,57 @@ def blog(section, post):
         logging.error(f"An error occurred: {e}")
         return "An error occurred", 500
 
-    return render_template('blog.html', content_html=content_html, related_links=related_links)
+    return render_template('blog.html', content_html=content_html, related_links=related_links, blog_posts=post_data)
 
+#comments and reactions to blog posts
+@app.route('/add_comment', methods=['POST'])
+def add_comment():
+    if 'google_token' not in session:  # Verify if the user is logged in
+        return jsonify({"status": "error", "message": "Please log in first"}), 401
+    blog_post_id = ObjectId(request.form.get('blog_post_id'))  # Convert to ObjectId
+    logging.info(f"Received comment for blog post {blog_post_id}")
+    user_id = request.form.get('user_id')
+    logging.info(f"Received comment from user {user_id}")
+    comment_text = request.form.get('comment_text')
+    parent_comment_id = request.form.get('parent_comment_id', None)
+    user_id = ObjectId(session.get('_id'))  # Assuming _id in session is the ObjectId of the user
+    logging.info(f"Received comment from user {user_id}")
+
+
+    try:
+        comment = Comment(blog_post_id, user_id, comment_text, parent_comment_id)
+        comment.save_to_mongo()
+        return jsonify({"status": "success"}), 200
+    except ValueError as e:
+        return jsonify({"status": "error", "message": str(e)}), 400
+
+@app.route('/add_reaction', methods=['POST'])
+def add_reaction():
+    comment_id = request.form.get('comment_id')
+    reaction_type = request.form.get('reaction_type')
+
+    if reaction_type not in ["thumbs_up", "thumbs_down", "question_mark"]:
+        return jsonify({"status": "error", "message": "Invalid reaction type"}), 400
+
+    try:
+        mongo.db.comments.update_one({"_id": ObjectId(comment_id)}, {"$inc": {f"reactions.{reaction_type}": 1}})
+        return jsonify({"status": "success"}), 200
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 400
+
+@app.route('/api/get_comments', methods=['GET'])
+def get_comments():
+    blog_post_id = request.args.get('blog_post_id')
+    logging.info(f"Received request for comments for blog post {blog_post_id}")
+    if not blog_post_id:
+        return jsonify({"status": "error", "message": "Missing blog_post_id"}), 400
+
+    try:
+        comments = mongo.db.comments.find({"blog_post_id": blog_post_id})
+        comments_list = list(comments)
+        return dumps(comments_list), 200
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 @app.route('/economics')
 def labor_market():
@@ -253,13 +309,9 @@ def authorized():
 
     existing_user = mongo.db.users.find_one({"_id": user_data["id"]})
     if not existing_user:
-        user = User(user_data["id"], user_data["email"],session['google_token'])
+        user = User(user_data["id"], user_data["email"])
         user.save_to_mongo()
-    else:
-        mongo.db.users.update_one(
-            {"_id": user_data["id"]},
-            {"$set": {"google_token": session['google_token']}}
-        )
+
     # The JWT token will already be in session['token'] after the user logs in. 
     # If you want to generate it again, you can do so here.
     # Redirect to the previous page or the index page if it doesn't exist

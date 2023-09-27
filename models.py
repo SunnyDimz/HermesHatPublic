@@ -13,6 +13,7 @@ logging.basicConfig(filename='models.log', level=logging.INFO)
 import ssl
 import certifi
 from config import app
+from bleach import clean
 
 mongo_password = os.getenv("MONGO_PASSWORD")
 
@@ -22,6 +23,9 @@ app.config["MONGO_URI"] = f"mongodb+srv://dborzhko:{encoded_mongo_password}@sunn
 
 try:
     mongo = PyMongo(app)
+    client = MongoClient(app.config["MONGO_URI"])
+    db = client.EconWizardDB
+    blog_posts = db.blog_posts
     print("MongoDB Databases:", mongo.cx.list_database_names())
     logging.debug("Successfully connected to MongoDB.")
 except Exception as e:
@@ -118,17 +122,31 @@ class Highlight:
         mongo.db.blog_posts.update_one({"_id": ObjectId(self.blog_post_id)}, {"$push": {"highlights": highlight_data}})
 
 class Comment:
-    def __init__(self, blog_post_id, user_id, comment_text):
+    def __init__(self, blog_post_id, user_id, comment_text, parent_comment_id=None):
         self.blog_post_id = blog_post_id
         self.user_id = user_id
-        self.comment_text = comment_text
+        self.comment_text = self.validate_comment_text(comment_text)
+        self.parent_comment_id = parent_comment_id
+        self.reactions = {"thumbs_up": 0, "thumbs_down": 0, "question_mark": 0}
 
+    def validate_comment_text(self, comment_text):
+        # Validation to prevent attacks
+        if not comment_text or len(comment_text) < 2:
+            raise ValueError("Invalid comment")
+        # Sanitize the comment text
+        allowed_tags = ['b', 'i', 'u', 'em', 'strong']
+        return clean(comment_text, tags=allowed_tags, strip=True)
     def save_to_mongo(self):
         comment_data = {
+            "blog_post_id": self.blog_post_id,
             "user_id": self.user_id,
-            "comment_text": self.comment_text
+            "comment_text": self.comment_text,
+            "parent_comment_id": self.parent_comment_id,
+            "reactions": self.reactions,
+            "timestamp": datetime.now()
         }
-        mongo.db.blog_posts.update_one({"_id": ObjectId(self.blog_post_id)}, {"$push": {"comments": comment_data}})
+        mongo.db.comments.insert_one(comment_data)
+
 
 class YouTubeVideo:
     def __init__(self, video_id, title, description, tags):
@@ -146,22 +164,27 @@ class YouTubeVideo:
         }
         mongo.db.youtube_videos.insert_one(video_data)
 class User:
-    def __init__(self, user_id, email, has_purchased_photos=False):
+    def __init__(self, user_id, email, google_token = None, has_purchased_photos=False):
         self.user_id = user_id
         self.email = email
+        self.google_token = google_token
         self.has_purchased_photos = has_purchased_photos
 
     def save_to_mongo(self):
         user_data = {
             "_id": self.user_id,
             "email": self.email,
+            "google_token": self.token,
             "has_purchased_photos": self.has_purchased_photos,
         }
         mongo.db.users.insert_one(user_data)
 
     @classmethod
     def update_purchase_status(cls, user_id, status=True):
-        mongo.db.users.update_one(
-            {"_id": user_id},
-            {"$set": {"has_purchased_photos": status}}
-        )
+        try:
+            mongo.db.users.update_one(
+                {"_id": user_id},
+                {"$set": {"has_purchased_photos": status}}
+            )
+        except Exception as e:
+            logging.error(f"Failed to update purchase status: {e}")

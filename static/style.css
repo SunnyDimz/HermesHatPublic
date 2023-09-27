@@ -423,8 +423,8 @@ iframe {
 
 /* scrollable videos for blog posts */
 .video-scroll-container {
-    height: 100%;
-    overflow-y: auto;
+    height: 300px;
+    overflow-x: auto;
     gap: 10px; /* space between the videos */
     padding: 10px 0;
 }
