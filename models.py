@@ -188,3 +188,34 @@ class User:
             )
         except Exception as e:
             logging.error(f"Failed to update purchase status: {e}")
+
+class FredData:
+    def __init__(self, code, realtime_start, realtime_end, observation_start, observation_end, units, count, observations):
+        self.code = code
+        self.realtime_start = realtime_start
+        self.realtime_end = realtime_end
+        self.observation_start = observation_start
+        self.observation_end = observation_end
+        self.units = units
+        self.count = count
+        self.observations = observations
+
+    def save_to_mongo(self):
+        try:
+            fred_data = {
+                "code": self.code,
+                "realtime_start": self.realtime_start,
+                "realtime_end": self.realtime_end,
+                "observation_start": self.observation_start,
+                "observation_end": self.observation_end,
+                "units": self.units,
+                "count": self.count,
+                "observations": self.observations
+            }
+            print(fred_data)
+            print(type(fred_data))
+            mongo.db.fred_data.insert_one(fred_data)
+            logging.info(f"Successfully saved {self.code} to MongoDB.")
+        except Exception as e:
+            logging.error(f"Error saving to MongoDB: {e}")
+            raise e

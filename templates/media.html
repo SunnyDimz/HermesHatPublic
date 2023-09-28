@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="ui large top fixed menu">
@@ -23,6 +24,10 @@
                 {% if not g.user_logged_in %}
                     <a class="item" href="/login">
                         <i class="fas fa-lock"></i>
+                    </a>
+                {% else %}
+                    <a class="item" href="/logout">
+                        <i class="fas fa-unlock"></i>
                     </a>
                 {% endif %}
             </div>

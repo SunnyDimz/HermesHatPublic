@@ -324,7 +324,7 @@ iframe {
 }
 /* Main Blog Content */
 #blog-content {
-    background-image: url('papyrus.jpeg');
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(165, 215, 121));
     filter: brightness(1.02); /* Adjust the value greater than 1 to increase brightness */
     border-radius: 5%;
     width: 66%;
@@ -354,6 +354,26 @@ iframe {
     border-radius: 50%;
     z-index: 100;
 }
+.fas {
+    cursor: pointer;
+}
+
+.new-comment-box {
+    margin-top: 15px;
+}
+
+.new-comment-box.hidden {
+    display: none;
+}
+
+.comment-buttons {
+    text-align: right;
+}
+
+.btn {
+    margin: 5px;
+}
+
 /* Highlight colors */
 .highlight-positive { 
     background-color: #a4d391; /* Light green */

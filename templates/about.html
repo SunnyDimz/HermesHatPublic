@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="ui large top fixed menu">
@@ -26,6 +27,10 @@
                 {% if not g.user_logged_in %}
                     <a class="item" href="/login">
                         <i class="fas fa-lock"></i>
+                    </a>
+                {% else %}
+                    <a class="item" href="/logout">
+                        <i class="fas fa-unlock"></i>
                     </a>
                 {% endif %}
             </div>

@@ -1,0 +1,82 @@
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+ERROR:root:Error saving to MongoDB: documents must be a non-empty list
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+ERROR:root:Error saving to MongoDB: documents must be a non-empty list
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+ERROR:root:Error saving to MongoDB: documents must be a non-empty list
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+INFO:root:Successfully saved UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=CIVPART&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for CIVPART.
+INFO:root:Fetched 13 observations for CIVPART.
+INFO:root:Saving 13 observations for CIVPART to MongoDB.
+INFO:root:Successfully saved CIVPART to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=EMRATIO&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for EMRATIO.
+INFO:root:Fetched 13 observations for EMRATIO.
+INFO:root:Saving 13 observations for EMRATIO to MongoDB.
+INFO:root:Successfully saved EMRATIO to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=FEDFUNDS&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 830 observations for FEDFUNDS.
+INFO:root:Fetched 13 observations for FEDFUNDS.
+INFO:root:Saving 13 observations for FEDFUNDS to MongoDB.
+INFO:root:Successfully saved FEDFUNDS to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=GS10&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 845 observations for GS10.
+INFO:root:Fetched 13 observations for GS10.
+INFO:root:Saving 13 observations for GS10 to MongoDB.
+INFO:root:Successfully saved GS10 to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXB&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 6520 observations for DTWEXB.
+INFO:root:Fetched 13 observations for DTWEXB.
+INFO:root:Saving 13 observations for DTWEXB to MongoDB.
+INFO:root:Successfully saved DTWEXB to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=NETFI&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 306 observations for NETFI.
+INFO:root:Fetched 13 observations for NETFI.
+INFO:root:Saving 13 observations for NETFI to MongoDB.
+INFO:root:Successfully saved NETFI to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=GFDEBTN&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 230 observations for GFDEBTN.
+INFO:root:Fetched 13 observations for GFDEBTN.
+INFO:root:Saving 13 observations for GFDEBTN to MongoDB.
+INFO:root:Successfully saved GFDEBTN to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=HOUST&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 776 observations for HOUST.
+INFO:root:Fetched 13 observations for HOUST.
+INFO:root:Saving 13 observations for HOUST to MongoDB.
+INFO:root:Successfully saved HOUST to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=T10Y2Y&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 12347 observations for T10Y2Y.
+INFO:root:Fetched 13 observations for T10Y2Y.
+INFO:root:Saving 13 observations for T10Y2Y to MongoDB.
+INFO:root:Successfully saved T10Y2Y to MongoDB.

@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="/static/style.css">
         <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
         <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <title>Photographs</title>
     </head>
 <body>
@@ -21,17 +22,21 @@
                     <a class="item" href="/login">
                         <i class="fas fa-lock"></i>
                     </a>
+                {% else %}
+                    <a class="item" href="/logout">
+                        <i class="fas fa-unlock"></i>
+                    </a>
                 {% endif %}
             </div>
         </div>
     </div>
-    <!-- Stripe Payment Banner -->
+    <!-- Stripe Payment Banner 
     <div class="stripe-banner">
         <div class="stripe-text">Unlock Access to Exclusive Photos. Once you purchase you will receive a link to download a zip file with every photo! Thank you for your support :)</div>
         <div class="stripe-button-wrapper">
         <a href="https://buy.stripe.com/test_7sIeXWa7agvlfuw9AA" class="buy-button" target="_blank">Buy Photos for 2$</a>
         </div>
-    </div>
+    </div> -->
     <div class="grid">
         <div class="grid-sizer"></div>
         {% for image_url in object_keys %}

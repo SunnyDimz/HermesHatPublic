@@ -21,6 +21,10 @@
                     <a class="item" href="/login">
                         <i class="fas fa-lock"></i>
                     </a>
+                {% else %}
+                    <a class="item" href="/logout">
+                        <i class="fas fa-unlock"></i>
+                    </a>
                 {% endif %}
             </div>
         </div>
@@ -57,11 +61,18 @@
             
             <!-- Comments Section 
             <div id="comments" class="sidebar-section">
-                <h3>Comments</h3>
+                <h3>Comments - Coming Soon!</h3>
                 <div class="inner-box">
+                    <div id="newCommentBox" class="new-comment-box hidden"> 
+                        <textarea id="newCommentText" rows="4"></textarea>
+                        <div class="comment-buttons">
+                            <button id="cancelComment" class="btn btn-secondary">Cancel</button>
+                            <button id="submitComment" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div> -->
-            <!-- Comments Section -->
+            <!-- video Section -->
             <div id="related_videos" class="sidebar-section" style="overflow-y: auto;">
                 <h3>Related Videos</h3>
                 <div class="video-scroll-container">
@@ -74,58 +85,65 @@
 
     <!-- JavaScript for Highlighting and Commenting -->
     <script>
-        // JavaScript code for highlighting and commenting
-        let selectedText = '';
-        let selectedClass = '';
-
-        // Function to get selected text
-        function getSelectionText() {
-            var text = "";
-            if (window.getSelection) {
-                text = window.getSelection().toString();
-            } else if (document.selection && document.selection.type !== "Control") {
-                text = document.selection.createRange().text;
-            }
-            return text;
-        }
-
-        // Highlighting text logic
-        $('#highlight-icons button').click(function() {
-            selectedClass = `highlight-${this.id}`;
-        });
-
-        $('#content-area').mouseup(function() {
-            selectedText = getSelectionText();
-            if (selectedText && selectedClass) {
-                const selection = window.getSelection();
-                const range = selection.getRangeAt(0);
-                const span = document.createElement('span');
-                span.className = selectedClass;
-                range.surroundContents(span);
         
-                const commentIcon = document.createElement('span');
-                commentIcon.className = 'comment-icon';
-                commentIcon.innerText = '🗨️';
-        
-                span.parentNode.insertBefore(commentIcon, span.nextSibling);
-            }
-        });
-
-        // Adding comments
-        $('#content-area').on('mouseover', '.highlight-positive, .highlight-negative, .highlight-questionable', function() {
-            $(this).find('.comment-icon').show();
-        });
-
-        $('#content-area').on('click', '.comment-icon', function() {
-            let comment = prompt('Enter your comment:');
-            if (comment) {
-                // Add logic to store this comment in your MongoDB database
-                alert(`Comment added: ${comment}`);
-            }
-        });
-
-        // Related Videos
         $(document).ready(function() {
+
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+            
+            $("#addCommentIcon").click(function() {
+                const userLoggedIn = getCookie('user_logged_in');
+                if (!userLoggedIn) {
+                    window.location.href = "/login";
+                    console.log("User not logged in");
+                    return;
+                }
+                $(".inner-box").html(`
+                    <textarea id="commentText"></textarea>
+                    <button id="submitComment">Submit</button>
+                    <button id="cancelComment">Cancel</button>
+                `);
+            });
+        
+            // Event delegation for dynamically created elements
+            $(".inner-box").on('click', '#submitComment', function() {
+                let commentText = $("#commentText").val();
+                $.post("/add_comment", {
+                    blog_post_id: "your_blog_post_id_here",
+                    user_id: "your_user_id_here",
+                    comment_text: commentText
+                }).done(function(data) {
+                    if (data.status === "success") {
+                        // TODO: Add comment to the list of existing comments or do other UI updates
+                    }
+                });
+            });
+        
+            $(".inner-box").on('click', '#cancelComment', function() {
+                $(".inner-box").html(''); // Clear the comment box
+            });
+            // Submit new comment
+            $('#submitComment').click(function() {
+                let commentText = $("#commentText").val();
+                $.post("/add_comment", {
+                    blog_post_id: "your_blog_post_id_here",
+                    user_id: "your_user_id_here",
+                    comment_text: commentText
+                }).done(function(data) {
+                    if (data.status === "success") {
+                        // Add comment to the list of existing comments or do other UI updates
+                    }
+                });
+            });
+
+            // Cancel new comment
+            $('#cancelComment').click(function() {
+                $('#newCommentBox').addClass('hidden'); // Hide the comment box
+                $('#newCommentText').val(''); // Clear the textarea
+            });
             // Assuming you have a route named '/api/youtube_details' that returns video details
             $.get('/api/youtube_details?section=economics', function(data) {
                 const videoContainer = $('.video-scroll-container');
@@ -153,7 +171,6 @@
             // Update height when window is resized
             $(window).on('resize', adjustVideoHeight);
         });
-        
     </script>
 </body>
 </html>

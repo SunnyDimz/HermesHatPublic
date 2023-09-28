@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, session, g
+from flask import Flask, render_template, jsonify, request, session, g, make_response
 from flask_mail import Mail, Message
 from flask import flash, redirect, url_for
 from flask_compress import Compress
@@ -207,17 +207,16 @@ def about():
         return redirect(url_for('about'))
 
     return render_template('about.html')
-
-
+# endpoint to verify login to update lock icon to unlock. leverage google token
 @app.before_request
 def before_request():
-    if 'token' in session:
-        user_id = verify_jwt(session['token'])
-        logging.info(f"User ID from JWT: {user_id}")
-        if not user_id:
-            session.pop('token', None)
-        else:
-            g.user_logged_in = True  # Setting the global variable
+    google_token_from_session = session.get('google_token')  # Retrieve Google token from session
+    
+    # Search MongoDB for the user by Google token
+    existing_user = mongo.db.users.find_one({"google_token": google_token_from_session})
+    
+    if existing_user:
+        g.user_logged_in = True  # Setting the global variable
     else:
         g.user_logged_in = False  # Default value
 
@@ -246,6 +245,7 @@ def authorized():
             request.args['error_description']
         )
     session['google_token'] = (response['access_token'], '')
+
     logging.info(f"Successfully logged in with Google. Token: {session['google_token']}")
     user_info = google.get('userinfo')
     user_data = user_info.data
@@ -264,9 +264,10 @@ def authorized():
     # If you want to generate it again, you can do so here.
     # Redirect to the previous page or the index page if it doesn't exist
     next_url = session.pop('next_url', None)
-    if not next_url:
-        return redirect(url_for('index'))
-    return redirect(next_url)
+    resp = make_response(redirect(next_url or url_for('index')))
+    resp.set_cookie('token', session['google_token'][0], httponly=True, samesite='Lax')
+    resp.set_cookie('user_logged_in', 'true' , httponly=True, samesite='Lax')
+    return resp
     
 @google.tokengetter
 def get_google_oauth_token():

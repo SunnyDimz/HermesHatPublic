@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import frontmatter
 import re
 import time
-from models import YouTubeVideo, BlogPost
+from models import YouTubeVideo, BlogPost, FredData
 from markdown import Markdown
 import logging
 from app import app
