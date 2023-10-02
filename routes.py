@@ -239,6 +239,8 @@ def logout():
 @app.route('/login/authorized')
 def authorized():
     response = google.authorized_response()
+    session.permanent = True # make the session permanent so it keeps existing after browser gets closed
+    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5) # set the session lifetime to 5 minutes
     if response is None or response.get('access_token') is None:
         return 'Access denied: reason={} error={}'.format(
             request.args['error_reason'],
