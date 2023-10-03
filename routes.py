@@ -71,6 +71,7 @@ def blog(section, post):
             # Parse the metadata using YAML
             metadata = yaml.safe_load(metadata_str)
             related_links = metadata.get('related_links', [])
+            questions = metadata.get('questions', [])
             
             # Convert markdown content to HTML
             content_html = markdown(content_str)
@@ -82,9 +83,34 @@ def blog(section, post):
         print(f"An error occurred: {e}")
         logging.error(f"An error occurred: {e}")
         return "An error occurred", 500
+    print("Questions:", questions)
+    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'))
 
-    return render_template('blog.html', content_html=content_html, related_links=related_links)
+@app.route('/submit_answer', methods=['POST'])
+def submit_answer():
+    try:
+        data = request.get_json()
+        logging.info(f"Received answer: {data}")
+        if not all(key in data for key in ('title', 'question_id', 'selected_answer')):
+            return jsonify({"status": "failure", "message": "Missing required fields"}), 400
 
+        post_title = data.get('title')
+        logging.info(f"Received answer for blog post {post_title}")
+        question_id = data.get('question_id')
+        logging.info(f"Received answer for question {question_id}")
+        selected_answer = data.get('selected_answer')
+        logging.info(f"Received answer {selected_answer}")
+        
+        result = update_response_count(post_title, question_id, selected_answer)
+        logging.info(f"Result: {result}")
+        logging.info(f"Result Status: {result['status']}")
+        if result['status'] == "success":
+            return jsonify({"status": "success", "message": "Successfully updated the database"})
+        else:
+            return jsonify({"status": "failure", "message": "Failed to update the database"}), 500
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+        return jsonify({"status": "failure", "message": "An unexpected error occurred"}), 500
 
 @app.route('/economics')
 def labor_market():

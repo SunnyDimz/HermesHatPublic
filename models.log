@@ -80,3 +80,58 @@ INFO:root:Fetched 12347 observations for T10Y2Y.
 INFO:root:Fetched 13 observations for T10Y2Y.
 INFO:root:Saving 13 observations for T10Y2Y to MongoDB.
 INFO:root:Successfully saved T10Y2Y to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.

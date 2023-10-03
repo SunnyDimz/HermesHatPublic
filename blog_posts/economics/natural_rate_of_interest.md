@@ -1,5 +1,6 @@
 ---
 title: "Understanding the Natural Rate of Interest and Its Impacts"
+blog_post_id: "2"
 summary: "A deep dive into the concept of the natural rate of interest and its implications on monetary policy."
 author: "Dmitriy Borzhkovskiy"
 created_at: "2023-09-07"
@@ -7,6 +8,18 @@ updated_at: "2023-09-07"
 related_links: ["https://www.newyorkfed.org/research/policy/rstar", "https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/", "https://www.econlib.org/library/Enc/bios/Hayek.html", "https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754", "https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain","https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)"]
 media_links: ["https://www.youtube.com/watch?v=rdYHoIDX44M", "https://www.youtube.com/watch?v=g6iXBQ33pBo"] 
 tags: "economics"
+questions: 
+  - question: "What is the natural rate of interest?"
+    question_id: "q1"
+    options:
+      - "A rate set by the Federal Reserve"
+      - "The interest rate at which inflation is stable"
+      - "The interest rate on Treasury Bills"
+    correct_answer: "The interest rate at which inflation is stable"
+    response_count:
+      "A rate set by the Federal Reserve": 0
+      "The interest rate at which inflation is stable": 0
+      "The interest rate on Treasury Bills": 0
 ---
 
 # Understanding the Natural Rate of Interest and Its Impacts

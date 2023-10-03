@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>{{ post_title }}</title> <!-- Updated the title -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -39,9 +39,22 @@
             </div> -->                 
             <div id="content-area">
                 {{ content_html | safe }}
+                <!-- Displaying Questions -->
+                <form id="myForm">
+                    {% for question in questions %}
+                        <div class="question">
+                            <p>{{ question['question'] }}</p>
+                            {% for option in question['options'] %}
+                                <input type="radio" name="selected_answer" value="{{ option }}">{{ option }}<br>
+                            {% endfor %}
+                            <input type="hidden" id="post_title" value="{{ post_title }}">
+                            <input type="hidden" id="question_id" value="{{ question['question_id'] }}">
+                        </div>
+                    {% endfor %}
+                    <input type="submit" id="submitBtn" value="Submit">
+                </form>
             </div>
         </div>
-
         <!-- Sidebar for Related Links and Comments -->
         <div id="sidebar" style="width: 34%; gap: 20px;">
 
@@ -138,6 +151,65 @@
                     }
                 });
             });
+            //questions and answers
+            // Function to disable or enable the submit button
+            function toggleSubmitButton(disable = true) {
+                const submitButton = document.querySelector("#submitBtn");
+                submitButton.disabled = disable;
+            }
+
+            // This function will be invoked when the form is submitted
+            async function submitAnswer(title, question_id) {
+                const radios = document.getElementsByName('selected_answer');
+                let selected_answer = null;
+                
+                for(let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        selected_answer = radios[i].value;
+                        break;
+                    }
+                }
+
+                if (selected_answer === null) {
+                    alert("Please select an answer before submitting.");
+                    return;
+                }
+                const response = await fetch('/submit_answer', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ title, question_id, selected_answer })
+                });
+                console.log("Request payload:", JSON.stringify({ title, question_id, selected_answer }));
+                const data = await response.json();
+                console.log("Response:", data);
+                if (data.status === "success") {
+                    alert("Answer submitted successfully!");
+                } else {
+                    alert("Failed to submit answer.");
+                }
+            }
+
+            // Assuming the form has an id="myForm"
+            document.querySelector("#myForm").addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevents the default form submit behavior
+                let questions = document.querySelectorAll('.question');  // Get all questions
+                
+                questions.forEach(function(question) {
+                    const question_id = question.querySelector("#question_id").value;
+                    const title = question.querySelector("#post_title").value;
+                    const selected_answer = question.querySelector("input[name='selected_answer']:checked").value;
+                    
+                    if (title && question_id && selected_answer) {
+                        // If validation passes, make the AJAX call here
+                        submitAnswer(title, question_id);
+                    } else {
+                        // Show a warning message or some validation errors
+                        alert("All fields are required.");
+                    }
+                });
+            });     
 
             // Cancel new comment
             $('#cancelComment').click(function() {

@@ -33,8 +33,9 @@ except Exception as e:
     logging.error(f"Could not connect to MongoDB: {e}")
 
 class BlogPost:
-    def __init__(self, title, content, author, tags, related_links, media_bucket_links, date, summary):
+    def __init__(self, title,blog_post_id, content, author, tags, related_links, media_bucket_links, date, summary, questions = []):
         self.title = self.validate_title(title)
+        self.blog_post_id = blog_post_id
         self.content = self.validate_content(content)
         self.author = self.validate_author(author)
         self.tags = self.validate_tags(tags)
@@ -42,6 +43,7 @@ class BlogPost:
         self.media_bucket_links = self.validate_links(media_bucket_links)
         self.date = self.validate_date(date)
         self.summary = self.validate_summary(summary)
+        self.questions = [{"question": q["question"], "question_id": q["question_id"], "options": q["options"], "responses": [], "response_count": {option: 0 for option in q["options"]}} for q in questions]
 
     def validate_title(self, title):
         if not title or len(title) < 5:
@@ -83,11 +85,12 @@ class BlogPost:
         if not summary or len(summary) < 10:
             raise ValueError("Invalid summary")
         return summary
-
+    
     def save_to_mongo(self):
         try:
             blog_post_data = {
                 "title": self.title,
+                "blog_post_id": self.blog_post_id,
                 "content": self.content,
                 "author": self.author,
                 "tags": self.tags,
@@ -96,7 +99,8 @@ class BlogPost:
                 "date": self.date,
                 "summary": self.summary,
                 "highlights": [],
-                "comments": []
+                "comments": [],
+                "questions": self.questions
             }
             mongo.db.blog_posts.insert_one(blog_post_data)
             logging.info(f"Successfully saved {self.title} to MongoDB.")
