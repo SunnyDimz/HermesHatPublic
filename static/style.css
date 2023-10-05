@@ -486,3 +486,65 @@ iframe {
     background-color: #0056b3; /* Darker color on hover */
   }
   
+/* buttons for chat gpt-3 */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8a2727;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+/* Chat Modal Styles */
+.chat-modal {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 34%;
+    height: 423px;
+    z-index: 1000;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    background-image: url('papyrus.jpeg');
+    background-size: cover;   
+}
+
+.chat-modal-header {
+    background-color: #000000;
+    background-size: cover;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-chat {
+    cursor: pointer;
+}
+
+.chat-title {
+    margin: 0;
+}
+
+.chat-area {
+    flex-grow: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input-area {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#user-input {
+    width: 100%;
+}
+
+#send-button {
+    margin-top: 5px;
+}

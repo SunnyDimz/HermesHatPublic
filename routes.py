@@ -72,6 +72,9 @@ def blog(section, post):
             metadata = yaml.safe_load(metadata_str)
             related_links = metadata.get('related_links', [])
             questions = metadata.get('questions', [])
+            summary = metadata.get('summary', "")
+            media_links = metadata.get('media_links', [])
+
             
             # Convert markdown content to HTML
             content_html = markdown(content_str)
@@ -84,7 +87,7 @@ def blog(section, post):
         logging.error(f"An error occurred: {e}")
         return "An error occurred", 500
     print("Questions:", questions)
-    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'))
+    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'), summary=summary,media_links=media_links)
 
 @app.route('/submit_answer', methods=['POST'])
 def submit_answer():

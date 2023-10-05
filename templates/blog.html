@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{{ post_title }}</title> <!-- Updated the title -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -94,19 +94,89 @@
             </div>
         </div>
     </div>
-
+    <div id="script-icon" class="chat-button" style="cursor: pointer;">
+        <i class="fa fa-scroll fa-2x"></i>
+    </div>      
+    <!-- The Modal -->
+    <div id="question-modal" class="chat-modal">
+        <div class="chat-modal-header">
+            <span class="chat-title">Hermes Chat</span>
+            <span id="close-chat" class="close-chat">&times;</span>
+        </div>
+        <div class="chat-modal-content">
+            <div id="chat-area" class="chat-area"></div>
+            <div class="chat-input-area">
+                <textarea id="user-input" maxlength="100" placeholder="Type your question..."></textarea>
+                <p id="char-count">100</p>
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript for Highlighting and Commenting -->
     <script>
         
         $(document).ready(function() {
+            // Log to see if document is ready
+            console.log("Document is ready");
+
+            // Toggle the visibility of the modal and replace the related videos
+            $('#script-icon').click(function() {
+                $('#question-modal').toggle();
+                $('#related_videos').toggleClass('hide');
+                console.log("Script icon clicked");
+            });
+            
+            // New code for closing the chat modal
+            $('#close-chat').click(function() {
+                $('#question-modal').hide();
+            });
+            // Function to handle user questions
+            $('#question-modal button').click(function() {
+                sendQuestion();
+            });
+
+            function sendQuestion() {
+                // Log to trace function call
+                console.log("Inside sendQuestion function");
+
+                let userQuestion = document.getElementById('user-input').value;
+
+                // Log to trace user input
+                console.log("User Question: ", userQuestion);
+
+                // Send the question to the backend
+                fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({input: userQuestion, context: "Blog context here", token_limit: 100}),
+                }).then(response => response.json())
+                .then(data => {
+                    console.log("Backend Response: ", JSON.stringify(data, null, 4));
+
+                    // Update the chat with user's question and model's response
+                    let userQuestion = document.getElementById('user-input').value;
+                    document.getElementById('chat-area').innerHTML += `<div class='user-message'>You: ${userQuestion}</div>`;
+                    document.getElementById('chat-area').innerHTML += `<p>${data.response}</p>`;
+                    document.getElementById('chat-area').innerHTML += `<div class='bot-message'>Hermes: ${data.message}</div>`;
+                });
+                console.log("Question sent to the backend");
+            }
 
             function getCookie(name) {
                 const value = `; ${document.cookie}`;
                 const parts = value.split(`; ${name}=`);
                 if (parts.length === 2) return parts.pop().split(';').shift();
             }
-            
+            const textarea = document.getElementById("user-input");
+            const charCount = document.getElementById("char-count");
+
+            textarea.addEventListener('input', function() {
+                charCount.textContent = 100 - textarea.value.length;
+                console.log("Character count updated");
+            });
             $("#addCommentIcon").click(function() {
                 const userLoggedIn = getCookie('user_logged_in');
                 if (!userLoggedIn) {
@@ -242,6 +312,7 @@
 
             // Update height when window is resized
             $(window).on('resize', adjustVideoHeight);
+            $('#content-area a').attr('target', '_blank');
         });
     </script>
 </body>

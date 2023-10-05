@@ -24,57 +24,7 @@
             cache/
                 lastfailed
                 stepwise
-    hermesvirtual/
-        .DS_Store
-        watchdog.py
-        requirements.txt
-        directory_tree.txt
-        linkparse.py
-        pyvenv.cfg
-        mongotest.py
-        application.py
-        hermeshat.zip
-        models.log
-        main_app.py
-        blog_posts/
-            .DS_Store
-            politics/
-            philosophy/
-            history/
-            economics/
-                natural_rate_of_interest.md
-                test.md
-        tests/
-            .DS_Store
-            __init__.py
-            unit/
-                __init__.py
-                test_routes.py
-                test_models.py
-            integration/
-                __init__.py
-                test_models.py
-        etc/
-            jupyter/
-                nbconfig/
-                    notebook.d/
-                        jupyterlab-plotly.json
-        models/
-            test.mongodb.js
-            __pycache__/
-                models.cpython-37.pyc
-                models.cpython-38.pyc
-        __pycache__/
-            main_app.cpython-38.pyc
-            watchdog.cpython-37.pyc
-            config.cpython-37.pyc
-            routes.cpython-38.pyc
-            utils.cpython-38.pyc
-            app.cpython-37.pyc
-            config.cpython-38.pyc
-            routes.cpython-37.pyc
-            utils.cpython-37.pyc
-            watchdog.cpython-38.pyc
+    
         static/
             greektexture.jpeg
             favicon.ico
