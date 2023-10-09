@@ -20,11 +20,11 @@
             }
 
             @keyframes colorCycle {
-                0% { color: red; }
-                25% { color: blue; }
-                50% { color: green; }
-                75% { color: yellow; }
-                100% { color: red; }
+                0%   { color: #FF0000; }  /* Red */
+                25%  { color: #00FF00; }  /* Green */
+                50%  { color: #0000FF; }  /* Blue */
+                75%  { color: #FF00FF; }  /* Magenta */
+                100% { color: #FF4500; }  /* Orange */
             }
             #background-video {
                 position: fixed;
@@ -84,6 +84,7 @@
         imagesLoaded( elem, function() {
             // Hide the spinner
             $("#custom-loader").hide();
+            $("#background-video").hide();
 
             // Make the grid visible
             elem.style.visibility = 'visible';
