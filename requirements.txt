@@ -16,6 +16,7 @@ certifi==2023.7.22
 charset-normalizer==3.2.0
 click==8.1.6
 cytoolz==0.12.2
+Deprecated==1.2.14
 dnspython==2.3.0
 eth-abi==2.2.0
 eth-account==0.5.9
@@ -30,6 +31,7 @@ Flask==2.2.5
 Flask-Caching==2.0.2
 Flask-Compress==1.13
 Flask-JWT-Extended==4.5.2
+Flask-Limiter==3.5.0
 Flask-Mail==0.9.1
 Flask-OAuthlib==0.9.6
 Flask-PyMongo==2.3.0
@@ -51,16 +53,20 @@ jmespath==1.0.1
 joblib==1.3.1
 jsonschema==4.19.0
 jsonschema-specifications==2023.7.1
+limits==3.6.0
 lru-dict==1.2.0
 magic-admin==1.0.0
 Markdown==3.4.4
+markdown-it-py==3.0.0
 MarkupSafe==2.1.3
+mdurl==0.1.2
 multiaddr==0.0.9
 multidict==6.0.4
 netaddr==0.8.0
 numpy==1.21.6
 oauthlib==2.1.0
 openai==0.28.1
+ordered-set==4.1.0
 packaging==23.1
 pandas==1.3.5
 parsimonious==0.8.1
@@ -69,6 +75,7 @@ plotly==5.15.0
 pluggy==1.2.0
 protobuf==3.19.5
 pycryptodome==3.19.0
+Pygments==2.16.1
 PyJWT==2.8.0
 pymongo==4.5.0
 pytest==7.4.2
@@ -83,6 +90,7 @@ PyYAML==5.1
 referencing==0.30.2
 requests==2.31.0
 requests-oauthlib==1.1.0
+rich==13.6.0
 rlp==2.0.1
 rpds-py==0.10.3
 s3transfer==0.6.2
@@ -105,6 +113,7 @@ web3==5.31.4
 webencodings==0.5.1
 websockets==9.1
 Werkzeug==2.2.3
+wrapt==1.15.0
 wsproto==1.2.0
 yarl==1.9.2
 zipp==3.15.0
