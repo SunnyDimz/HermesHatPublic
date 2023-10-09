@@ -8,8 +8,36 @@
         <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <title>Photographs</title>
+        <style>
+            .custom-loader i {
+                font-size: 9em;
+                animation: colorCycle 3s infinite linear;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1
+            }
+
+            @keyframes colorCycle {
+                0% { color: red; }
+                25% { color: blue; }
+                50% { color: green; }
+                75% { color: yellow; }
+                100% { color: red; }
+            }
+            #background-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+            }
+        </style>
     </head>
 <body>
+    
     <div class="ui large top fixed menu">
         <div class="ui container">
             <a class="active_item" href="/">Hermes Hat</a>
@@ -30,14 +58,14 @@
             </div>
         </div>
     </div>
-    <!-- Stripe Payment Banner 
-    <div class="stripe-banner">
-        <div class="stripe-text">Unlock Access to Exclusive Photos. Once you purchase you will receive a link to download a zip file with every photo! Thank you for your support :)</div>
-        <div class="stripe-button-wrapper">
-        <a href="https://buy.stripe.com/test_7sIeXWa7agvlfuw9AA" class="buy-button" target="_blank">Buy Photos for 2$</a>
-        </div>
-    </div> -->
-    <div class="grid">
+    <video id="background-video" autoplay loop muted>
+        <source src="/static/winter.mp4" type="video/mp4">
+    </video>
+    <div id="custom-loader" class="custom-loader" style="display:none;">
+        <i id="icon" class="fas fa-sun"></i> <!-- Replace with your custom icon -->
+    </div>
+
+    <div class="grid" style="visibility: hidden;">
         <div class="grid-sizer"></div>
         {% for image_url in object_keys %}
             <div class="grid-item">
@@ -45,21 +73,26 @@
             </div>
         {% endfor %}
     </div>
+
     <script>
+        // Show the spinner
+        $("#custom-loader").show();
+
         // Initialize Packery after all images have loaded
         var elem = document.querySelector('.grid');
-
+        
         imagesLoaded( elem, function() {
+            // Hide the spinner
+            $("#custom-loader").hide();
+
             // Make the grid visible
             elem.style.visibility = 'visible';
             
-            // Initialize Packery after a delay of 500ms
-            setTimeout(function(){
-                var pckry = new Packery( elem, {
-                    itemSelector: '.grid-item',
-                    gutter: 0
-                });
-            },300); // 500ms delay
+            // Initialize Packery
+            var pckry = new Packery( elem, {
+                itemSelector: '.grid-item',
+                gutter: 0
+            });
         });
     </script>
 </body>

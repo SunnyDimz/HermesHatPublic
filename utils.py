@@ -23,7 +23,7 @@ app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET')
 
 
 #fetching images from AWS S3 bucket for the Photography page
-def fetch_s3_images():
+def fetch_s3_images(start=0,end=10):
     s3_object_keys = []
     # AWS configurations (Replace with your own credentials)
     aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')

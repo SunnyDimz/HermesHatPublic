@@ -20,7 +20,6 @@ logging.info("OpenAI API key loaded")
 limiter = Limiter(
     app=app,
     key_func=get_remote_address,
-    default_limits=["2 per minute", "50 per day"]
 )
 logging.info("Rate limiter initialized")
 

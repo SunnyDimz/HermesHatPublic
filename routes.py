@@ -26,7 +26,8 @@ from flask_oauthlib.client import OAuth
 import jwt
 from datetime import datetime, timedelta
 from bson.json_util import dumps, loads
-from bson.objectid import ObjectId  
+from bson.objectid import ObjectId
+from functools import wraps
 
 
 data_cache = {}  # Global cache dictionary
@@ -240,14 +241,18 @@ def about():
 @app.before_request
 def before_request():
     google_token_from_session = session.get('google_token')  # Retrieve Google token from session
-    
-    # Search MongoDB for the user by Google token
     existing_user = mongo.db.users.find_one({"google_token": google_token_from_session})
     
     if existing_user:
         g.user_logged_in = True  # Setting the global variable
     else:
         g.user_logged_in = False  # Default value
+
+    # Check if the user is trying to access the /api/chat route
+    if request.path == '/api/chat' and not g.user_logged_in:
+        return jsonify({"error": "Unauthorized"}), 401  # Return 401 Unauthorized status
+
+    
 
 @app.route('/login')
 def login():

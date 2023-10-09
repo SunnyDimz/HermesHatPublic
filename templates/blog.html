@@ -152,7 +152,14 @@
                     'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({input: userQuestion, context: "Blog context here", token_limit: 100}),
-                }).then(response => response.json())
+                }).then(response => {
+                    if (response.status === 401) {
+                        // Display message prompting user to log in
+                        document.getElementById('chat-area').innerHTML += `<div class='warning-message'>Please log in by clicking the <i class='fas fa-lock'></i> icon to continue chatting.</div>`;
+                        return;
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     console.log("Backend Response: ", JSON.stringify(data, null, 4));
 
