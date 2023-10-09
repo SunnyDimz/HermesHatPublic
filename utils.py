@@ -16,8 +16,8 @@ import time
 from models import YouTubeVideo, BlogPost, FredData, mongo
 from markdown import Markdown
 import logging
-from app import app
 import jwt
+from config import app
 load_dotenv()
 app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET')
 
