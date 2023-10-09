@@ -35,7 +35,7 @@
         <!-- Boxes for links -->
         <div class="info-boxes">
             <a href="/economics" class="info-box">
-                <div class="article-image" style="background-image: url('/static/dark clouds.jpg');"></div>
+                <div class="article-image" style="background-image: url('/static/Fred.jpeg');"></div>
                 <div class="article-copy">
                     <div class="article-cat"><span>Economics</span></div>
                     <h3>Economic Indicators</h3>
@@ -45,10 +45,26 @@
             <a href="{{ url_for('blog', section='economics', post='natural_rate_of_interest') }}" class="info-box">
                 <div class="article-image" style="background-image: url('/static/blog_image1.jpg');"></div>
                 <div class="article-copy">
-                    <div class="article-cat"><span>Blog</span></div>
+                    <div class="article-cat"><span>Economics</span></div>
                     <h3>The Natural Rate of Interest</h3>
                 </div>
             </a>       
+            <!-- New box for blog post -->
+            <a href="{{ url_for('blog', section='history', post='Ukraine_Next_Generation') }}" class="info-box">
+                <div class="article-image" style="background-image: url('/static/ukraine_generation.jpeg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>Current Events</span></div>
+                    <h3>Ukraine's New Generation</h3>
+                </div>
+            </a>
+            <!-- New box for blog post -->
+            <a href="{{ url_for('blog', section='politics', post='Americas_Interest_Ukraine') }}" class="info-box">
+                <div class="article-image" style="background-image: url('/static/bakhmut.jpeg');"></div>
+                <div class="article-copy">
+                    <div class="article-cat"><span>History</span><span>Current Events</span></div>
+                    <h3>Americas Interest in Ukraine</h3>
+                </div>
+            </a>  
         </div>
         <script>
             // Add this script at the bottom of your HTML file
