@@ -20,6 +20,14 @@ questions:
       "Strengthen": 0
       "Falter": 0
       "Remain the same": 0
+suggested_questions:
+  - question: "What is the Budapest Memorandum"
+    question_id: "q1"
+  - question: "What was the US response to Russia's invasion of Ukraine in 2014"
+    questin_id: "q2"
+  - question: "Who were the strongest leaders against the Soviet Union"
+    question_id: "q3"
+
 ---
 
 # America's Duty and the Future of Ukraine: A Crossroads in Western Unity
