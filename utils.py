@@ -1,4 +1,5 @@
 import requests
+from flask import jsonify, session, request
 import logging
 import pandas as pd
 import plotly.graph_objs as go
@@ -56,18 +57,45 @@ def fetch_s3_images(start=0, end=10):
 
     return s3_object_keys
 # fetching youtubde videos to embed in the Media page
+video_cache = {}
+
 def fetch_youtube_video_details(video_id, api_key):
+    # Check if video details are in cache
+    # Extract video ID using regular expression
+    video_id_match = re.search(r'(?:v=|/|^)([0-9A-Za-z_-]{11})', video_id)
+    if video_id_match:
+        video_id = video_id_match.group(1)
+    else:
+        logging.error("Invalid YouTube URL")
+        return jsonify({"error": "Invalid YouTube URL"})
+    if video_id in video_cache:
+        logging.info(f"Fetching video details from cache for video_id: {video_id}")
+        return jsonify(video_cache[video_id])
+
     url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={api_key}&part=snippet"
     response = requests.get(url)
+    video_details = []
+    logging.info(f"Fetching video details from URL: {url}")
+
     if response.status_code == 200:
         data = response.json()
         items = data.get("items", [])
-        if items:
-            snippet = items[0].get("snippet", {})
+
+        for item in items:
+            snippet = item.get("snippet", {})
+            video_id = item.get("id", "")
+            logging.info(f"Video ID: {video_id}")
             title = snippet.get("title", "")
             description = snippet.get("description", "")
-            return {'video_id': video_id, 'title': title, 'description': description}
-    return None
+            channel = snippet.get("channelTitle", "")
+            video_details.append({'video_id': video_id, 'title': title, 'description': description, 'channel': channel})
+
+        # Store the video details in cache
+        video_cache[video_id] = video_details
+
+    logging.info(f"Fetched {len(video_details)} video details.")
+    return video_details
+
 def fetch_youtube_video_details_batch(video_ids, api_key):
     """
     Fetch details for multiple YouTube videos in a single request.
@@ -81,7 +109,6 @@ def fetch_youtube_video_details_batch(video_ids, api_key):
     # Construct the URL for the YouTube API
     url = f"https://www.googleapis.com/youtube/v3/videos?id={video_ids_string}&key={api_key}&part=snippet"
     response = requests.get(url)
-    logging.info(f"Fetching video details from URL: {url}")
     video_details = []
     logging.info(f"Fetching video details from URL: {url}")
     if response.status_code == 200:
@@ -95,7 +122,6 @@ def fetch_youtube_video_details_batch(video_ids, api_key):
             description = snippet.get("description", "")
             channel = snippet.get("channelTitle", "")
             video_details.append({'video_id': video_id, 'title': title, 'description': description, 'channel': channel})
-    logging.info(f"Fetched {len(video_details)} video details.")
     return video_details
 # fetching data from FRED API
 FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json"

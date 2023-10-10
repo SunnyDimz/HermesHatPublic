@@ -6,7 +6,7 @@ author: "Your Name Here"
 created_at: "2023-10-09"
 updated_at: "2023-10-09"
 related_links: ["https://www.loc.gov/exhibits/archives/intn.html", "https://en.wikipedia.org/wiki/Budapest_Memorandum", "https://www.youtube.com/watch?v=nTvswwU5Eco"]
-media_links: ["https://www.youtube.com/watch?v=8ek5jt8Ru3o"]
+media_bucket_links: ["https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy"]
 tags: "politics, history, Ukraine"
 questions: 
   - question: "Will Western unity strengthen or falter?"

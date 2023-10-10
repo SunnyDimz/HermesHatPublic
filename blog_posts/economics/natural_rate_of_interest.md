@@ -6,7 +6,7 @@ author: "Dmitriy Borzhkovskiy"
 created_at: "2023-09-07"
 updated_at: "2023-09-07"
 related_links: ["https://www.newyorkfed.org/research/policy/rstar", "https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/", "https://www.econlib.org/library/Enc/bios/Hayek.html", "https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754", "https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain","https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)"]
-media_links: ["https://www.youtube.com/watch?v=rdYHoIDX44M", "https://www.youtube.com/watch?v=g6iXBQ33pBo"] 
+media_bucket_links: ["https://youtu.be/Gc6E6_-Q-0E?si=FJt96__MimhpSbkO", "https://youtu.be/mFI58RRCDbs?si=OMIaHMH3kDqg5xsd","https://youtu.be/5A3KCaaTT2I?si=mIDcFnn4nW8ksFdn","https://youtu.be/R8VBRCs2jTU?si=1j7G2QzxUODYO58T"] 
 tags: "economics"
 questions: 
   - question: "What is the natural rate of interest?"

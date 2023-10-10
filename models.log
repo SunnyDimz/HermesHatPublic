@@ -250,3 +250,17 @@ INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
 INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
 INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
 INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy', 'FIbdbrN9cwo', 'zs_V7ao8kTMnGiGy', '5mi2HfMtyOI']
+INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
+INFO:root:Validating link: FIbdbrN9cwo
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy']
+INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.

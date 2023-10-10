@@ -77,9 +77,14 @@ def blog(section, post):
             related_links = metadata.get('related_links', [])
             questions = metadata.get('questions', [])
             summary = metadata.get('summary', "")
-            media_links = metadata.get('media_links', [])
+            media_bucket_links = metadata.get('media_bucket_links', [])
+            logging.info(f"Media bucket links: {media_bucket_links}")
             suggested_questions=metadata.get('suggested_questions', [])
-            
+            youtube_details = []
+            for link in media_bucket_links:
+                api_key = os.getenv("api_key")
+                details = fetch_youtube_video_details(link, api_key)  # Your function to fetch YouTube video details
+                youtube_details.append(details)
             # Convert markdown content to HTML
             content_html = markdown(content_str)
             session['current_blog_content'] = content_html
@@ -93,7 +98,7 @@ def blog(section, post):
         logging.error(f"An error occurred: {e}")
         return "An error occurred", 500
     print("Questions:", questions)
-    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'), summary=summary,media_links=media_links, suggested_questions=suggested_questions)
+    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'), summary=summary,media_bucket_links=media_bucket_links, suggested_questions=suggested_questions)
 
 @app.route('/submit_answer', methods=['POST'])
 def submit_answer():
@@ -386,7 +391,7 @@ def chat():
             return jsonify({"error": "No data received"}), 400
         user_input = data.get('input', '').strip()
         blog_context = session.get('current_blog_content', '')
-        token_limit = data.get('token_limit', 120)
+        token_limit = data.get('token_limit', 150)
         if 'chat_history' not in session:
             session['chat_history'] = []
         session['chat_history'].append({
@@ -398,7 +403,7 @@ def chat():
             logging.warning("Input or context too long.")
             return jsonify({"error": "Input or context too long"}), 400
         messages = [
-            {"role": "system", "content": "You are a helpful assistant helping me teach users about various topics in history, economics, philosophy, politics, technology, and current events. We want to engage users and have them ask questions.Limit results to 120 tokens."},
+            {"role": "system", "content": "You're an assistant teaching users about topics in history, economics, philosophy, politics, technology, and current events. We want to engage users and have them ask questions.Limit your results to 100 tokens."},
             {"role": "user", "content": f"{blog_context}"},
             {"role": "user", "content": f"{user_input}"}
         ]

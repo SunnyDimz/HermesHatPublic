@@ -501,6 +501,7 @@ iframe {
 /* Chat Modal Styles */
 .chat-modal {
     display: none;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -529,29 +530,38 @@ iframe {
     margin: 0;
 }
 
+.chat-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);  /* 100% of parent height minus the header height, change 50px based on your actual header height */
+}
+
 .chat-area {
-    max-height: 250px;
-    overflow-y: auto;
     flex-grow: 1;
+    max-height: calc(100% - 60px);  /* 100% of parent height minus the input area height, change 60px based on your actual input area height */
     overflow-y: auto;
     padding: 10px;
 }
 
 .chat-input-area {
-    position: sticky;
-    padding: 10px;
+    flex-shrink: 0;
     border-top: 1px solid #ccc;
+    padding: 10px;
 }
 
+  
 #user-input {
     width: 100%;
 }
 
 #send-button {
+    display: flex;
+    flex-direction: column;
     margin-top: 5px;
 }
 
 .suggested-questions-area {
+    max-height: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -566,7 +576,7 @@ iframe {
 }
 .suggested-question-bubble {
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     margin: 5px;
     border-radius: 20px;
     background-color: #f2f2f2;

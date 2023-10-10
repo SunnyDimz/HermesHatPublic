@@ -87,6 +87,7 @@
                 </div>
             </div> -->
             <!-- video Section -->
+            <!-- Store media links in a data attribute -->
             <div id="related_videos" class="sidebar-section" style="overflow-y: auto;">
                 <h3>Related Videos</h3>
                 <div class="video-scroll-container">
@@ -121,6 +122,7 @@
     <script>
         $(document).ready(function() {
             displaySuggestedQuestions({{ suggested_questions | tojson | safe }});
+
             // Log to see if document is ready
             console.log("Document is ready");
             initChatModal();
@@ -168,7 +170,15 @@
                 });
                 console.log("Suggested question sent to the backend");
             }
-            
+            async function fetchSuggestedQuestions() {
+                try {
+                    // Use the global suggestedQuestions variable
+                    displaySuggestedQuestions(suggestedQuestions.map(q => q.question));
+                } catch (error) {
+                    console.error("An error occurred while fetching suggested questions:", error);
+                }
+            }
+
             function displaySuggestedQuestions(questions) {
                 const questionContainer = document.getElementById('suggested-questions-container');
                 questions.forEach((question) => {
@@ -206,16 +216,56 @@
                 })
                 .then(data => {
                     console.log("Backend Response: ", JSON.stringify(data, null, 4));
-
+            
                     // Update the chat with user's question and model's response
                     let userQuestion = document.getElementById('user-input').value;
-                    document.getElementById('chat-area').innerHTML += `<div class='user-message'>You: ${userQuestion}</div>`;
-                    document.getElementById('chat-area').innerHTML += `<p>${data.response}</p>`;
-                    document.getElementById('chat-area').innerHTML += `<div class='bot-message'>Hermes: ${data.message}</div>`;
+                    let chatArea = document.getElementById('chat-area');
+                    chatArea.innerHTML += `<div class='user-message'>You: ${userQuestion}</div>`;
+                    chatArea.innerHTML += `<div class='bot-message'>Hermes: ${data.message}</div>`;
+            
+                    // Scroll chat area to the bottom to show latest messages
+                    chatArea.scrollTop = chatArea.scrollHeight;
                 });
+            
                 console.log("Question sent to the backend");
             }
+            
+            // Assuming you have a route named '/api/youtube_details' that returns video details
+            // Add this inside your $(document).ready(function() { ... });
+            var media_bucket_links = {{ media_bucket_links | tojson | safe }};
+            console.log("Media bucket links:", media_bucket_links);
+            const videoContainer = $('.video-scroll-container');
+            media_bucket_links.forEach(link => {
+                const video_id = link.split("youtu.be/")[1].split("?")[0];
+                console.log("Video ID:", video_id);
+                const videoElement = `
+                    <div class="video-wrapper">
+                        <iframe width="250" height="140" src="https://www.youtube.com/embed/${video_id}" frameborder="0" allowfullscreen></iframe>
+                    </div>`;
+                videoContainer.append(videoElement);
+                console.log("Video element added");
+            });
 
+        
+            adjustVideoHeight();
+            });
+            // Adjust the video section height
+            function adjustVideoHeight() {
+                let blogHeight = $('#blog-content').height();
+                let relatedHeight = $('#related-links').height();
+                let videoHeight = blogHeight - relatedHeight;
+                $('.video-scroll-container').height(videoHeight);
+            }
+
+            adjustVideoHeight(); // Call it initially
+
+            // Update height when window is resized
+            $(window).on('resize', adjustVideoHeight);
+            $('#content-area a').attr('target', '_blank');
+            async function initChatModal() {
+                const suggestedQuestions = await fetchSuggestedQuestions();
+                displaySuggestedQuestions(suggestedQuestions);
+            }
             function getCookie(name) {
                 const value = `; ${document.cookie}`;
                 const parts = value.split(`; ${name}=`);
@@ -337,38 +387,7 @@
                 $('#newCommentBox').addClass('hidden'); // Hide the comment box
                 $('#newCommentText').val(''); // Clear the textarea
             });
-            // Assuming you have a route named '/api/youtube_details' that returns video details
-            $.get('/api/youtube_details?section=economics', function(data) {
-                const videoContainer = $('.video-scroll-container');
-                data.forEach(video => {
-                    const videoElement = `
-                        <div class="video-wrapper">
-                            <iframe width="250" height="140" src="https://www.youtube.com/embed/${video.video_id}" frameborder="0" allowfullscreen></iframe>
-                            <div class="video-title">${video.title}</div>
-                            <div class="video-channel">${video.channel}</div>
-                        </div>`;
-                    videoContainer.append(videoElement);
-                });
-                adjustVideoHeight();
-            });
-            // Adjust the video section height
-            function adjustVideoHeight() {
-                let blogHeight = $('#blog-content').height();
-                let relatedHeight = $('#related-links').height();
-                let videoHeight = blogHeight - relatedHeight;
-                $('.video-scroll-container').height(videoHeight);
-            }
-
-            adjustVideoHeight(); // Call it initially
-
-            // Update height when window is resized
-            $(window).on('resize', adjustVideoHeight);
-            $('#content-area a').attr('target', '_blank');
-            async function initChatModal() {
-                const suggestedQuestions = await fetchSuggestedQuestions();
-                displaySuggestedQuestions(suggestedQuestions);
-            }
-        });
+            
     </script>
     <style>
         @media only screen and (max-width: 768px) {
