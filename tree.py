@@ -18,7 +18,7 @@ def list_files(startpath, output_file, ignore_paths=None):
 
 if __name__ == '__main__':
     startpath = '.'  # Start from the current directory
-    ignore = ['dimzvirtual', 'bin', 'lib', 'include', 'node_modules']
+    ignore = ['dimzvirtual', 'bin', 'lib', 'include', 'node_modules', 'git', '__pycache__','.vscode']
     
     with open('directory_tree.txt', 'w') as f:
         list_files(startpath, f, ignore_paths=ignore)

@@ -6,16 +6,40 @@
     models.py
     requirements.txt
     directory_tree.txt
+    config.pyc
     runtime.txt
     updated_index.html
+    mongotest.py
     updated_labor_market.html
     .gitignore
     utils.py
     .env
+    chatgpt.py
+    fredmongo.py
     archive.py
     app.py
     Procfile
+    webhooks.py
+    models.log
+    playground-2.mongodb.js
+    blogapi.py
     routes.py
+    blog_posts/
+        .DS_Store
+        technology/
+            Generative AI.md
+            innovation.md
+        politics/
+            healthcare_drug_patents.md
+            Americas_Interest_Ukraine.md
+        philosophy/
+        history/
+            Ukraine_Next_Generation.md
+        economics/
+            natural_rate_of_interest.md
+            test.md
+            inequality.md
+            EV_and_Infrastructure.md
     .pytest_cache/
         CACHEDIR.TAG
         README.md
@@ -24,41 +48,34 @@
             cache/
                 lastfailed
                 stepwise
-    
-        static/
-            greektexture.jpeg
-            favicon.ico
+    hermesvirtual/
+        .DS_Store
+        watchdog.py
+        requirements.txt
+        directory_tree.txt
+        linkparse.py
+        pyvenv.cfg
+        application.py
+        hermeshat.zip
+        models.log
+        main_app.py
+        tests/
             .DS_Store
-            blog_image1.jpg
-            Blood Sunset.jpg
-            dark clouds.jpg
-            Sunny Flowers.jpg
-            greekvase.jpg
-            Asian Flower.jpg
-            Duck Lovers.jpg
-            Summer Sails.jpg
-            papyrus.jpeg
-            style.css
-            profile.jpeg
-            winter.mp4
-            the-school-of-athens.jpeg
-            boot.png
-            marble.jpg
-        templates/
-            blog.html
-            index.html
-            about.html
-            UNRATE.html
-            photographs.html
-            economics_test.html
-            media.html
-            economics.html
-            links/
-                philosophy.txt
-                current.txt
-                politics.txt
-                history.txt
-                economics.txt
+            __init__.py
+            unit/
+                __init__.py
+                test_routes.py
+                test_models.py
+            integration/
+                __init__.py
+                test_models.py
+        etc/
+            jupyter/
+                nbconfig/
+                    notebook.d/
+                        jupyterlab-plotly.json
+        models/
+            test.mongodb.js
         share/
             .DS_Store
             jupyter/
@@ -83,288 +100,40 @@
                         index.js
                         index.js.LICENSE.txt
                         extension.js
-    .git/
+    static/
+        greektexture.jpeg
+        Fred.jpeg
+        favicon.ico
         .DS_Store
-        ORIG_HEAD
-        config
-        HEAD
-        description
-        index
-        packed-refs
-        COMMIT_EDITMSG
-        FETCH_HEAD
-        objects/
-            59/
-                005089337fa327ed656dfb8f314ae833fc6e1d
-            50/
-                c473dc2c73f80b7003eb65a43f1d8cc98ba2cd
-            03/
-                8c78e9bfd89d13d78f268b96444212596b968e
-            9b/
-                129a0dc455b0fdca54179cb683f9856fef8386
-            9e/
-                8e427f42875f7d223bc5316d98c6880f77e354
-            04/
-                5a3d80bc6d394a8ce4525ba627ae5d06fe1953
-            6a/
-                44d2aec8131a121057fb96f6761c4dd525649b
-            32/
-                bc7fe4ea56cb2673631c7fea8a072dce6945f3
-            35/
-                e838309f583449bafa79799861e6ee228af7e3
-                58803011e54e53c3f1bc86d89dcb741be4278d
-                2adca1a4d29b8fa0f13f91ad5ccc7d5683435e
-            3c/
-                837551ccb968897d105461483000680b7325eb
-            56/
-                ab52d38b02d2953006e436a926a9af09f2b189
-            51/
-                3000837d2d6b01e8fe79c50590d51b4b041dfb
-            58/
-                7453689ec35b5b13b888a6e075f257c43b493c
-            67/
-                c75ddae541733761bdf50ff0691ec5e4344a2f
-            0e/
-                52bad8b85eba4677a781cc29872a9187b7871b
-            60/
-                6d4e7820384eb0e94309c2ef7a1262c61fc2e3
-            34/
-                47a645a7737fd805e00290aca9083c505afb75
-            5a/
-                411748695976d8efc01c424b7fc7a5f31e58bb
-            33/
-                0ddc2f00ffc1aff40e540b08caa4bb00d19df5
-                5f818698929813ffe752c6be21503c22a08b21
-            05/
-                9442caf7615cdeb2e335fa28978dc04a0aabce
-            d0/
-                21846970c778218e7287a51dfc7733e4853fad
-                cf3385f55007c44d623369a322f8dbe11087fa
-            b4/
-                7a8a5b4c0360e8c3a74a4d6f80020639712b90
-            bc/
-                4d66ae230acc96441fce51a9c05626e327d130
-            f4/
-                eff16acad8613ea74f07fefadbe5687f46ec5f
-                2718ca2a0741ad9945e877fb04823031724956
-            c7/
-                d596a4c6491f8390b889f27de13d6609908987
-                2e282eb6a0b5651db1887b78ec4331261fe635
-            c9/
-                27c38218c1c2a118e546f0b38fd763d1325632
-            fd/
-                c4f1aa5bc229f53b3b82f236fa1d14008e8394
-                d76c2565bedc7ca63004b6270538b8514b09a3
-            f5/
-                b48c5728264d45c42994953fa90dfebb9f7822
-            ca/
-                2c4b6dda4858bfda367f80d75bda5144e4ef18
-                00c345e163b7f38b9c11828930dfb94ec07087
-                6e941cbc79a8519bfef7475ea15c12cb0b5550
-                5675db6265a57aafcb211164f4a7748d364d40
-            ed/
-                0bdc60b092f14c5e7a1eb44cadd57c754711fc
-            c1/
-                6fd8adc2353a0670430a5876a190e9215b4297
-            20/
-                ee443aa14bc6fa5fc0aca4f1e63adf1dfe57b2
-            pack/
-                pack-a6ef9845c1a6663530c04659153fe3702f7b5d05.pack
-                pack-a6ef9845c1a6663530c04659153fe3702f7b5d05.idx
-            7c/
-                78f23ea78b384b2218d1169ebc80f01c70e10d
-            16/
-                9d5f4b260a744cef89bfdab0198c105eb35f87
-                643bd86d8346c30aaf0602f9d142aa8feca9cd
-            42/
-                a1b8ef9d881e6d9b52cb75a284912063e88e13
-            89/
-                2514754fe6c467c16f5b24559fd1e3c1a9a7cf
-            45/
-                973e3b4663c620e1d0f84860f1b4262a1b0fde
-            73/
-                92a66368288e8139b3e6cf85eaddd39bf9f6c7
-            17/
-                2053e9e49c26a89fdab721340767329bcdc157
-            8f/
-                e2412633202f75ea6a2a740f00eaa5c9d69ffa
-            10/
-                5456240aaa921ab692352896d087ed80e8062c
-                b6eb379a48af73d0bca36a87ea266e8770a625
-            19/
-                f05297cd3ee86a70ab05f552d11ec0b7567478
-            26/
-                69545242b48df2755bfc907bfd0f0cecac0da0
-            75/
-                799cd73ebe0eb6a7dfb5edd2f329e147b10136
-            86/
-                a2e2ce7cd689f8aa1f71d6715f57bac8deef73
-            44/
-                2ec1685c57749a9dd4158dca14048e05d99d09
-                4357b2b6f300595fc77588768828e7f059f537
-            2f/
-                ef0d10512465f30ee636bdcbcf83763a2b1ae2
-            43/
-                348587ea25bdf633a56a3f2bf89040d56cac6f
-            38/
-                7c89cfd789ac84f759df179b24ea6070fe4f78
-            36/
-                bd6d82842616b43c4f86e3b7900bfcc11a7713
-            31/
-                0eae053a39de088b601628c1d7ae3e6542bd82
-                afdeb3ddad472476ab65ad53ca6b9499b59e65
-            info/
-                packs
-            62/
-                612d7cb65edc2ade77f3c741fe5fa82fc8ae79
-            96/
-                bbe5e9390d5dedda18d8b98301c561a4bb5057
-            98/
-                e3083977b240a5321d7a9bca6a1d0435d96bd4
-            3f/
-                84d5772577f64ff69e5faa758b184b571f8de0
-                909d7e1d8a99cd6393c1fac485ee1d45c9a2de
-            5b/
-                340136652e4a62d29a0ab0ad0266924d0f1a21
-            06/
-                7123c8cfc5a5a3e3f77e512b2aa017fdc206b7
-            39/
-                b948d25bd32e90d6290becb83d6cdddf06bd3d
-                544354bcfd02e8fdb1bdc5822441224ff0ba78
-                a87eb319b9a4204e013bb71ac0919b5489d4c5
-            99/
-                4cd64cd2c7c96092ac8e2a84e06abddee27977
-                5e1ad9c6dcdb4e1c81aa31ab861a2bd2ba9061
-            0a/
-                8fd0c0d40db7ae755548a44bfa816bd7336746
-            64/
-                a0387be8bca267df920f01e1b1bb26684c6aff
-            90/
-                15a7580e687593a7ff7a63780559d586621102
-            bf/
-                e006dca229495337a23ad7e93fa92f34817ed9
-            d3/
-                83b764f779a684056e1a20bae4ab2e3f349f76
-            a9/
-                df3b5ac2153b4dedba9d5eae49d2e9ea0ceb1a
-            d2/
-                5e0dd317c0b1311cebce2795fe27cd8f06ec0b
-            db/
-                1e5f46f9181d2b913f6647bc4e0c3a8fea1ce6
-                3da6a066df4824b6a33cb5772e2532b553135e
-                fbd4c37e5023830e9cb9898daba223b1d21848
-            a6/
-                62b3be2bd4af068a64977ec2bcf978747cee7d
-                4fdc9d94c5700075564954e3760b80bec3d233
-                e85cbf76bb4c23c2b18c9c7223e621222da716
-            b9/
-                e7b1dd5df17ea1aebb36ce12ae59e22a20b723
-            c4/
-                d6d23bc834d685a9f75619878b8fdf7ca2a8eb
-            e1/
-                3c924765b160095edd5002f774a88536d44a88
-            cc/
-                4c2859f0c98700f2a888a59734d47d720ad398
-                7fd7f15d9a9c3c1d5a9cf66e37d2ff911e29ff
-            e6/
-                2ffd82d9a3ed0218b986d1e6c8ad7dd20fc5d6
-            f7/
-                89c67ef3466e7f894044de013fe2d32e64866b
-            fa/
-                1d39ff33cff9944ec9ddd86bfdf05ef23a486c
-                5ea43e0374f46d154805acdd2d837ff7b8e659
-                e26cec45553854653ba413911b8a6656b2e72e
-            c5/
-                9e71b884755ef338f77732cd509b7786443cce
-            c2/
-                c3374843dbed1bff880922366d59fff9068423
-            f6/
-                ae9534296e7f32ae8f1366922088859372f629
-            e9/
-                1de5d501e2233420d1da35ebb0ea0126536ac5
-            f1/
-                434c9771ffe4b87ee231ca8f60c8917417819e
-            f8/
-                b4bc372003d2a784f64efbe02f170824ddb3a7
-            46/
-                958818ba5c39b6dd1f1ca072d6636766ac5ba8
-            2c/
-                cd19d27fbf4d072be184557bd4311faf6efcd7
-            41/
-                fa6074aa11f60c04de1c51db38a0b46000158a
-            77/
-                39b5ac59884ec3dd1a7056a335f7a0e900adc1
-            48/
-                c684e7dccc7f6f64ee3f5fab57e904bdc23c92
-            70/
-                943cb5f003530b985ab98599751ad45e97dbb0
-                232005c04b2f575702abccae7a746be7d827c2
-            1e/
-                be0fae7ad671bafb69ca11149cd6a27ab7ccf7
-            84/
-                a43c6f89d79c3e534be283558956b6693ab5b3
-                7418835eee02c5b23826554ee8a410ca3aea18
-            4f/
-                44bce9e69efb13d5bdfeaa4fcb7b2284f22405
-            71/
-                9f58cdb1a8632cf145823f50fc859a5780ddf4
-            76/
-                8326760950d3fb4cdcc65a749f5ebee52ae820
-                be8cc45f80c2256f1375d1ac58652cd9aa7eec
-            1c/
-                c0ff0edbf0f3d4de18d369735cab9cd2d13c79
-            40/
-                dcd4eccf2932ee2e6180fcb9b4efcad6f92fe8
-                3850e21b43c3fd8ef5dd2397bb6ac89decf5f5
-            78/
-                7dbf3ce249d433b50a713973888fc85b936e68
-            8b/
-                c4ad644d1bdf36c48ebf120df3e43403a2755f
-            13/
-                f427b4a846cbf9ab44f8bef31b2d1928defc3c
-                39c3de32fe29f71e8602734d2be83a4a40fe62
-            8e/
-                be7bf5961521a85e333611c6252d3d2134aba3
-                c89e36cec3d93d9be46c5ba3e8dc5b817a4994
-        info/
-            exclude
-            refs
-        logs/
-            HEAD
-            refs/
-                heads/
-                    test
-                    master
-                remotes/
-                    heroku/
-                        master
-                    origin/
-                        test
-                        main
-        hooks/
-            commit-msg.sample
-            pre-rebase.sample
-            pre-commit.sample
-            applypatch-msg.sample
-            fsmonitor-watchman.sample
-            pre-receive.sample
-            prepare-commit-msg.sample
-            post-update.sample
-            pre-applypatch.sample
-            pre-push.sample
-            update.sample
-        refs/
-            original/
-            heads/
-                master
-            tags/
-            remotes/
-                heroku/
-                    master
-                origin/
-                    test
-                    main
-        branches/
-    .vscode/
-        settings.json
-        extensions.json
+        greekvase.jpeg
+        blog_image1.jpg
+        Blood Sunset.jpg
+        dark clouds.jpg
+        Sunny Flowers.jpg
+        Asian Flower.jpg
+        Duck Lovers.jpg
+        Summer Sails.jpg
+        bakhmut.jpeg
+        papyrus.jpeg
+        style.css
+        profile.jpeg
+        winter.mp4
+        ukraine_generation.jpeg
+        the-school-of-athens.jpeg
+        boot.png
+        marble.jpg
+    templates/
+        blog.html
+        index.html
+        about.html
+        UNRATE.html
+        photographs.html
+        economics_test.html
+        media.html
+        economics.html
+        links/
+            philosophy.txt
+            current.txt
+            politics.txt
+            history.txt
+            economics.txt

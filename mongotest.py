@@ -39,7 +39,8 @@ def upload_markdown_to_mongo(md_file_path):
         media_bucket_links=metadata.get("media_links", []),
         date=metadata.get("created_at", "Default Creation Date"),
         summary=metadata.get("summary", "Default Summary"),
-        questions=metadata.get("questions", [])  # Add questions here
+        questions=metadata.get("questions", []),  # Add questions here
+        suggested_questions=metadata.get("suggested_questions", [])  # Add suggested questions here
     )
     blog_post.save_to_mongo()
 

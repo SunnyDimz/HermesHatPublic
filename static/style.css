@@ -530,13 +530,15 @@ iframe {
 }
 
 .chat-area {
+    max-height: 250px;
+    overflow-y: auto;
     flex-grow: 1;
-    max-height: 300px;
     overflow-y: auto;
     padding: 10px;
 }
 
 .chat-input-area {
+    position: sticky;
     padding: 10px;
     border-top: 1px solid #ccc;
 }
@@ -548,3 +550,27 @@ iframe {
 #send-button {
     margin-top: 5px;
 }
+
+.suggested-questions-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.suggested-question {
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+.suggested-question-bubble {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(226, 245, 52) 0%, rgba(0,204,255,1) 100%);
+  }
+  

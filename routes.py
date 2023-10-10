@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, session, g, make_response
+from flask import Flask, render_template, jsonify, request, session, g, make_response, json
 from flask_mail import Mail, Message
 from flask import flash, redirect, url_for
 from flask_compress import Compress
@@ -31,6 +31,7 @@ from functools import wraps
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import openai
+import stripe
 
 data_cache = {}  # Global cache dictionary
 
@@ -77,10 +78,12 @@ def blog(section, post):
             questions = metadata.get('questions', [])
             summary = metadata.get('summary', "")
             media_links = metadata.get('media_links', [])
-
+            suggested_questions=metadata.get('suggested_questions', [])
             
             # Convert markdown content to HTML
             content_html = markdown(content_str)
+            session['current_blog_content'] = content_html
+
             print(f"Successfully loaded Markdown file from {markdown_file_path}")
             logging.info(f"Successfully loaded Markdown file from {markdown_file_path}")
     except FileNotFoundError:
@@ -90,7 +93,7 @@ def blog(section, post):
         logging.error(f"An error occurred: {e}")
         return "An error occurred", 500
     print("Questions:", questions)
-    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'), summary=summary,media_links=media_links)
+    return render_template('blog.html', content_html=content_html, related_links=related_links, questions=questions, post_title=metadata.get('title'), summary=summary,media_links=media_links, suggested_questions=suggested_questions)
 
 @app.route('/submit_answer', methods=['POST'])
 def submit_answer():
@@ -242,14 +245,17 @@ def about():
 # endpoint to verify login to update lock icon to unlock. leverage google token
 @app.before_request
 def before_request():
+    session.permanent = True # make the session permanent so it keeps existing after browser gets closed
+    app.permanent_session_lifetime = timedelta(minutes=5) # set the session lifetime to 5 minutes
     google_token_from_session = session.get('google_token')  # Retrieve Google token from session
     existing_user = mongo.db.users.find_one({"google_token": google_token_from_session})
-    
+    g.user_has_paid = False  # Default value
+
     if existing_user:
         g.user_logged_in = True  # Setting the global variable
+        g.user_has_paid = existing_user.get("has_purchased_photos", False)
     else:
         g.user_logged_in = False  # Default value
-
     # Check if the user is trying to access the /api/chat route
     if request.path == '/api/chat' and not g.user_logged_in:
         return jsonify({"error": "Unauthorized"}), 401  # Return 401 Unauthorized status
@@ -318,6 +324,38 @@ def stripe_webhook():
     logging.info("Received webhook from Stripe.")
     return webhook_received()
 
+@app.route('/create-checkout-session', methods=['POST', 'GET'])
+def create_checkout_session():
+    stripe.api_key = os.getenv("STRIPE_SECRET")
+    session = stripe.checkout.Session.create(
+        payment_method_types=['card'],
+        line_items=[{
+            'price_data': {
+                'currency': 'usd',
+                'unit_amount': 200,  # $2.00
+                'product_data': {
+                    'name': 'Photos ZIP File',
+                },
+            },
+            'quantity': 1,
+        }],
+        mode='payment',
+        success_url='http://localhost:5000/success',
+        cancel_url='http://localhost:5000/cancel',
+    )
+    return jsonify({'id': session.id})
+@app.route('/check-payment-status', methods=['GET'])
+def check_payment_status():
+    if not g.user_logged_in:
+        return jsonify({"status": "failure", "reason": "User not logged in"}), 401
+    
+    google_token_from_session = session.get('google_token')  # Retrieve Google token from session
+    existing_user = mongo.db.users.find_one({"google_token": google_token_from_session})
+    
+    if existing_user and existing_user.get("has_purchased_photos"):
+        return jsonify({"status": "success", "has_paid": True})
+    else:
+        return jsonify({"status": "success", "has_paid": False})
 
 # endpoint for chatgpt api
 # Initialize logging
@@ -340,25 +378,31 @@ logging.info("Rate limiter initialized")
 @limiter.limit("5 per minute")
 def chat():
     """Chat with GPT-4"""
+    
     try:
         data = request.get_json()
         if not data:
             logging.warning("No data received.")
             return jsonify({"error": "No data received"}), 400
         user_input = data.get('input', '').strip()
-        blog_context = data.get('context', '').strip()
-        token_limit = data.get('token_limit', 100)
-
+        blog_context = session.get('current_blog_content', '')
+        token_limit = data.get('token_limit', 120)
+        if 'chat_history' not in session:
+            session['chat_history'] = []
+        session['chat_history'].append({
+            "role": "user",
+            "content": user_input
+        })
         # Validate input and context length
-        if len(user_input) > 100 or len(blog_context) > 100:
+        if len(user_input) > 100:
             logging.warning("Input or context too long.")
             return jsonify({"error": "Input or context too long"}), 400
-
         messages = [
-            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "system", "content": "You are a helpful assistant helping me teach users about various topics in history, economics, philosophy, politics, technology, and current events. We want to engage users and have them ask questions.Limit results to 120 tokens."},
             {"role": "user", "content": f"{blog_context}"},
             {"role": "user", "content": f"{user_input}"}
         ]
+        messages.extend(session['chat_history'])
         logging.info(f"Sending messages to GPT-4: {messages}")
         response = openai.ChatCompletion.create(
             model="gpt-4",
@@ -367,7 +411,11 @@ def chat():
         )
         message = response['choices'][0]['message']['content'].strip()
         logging.info(f"Received message from GPT-4: {message}")
-
+        # Add the assistant's message to the chat history
+        session['chat_history'].append({
+            "role": "assistant",
+            "content": message
+        })
         return jsonify({"message": message})
 
     except Exception as e:

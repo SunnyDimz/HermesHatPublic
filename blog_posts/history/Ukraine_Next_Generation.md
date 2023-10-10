@@ -20,6 +20,13 @@ questions:
       "Strengthen": 0
       "Falter": 0
       "Remain the same": 0
+suggested_questions:
+  - question: "How big is Ukraine?"
+    question_id: "q1"
+  - question: "What was Kievan Rus?"
+    questin_id: "q2"
+  - question: "What religions live in Ukraine?"
+    question_id: "q3"
 ---
 
 # The New Ukrainian Generation: Forged in War, United in Resolve
@@ -44,7 +51,5 @@ After the fall of the Soviet Union, questions arose about the allocation of reso
 
 It might be tempting to view the international solidarity behind Ukraine as miraculous. However, such a view diminishes the efforts of countless individuals, from President Zelenskiy to everyday supporters. Cracks are appearing in this unity, especially in the American political landscape. The choices we make now will reverberate for generations.
 
-## Questions
 
-Will Western unity strengthen? Falter? The stakes have never been higher.
 

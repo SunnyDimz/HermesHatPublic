@@ -20,6 +20,13 @@ questions:
       "A rate set by the Federal Reserve": 0
       "The interest rate at which inflation is stable": 0
       "The interest rate on Treasury Bills": 0
+suggested_questions:
+  - question: "What was the average natural rate of interest up to 2000?"
+    question_id: "q1"
+  - question: "Who was Paul Volcker"
+    questin_id: "q2"
+  - question: "When did the Federal Reserve start?"
+    question_id: "q3"
 ---
 
 # Understanding the Natural Rate of Interest and Its Impacts

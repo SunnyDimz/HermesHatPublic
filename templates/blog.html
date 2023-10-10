@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ post_title }}</title> <!-- Updated the title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile Responsiveness -->
+    <title>{{ post_title }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -96,35 +97,39 @@
     </div>
     <div id="script-icon" class="chat-button" style="cursor: pointer;">
         <i class="fa fa-scroll fa-2x"></i>
-    </div>      
-    <!-- The Modal -->
-    <div id="question-modal" class="chat-modal">
+    </div>    
+    <!-- Chat Modal -->  
+    <div id="question-modal" class="chat-modal" role="dialog" aria-labelledby="chat-title">
         <div class="chat-modal-header">
-            <span class="chat-title">Hermes Chat</span>
-            <span id="close-chat" class="close-chat">&times;</span>
+            <span id="chat-title" class="chat-title">Hermes Chat</span>
+            <span id="close-chat" class="close-chat" role="button" aria-label="Close Chat">&times;</span>
         </div>
         <div class="chat-modal-content">
+            <div id="suggested-questions-container" class="suggested-questions-container">
+                <!-- Suggested questions will be dynamically loaded here -->
+            </div>
             <div id="chat-area" class="chat-area"></div>
             <div class="chat-input-area">
-                <textarea id="user-input" maxlength="100" placeholder="Type your question..."></textarea>
+                <textarea id="user-input" maxlength="100" placeholder="Type your question..." aria-label="User Input"></textarea>
                 <p id="char-count">100</p>
-                <button id="send-button">Send</button>
+                <button id="send-button" role="button" aria-label="Send Question">Send</button>
             </div>
         </div>
     </div>
 
     <!-- JavaScript for Highlighting and Commenting -->
     <script>
-        
         $(document).ready(function() {
+            displaySuggestedQuestions({{ suggested_questions | tojson | safe }});
             // Log to see if document is ready
             console.log("Document is ready");
-
+            initChatModal();
             // Toggle the visibility of the modal and replace the related videos
             $('#script-icon').click(function() {
                 $('#question-modal').toggle();
                 $('#related_videos').toggleClass('hide');
                 console.log("Script icon clicked");
+                fetchSuggestedQuestions();
             });
             
             // New code for closing the chat modal
@@ -135,7 +140,46 @@
             $('#question-modal button').click(function() {
                 sendQuestion();
             });
-
+            
+            function sendSuggestedQuestion(question) {
+                // Log to trace function call
+                console.log("Inside sendSuggestedQuestion function");
+            
+                // Send the question to the backend
+                fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({input: question, context: "Blog context here", token_limit: 100}),
+                }).then(response => {
+                    if (response.status === 401) {
+                        // Display message prompting user to log in
+                        document.getElementById('chat-area').innerHTML += `<div class='warning-message'>Please log in by clicking the <i class='fas fa-lock'></i> icon to continue chatting.</div>`;
+                        return;
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Backend Response: ", JSON.stringify(data, null, 4));
+            
+                    // Update the chat with model's response
+                    document.getElementById('chat-area').innerHTML += `<div class='bot-message'>Hermes: ${data.message}</div>`;
+                });
+                console.log("Suggested question sent to the backend");
+            }
+            
+            function displaySuggestedQuestions(questions) {
+                const questionContainer = document.getElementById('suggested-questions-container');
+                questions.forEach((question) => {
+                  const bubble = document.createElement('div');
+                  bubble.className = 'suggested-question-bubble';
+                  bubble.innerHTML = question.question;
+                  bubble.addEventListener('click', () => sendSuggestedQuestion(question.question));
+                  questionContainer.appendChild(bubble);
+                });
+              }
+    
             function sendQuestion() {
                 // Log to trace function call
                 console.log("Inside sendQuestion function");
@@ -320,7 +364,18 @@
             // Update height when window is resized
             $(window).on('resize', adjustVideoHeight);
             $('#content-area a').attr('target', '_blank');
+            async function initChatModal() {
+                const suggestedQuestions = await fetchSuggestedQuestions();
+                displaySuggestedQuestions(suggestedQuestions);
+            }
         });
     </script>
+    <style>
+        @media only screen and (max-width: 768px) {
+            /* Add your mobile responsive CSS here */
+            #blog-content { width: 100%; }
+            #sidebar { width: 100%; }
+        }
+    </style>
 </body>
 </html>

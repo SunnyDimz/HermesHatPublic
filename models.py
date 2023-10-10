@@ -33,7 +33,7 @@ except Exception as e:
     logging.error(f"Could not connect to MongoDB: {e}")
 
 class BlogPost:
-    def __init__(self, title,blog_post_id, content, author, tags, related_links, media_bucket_links, date, summary, questions = []):
+    def __init__(self, title,blog_post_id, content, author, tags, related_links, media_bucket_links, date, summary, questions = [], suggested_questions = []):
         self.title = self.validate_title(title)
         self.blog_post_id = blog_post_id
         self.content = self.validate_content(content)
@@ -44,6 +44,7 @@ class BlogPost:
         self.date = self.validate_date(date)
         self.summary = self.validate_summary(summary)
         self.questions = [{"question": q["question"], "question_id": q["question_id"], "options": q["options"], "responses": [], "response_count": {option: 0 for option in q["options"]}} for q in questions]
+        self.suggested_questions = [{"question": q.get("question", "Unknown"),"question_id": q.get("question_id", "Unknown"),} for q in suggested_questions]
 
     def validate_title(self, title):
         if not title or len(title) < 5:
@@ -100,7 +101,8 @@ class BlogPost:
                 "summary": self.summary,
                 "highlights": [],
                 "comments": [],
-                "questions": self.questions
+                "questions": self.questions,
+                "suggested_questions": self.suggested_questions,
             }
             mongo.db.blog_posts.insert_one(blog_post_data)
             logging.info(f"Successfully saved {self.title} to MongoDB.")
