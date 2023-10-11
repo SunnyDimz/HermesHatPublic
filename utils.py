@@ -124,7 +124,8 @@ def fetch_youtube_video_details_batch(video_ids, api_key):
             video_details.append({'video_id': video_id, 'title': title, 'description': description, 'channel': channel})
     return video_details
 # fetching data from FRED API
-FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json"
+fred_api=os.environ.get('FRED_API_KEY')
+FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key={fred_api}&file_type=json"
 def fetch_data_from_fred(code, observation_start=None, observation_end=None, units=None):
     """
     Fetch data from FRED with the given code and optional parameters.

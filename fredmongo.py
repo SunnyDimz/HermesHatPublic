@@ -2,8 +2,10 @@ from models import BlogPost, FredData, mongo
 from flask import Flask, jsonify, request, session, g, render_template
 import requests
 import logging
+import os
 codes=['UNRATE', 'CIVPART', 'EMRATIO','FEDFUNDS', 'GS10', 'DTWEXB', 'NETFI', 'GFDEBTN', 'HOUST','T10Y2Y']
-FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json"
+fred_api = os.getenv("FRED_API_KEY")
+FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key={fred_api}&file_type=json"
 def fetch_data_from_fred(code, observation_start=None, observation_end=None, units=None):
     """
     Fetch data from FRED with the given code and optional parameters.
