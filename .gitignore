@@ -1,0 +1,10 @@
+```
+.env
+hermesvirtual/
+dimzvirtual/
+bin/
+blog_posts/
+.vscode/
+__pycache__/
+.pytest_cache/
+```
