@@ -4,22 +4,24 @@ blog_post_id: "2"
 summary: "Welcome to this exploration of the natural rate of interest—a concept that holds a pivotal role in shaping modern monetary policy. This article aims to offer a comprehensive understanding by delving into its historical context, the impacts of fluctuating rates on different demographic groups, and insights from renowned economists. Whether you're a student of economics, a policy enthusiast, or just someone interested in understanding the financial forces that affect our lives, this article is for you. Let's dive in."
 author: "Dmitriy Borzhkovskiy"
 created_at: "2023-09-07"
-updated_at: "2023-09-07"
+updated_at: "2023-10-11"
 related_links: ["https://www.newyorkfed.org/research/policy/rstar", "https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/", "https://www.econlib.org/library/Enc/bios/Hayek.html", "https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754", "https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain","https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)"]
 media_bucket_links: ["https://youtu.be/Gc6E6_-Q-0E?si=FJt96__MimhpSbkO", "https://youtu.be/mFI58RRCDbs?si=OMIaHMH3kDqg5xsd","https://youtu.be/5A3KCaaTT2I?si=mIDcFnn4nW8ksFdn","https://youtu.be/R8VBRCs2jTU?si=1j7G2QzxUODYO58T"] 
 tags: "economics"
 questions: 
-  - question: "What is the natural rate of interest?"
+  - question: "What do you think will happen with rates?"
     question_id: "q1"
     options:
-      - "A rate set by the Federal Reserve"
-      - "The interest rate at which inflation is stable"
-      - "The interest rate on Treasury Bills"
+      - "Rates will drop back to levels near the zero-bound"
+      - "Rates will stay at their current level then drop"
+      - "Rates will stay at their current level"
+      - "Rates will rise"
     correct_answer: "The interest rate at which inflation is stable"
     response_count:
-      "A rate set by the Federal Reserve": 0
-      "The interest rate at which inflation is stable": 0
-      "The interest rate on Treasury Bills": 0
+      "Rates will drop back to levels near the zero-bound": 0
+      "Rates will stay at their current level then drop": 0
+      "Rates will stay at their current level": 0
+      "Rates will rise": 0 
 suggested_questions:
   - question: "What was the average natural rate of interest up to 2000?"
     question_id: "q1"
@@ -50,9 +52,9 @@ The Great Moderation and liquidity traps are closely related. During periods of 
 
   
 
-## The Paths Forward
+## Impacts
 
-**Impacts on Different Demographics**
+**Different Demographics**
 
 In line with Keynes' "euthanasia of the rentier," higher interest rates could significantly affect those who rely on fixed income or passive investments. While higher rates benefit savers, they could be detrimental to borrowers and can also impact housing markets, thereby affecting a broad range of demographics. Anyone who purchased a home in the COVID era with a variable rate is  likely spending nights in bed dreaming of a different world. Americans are familiar with long-term fixed rates, supported by the GSEs like Fannie Mae or Freddie Mac that enhance liquidity and credit access to potential homeowners. Europe does not have 30-year mortgage rates, the standard is a variable rate. Theoretically, the tradeoff for higher mortgage rates are cheaper home prices but the low supply of available homes has first time homebuyers stuck in a nightmare of expensive homes, expensive interest payments on house debt. Many families who wanted to have a single family home with a yard are now compromising for multifamily gingerbread apartments, thin walls and a pipe maze on the ceiling. [Euthanasia of the Rentier](https://mises.org/wire/keynes-and-euthanasia-rentier)
 
@@ -80,12 +82,14 @@ The steep rate hike regime had a larger impact for banks with heavy allocations 
 
   
 
-## The Road not travelled by
+## Muddy Waters
 
 
-The natural rate of interest is more than just a theoretical construct—it's a key piece of the puzzle that influences a myriad of economic activities and policies. From historical events like oil shocks to the more recent challenges in the housing market, understanding this rate helps us make sense of the world around us. As we've seen, even a small change in this rate can have far-reaching consequences, affecting everything from our monthly mortgage payments to the health of global financial systems.
+As we explore the complex world of interest rates, we find ourselves in uncharted territory. While the Federal Reserve's recent policies appear to be accomplishing their intended soft landing, the waters remain muddy. Recession fears have been lingering, exacerbated by signs like recent yield curve inversions. These indicators often precede economic downturns, making them impossible to ignore.
 
-So, what's next on the horizon for interest rates, and how should policymakers and individuals prepare? That's a topic for ongoing discussion and one that we'll certainly revisit in future articles. 
+**Policymaker's Dilemma**
+Policymakers face a Herculean task. The delicate balance of maintaining low unemployment, controlling inflation, and ensuring financial stability has never been more challenging. The recent mini-crises in the banking sector and the ongoing debates about moral hazards signal that we're not out of the woods yet.Despite the Fed's optimistic outlook, cracks are beginning to show. Whether these are minor fissures or warning signs of a larger quake remains to be seen. What is clear is that these uncertainties merit close monitoring and could potentially disrupt the global financial landscape.
 
+So, what's next on the interest rate horizon? That's a subject for ongoing discussions and certainly a topic we'll revisit. For now, all eyes are on the Federal Reserve and global economic indicators as we navigate these muddy waters.
 
 ---

@@ -264,3 +264,37 @@ INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
 INFO:root:Validating links: ['https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy']
 INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
 INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://youtu.be/_mRjgcaIZl0?si=zTkTamWLVsVPuH7Y', 'https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy', 'https://youtu.be/nTvswwU5Eco?si=1iJuyBWheZCCJw_9', 'https://youtu.be/Qfgf-C-NNPE?si=NLiorVbRqieIQGfX']
+INFO:root:Validating link: https://youtu.be/_mRjgcaIZl0?si=zTkTamWLVsVPuH7Y
+INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
+INFO:root:Validating link: https://youtu.be/nTvswwU5Eco?si=1iJuyBWheZCCJw_9
+INFO:root:Validating link: https://youtu.be/Qfgf-C-NNPE?si=NLiorVbRqieIQGfX
+INFO:root:Successfully saved The New Ukrainian Generation: Victory for Freedom to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco', 'https://www.reuters.com/world/europe/what-are-minsk-agreements-ukraine-conflict-2022-02-21/']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating link: https://www.reuters.com/world/europe/what-are-minsk-agreements-ukraine-conflict-2022-02-21/
+INFO:root:Validating links: ['https://youtu.be/jhJAcA32Q8k?si=d7mbz4XXcGEjpIWP', 'https://youtu.be/dF7uuxRliBU?si=m5_-pu73J1McrHrW', 'https://youtu.be/YnFB2lSwQfI?si=2vw3NM9-L1_GfrGn', 'https://youtu.be/nTvswwU5Eco?si=GmbVGNLzYbNtMwO9']
+INFO:root:Validating link: https://youtu.be/jhJAcA32Q8k?si=d7mbz4XXcGEjpIWP
+INFO:root:Validating link: https://youtu.be/dF7uuxRliBU?si=m5_-pu73J1McrHrW
+INFO:root:Validating link: https://youtu.be/YnFB2lSwQfI?si=2vw3NM9-L1_GfrGn
+INFO:root:Validating link: https://youtu.be/nTvswwU5Eco?si=GmbVGNLzYbNtMwO9
+INFO:root:Successfully saved America's Interest in Ukraine to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://youtu.be/Gc6E6_-Q-0E?si=FJt96__MimhpSbkO', 'https://youtu.be/mFI58RRCDbs?si=OMIaHMH3kDqg5xsd', 'https://youtu.be/5A3KCaaTT2I?si=mIDcFnn4nW8ksFdn', 'https://youtu.be/R8VBRCs2jTU?si=1j7G2QzxUODYO58T']
+INFO:root:Validating link: https://youtu.be/Gc6E6_-Q-0E?si=FJt96__MimhpSbkO
+INFO:root:Validating link: https://youtu.be/mFI58RRCDbs?si=OMIaHMH3kDqg5xsd
+INFO:root:Validating link: https://youtu.be/5A3KCaaTT2I?si=mIDcFnn4nW8ksFdn
+INFO:root:Validating link: https://youtu.be/R8VBRCs2jTU?si=1j7G2QzxUODYO58T
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
