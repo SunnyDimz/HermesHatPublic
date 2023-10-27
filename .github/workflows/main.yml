@@ -1,0 +1,34 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t my-app-image .
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # Make sure to deploy only after the build job is successful
+
+    steps:
+      - name: Login to Heroku
+        run: docker login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
+
+      - name: Tag Docker image
+        run: docker tag my-app-image registry.heroku.com/$HEROKU_APP_NAME/web
+
+      - name: Push Docker image to Heroku
+        run: docker push registry.heroku.com/$HEROKU_APP_NAME/web
+
+      - name: Release image to Heroku
+        run: heroku container:release web --app $HEROKU_APP_NAME
