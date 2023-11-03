@@ -1,4 +1,4 @@
-from routes import *
+from api_resources import *
 from config import app
 import logging
 

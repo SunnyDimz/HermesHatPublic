@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EconWizard</title>
+    <!-- Include Semantic UI for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <!-- Plotly.js for graphing -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="ui large top fixed menu">
+        <div class="ui container">
+            <a class="active_item" href="/">Hermes Hat</a>
+            <div class="right menu">
+                <a class="item" href="/econwizard">Economics</a>
+                <a class="item" href="/photographs">Photography</a>
+                <a class="item" href="/media">Media</a>
+                <a class="item" href="/about">About</a>
+                {% if not g.user_logged_in %}
+                    <a class="item" href="/login">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                {% else %}
+                    <a class="item" href="/logout">
+                        <i class="fas fa-unlock"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="ui main text container" style="padding-top: 7em; padding-bottom: 7em;">
+
+        <!-- Form to ask questions -->
+        <div class="ui segment">
+            <form id="ask-question-form" class="ui form">
+                <div class="field">
+                    <input type="text" id="user-input" placeholder="Type your economic question here...">
+                </div>
+                <button class="ui primary button" type="button" onclick="sendQuestion()">Submit</button>
+            </form>
+        </div>
+
+        <!-- Chat and Graph area -->
+        <div class="ui segment" id="chat-and-graph-area" style="height: calc(100vh - 14em);">
+            <!-- Chat messages and graphs will be appended here -->
+            <!-- This element takes the remaining height of the viewport -->
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">EconWizard</h4>
+                    <div class="ui inverted link list">
+                        <!-- Footer links -->
+                    </div>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <div class="ui horizontal inverted small divided link list">
+                <p>Powered by Hermes Hat Technologies</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your JavaScript file here -->
+    <script src="static/econwizard.js"></script>
+</body>
+</html>

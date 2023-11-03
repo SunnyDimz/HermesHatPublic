@@ -1,0 +1,15 @@
+[[34m2023-11-02T16:33:40.006-0500[0m] {[34msequential_executor.py:[0m81} ERROR[0m - Failed to execute task Command '['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-11-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']' returned non-zero exit status 1..[0m
+[[34m2023-11-02T16:33:40.009-0500[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:43:14.555222+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py'][0m
+[[34m2023-11-02T16:33:40.857-0500[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py[0m
+MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[[34m2023-11-02T16:33:42.020-0500[0m] {[34mEconomicsChatResource.py:[0m30} INFO[0m - Rate limiter initialized[0m
+[[34m2023-11-02T16:33:42.042-0500[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-11-02T16:33:42.042-0500[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-11-02T16:33:42.058-0500[0m] {[34mexample_python_operator.py:[0m89} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-11-02T16:33:42.059-0500[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-11-02T16:33:42.182-0500[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-11-02T16:33:42.557-0500[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:43:14.555222+00:00 [queued]> on host macbook-pro-207.local[0m

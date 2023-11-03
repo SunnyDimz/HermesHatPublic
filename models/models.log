@@ -1,0 +1,300 @@
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Saving 908 observations for UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+ERROR:root:Error saving to MongoDB: documents must be a non-empty list
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+ERROR:root:Error saving to MongoDB: documents must be a non-empty list
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+ERROR:root:Error saving to MongoDB: documents must be a non-empty list
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for UNRATE.
+INFO:root:Fetched 13 observations for UNRATE.
+INFO:root:Saving 13 observations for UNRATE to MongoDB.
+INFO:root:Successfully saved UNRATE to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=CIVPART&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for CIVPART.
+INFO:root:Fetched 13 observations for CIVPART.
+INFO:root:Saving 13 observations for CIVPART to MongoDB.
+INFO:root:Successfully saved CIVPART to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=EMRATIO&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 908 observations for EMRATIO.
+INFO:root:Fetched 13 observations for EMRATIO.
+INFO:root:Saving 13 observations for EMRATIO to MongoDB.
+INFO:root:Successfully saved EMRATIO to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=FEDFUNDS&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 830 observations for FEDFUNDS.
+INFO:root:Fetched 13 observations for FEDFUNDS.
+INFO:root:Saving 13 observations for FEDFUNDS to MongoDB.
+INFO:root:Successfully saved FEDFUNDS to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=GS10&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 845 observations for GS10.
+INFO:root:Fetched 13 observations for GS10.
+INFO:root:Saving 13 observations for GS10 to MongoDB.
+INFO:root:Successfully saved GS10 to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXB&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 6520 observations for DTWEXB.
+INFO:root:Fetched 13 observations for DTWEXB.
+INFO:root:Saving 13 observations for DTWEXB to MongoDB.
+INFO:root:Successfully saved DTWEXB to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=NETFI&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 306 observations for NETFI.
+INFO:root:Fetched 13 observations for NETFI.
+INFO:root:Saving 13 observations for NETFI to MongoDB.
+INFO:root:Successfully saved NETFI to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=GFDEBTN&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 230 observations for GFDEBTN.
+INFO:root:Fetched 13 observations for GFDEBTN.
+INFO:root:Saving 13 observations for GFDEBTN to MongoDB.
+INFO:root:Successfully saved GFDEBTN to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=HOUST&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 776 observations for HOUST.
+INFO:root:Fetched 13 observations for HOUST.
+INFO:root:Saving 13 observations for HOUST to MongoDB.
+INFO:root:Successfully saved HOUST to MongoDB.
+INFO:root:Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=T10Y2Y&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+INFO:root:Fetched 12347 observations for T10Y2Y.
+INFO:root:Fetched 13 observations for T10Y2Y.
+INFO:root:Saving 13 observations for T10Y2Y to MongoDB.
+INFO:root:Successfully saved T10Y2Y to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=rdYHoIDX44M', 'https://www.youtube.com/watch?v=g6iXBQ33pBo']
+INFO:root:Validating link: https://www.youtube.com/watch?v=rdYHoIDX44M
+INFO:root:Validating link: https://www.youtube.com/watch?v=g6iXBQ33pBo
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['Pasted image URLs here']
+INFO:root:Validating link: Pasted image URLs here
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['']
+INFO:root:Validating link: 
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved America's Duty and the Future of Ukraine: A Crossroads in Western Unity to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://www.youtube.com/watch?v=8ek5jt8Ru3o']
+INFO:root:Validating link: https://www.youtube.com/watch?v=8ek5jt8Ru3o
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy', 'FIbdbrN9cwo', 'zs_V7ao8kTMnGiGy', '5mi2HfMtyOI']
+INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
+INFO:root:Validating link: FIbdbrN9cwo
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy']
+INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
+INFO:root:Successfully saved The New Ukrainian Generation: Forged in War, United in Resolve to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating links: ['https://youtu.be/_mRjgcaIZl0?si=zTkTamWLVsVPuH7Y', 'https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy', 'https://youtu.be/nTvswwU5Eco?si=1iJuyBWheZCCJw_9', 'https://youtu.be/Qfgf-C-NNPE?si=NLiorVbRqieIQGfX']
+INFO:root:Validating link: https://youtu.be/_mRjgcaIZl0?si=zTkTamWLVsVPuH7Y
+INFO:root:Validating link: https://youtu.be/5mi2HfMtyOI?si=zs_V7ao8kTMnGiGy
+INFO:root:Validating link: https://youtu.be/nTvswwU5Eco?si=1iJuyBWheZCCJw_9
+INFO:root:Validating link: https://youtu.be/Qfgf-C-NNPE?si=NLiorVbRqieIQGfX
+INFO:root:Successfully saved The New Ukrainian Generation: Victory for Freedom to MongoDB.
+INFO:root:Validating links: ['https://www.loc.gov/exhibits/archives/intn.html', 'https://en.wikipedia.org/wiki/Budapest_Memorandum', 'https://www.youtube.com/watch?v=nTvswwU5Eco', 'https://www.reuters.com/world/europe/what-are-minsk-agreements-ukraine-conflict-2022-02-21/']
+INFO:root:Validating link: https://www.loc.gov/exhibits/archives/intn.html
+INFO:root:Validating link: https://en.wikipedia.org/wiki/Budapest_Memorandum
+INFO:root:Validating link: https://www.youtube.com/watch?v=nTvswwU5Eco
+INFO:root:Validating link: https://www.reuters.com/world/europe/what-are-minsk-agreements-ukraine-conflict-2022-02-21/
+INFO:root:Validating links: ['https://youtu.be/jhJAcA32Q8k?si=d7mbz4XXcGEjpIWP', 'https://youtu.be/dF7uuxRliBU?si=m5_-pu73J1McrHrW', 'https://youtu.be/YnFB2lSwQfI?si=2vw3NM9-L1_GfrGn', 'https://youtu.be/nTvswwU5Eco?si=GmbVGNLzYbNtMwO9']
+INFO:root:Validating link: https://youtu.be/jhJAcA32Q8k?si=d7mbz4XXcGEjpIWP
+INFO:root:Validating link: https://youtu.be/dF7uuxRliBU?si=m5_-pu73J1McrHrW
+INFO:root:Validating link: https://youtu.be/YnFB2lSwQfI?si=2vw3NM9-L1_GfrGn
+INFO:root:Validating link: https://youtu.be/nTvswwU5Eco?si=GmbVGNLzYbNtMwO9
+INFO:root:Successfully saved America's Interest in Ukraine to MongoDB.
+INFO:root:Validating links: ['https://www.newyorkfed.org/research/policy/rstar', 'https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/', 'https://www.econlib.org/library/Enc/bios/Hayek.html', 'https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754', 'https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain', 'https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)']
+INFO:root:Validating link: https://www.newyorkfed.org/research/policy/rstar
+INFO:root:Validating link: https://www.brookings.edu/research/the-natural-rate-of-interest-and-its-usefulness-for-monetary-policy-making/
+INFO:root:Validating link: https://www.econlib.org/library/Enc/bios/Hayek.html
+INFO:root:Validating link: https://apnews.com/article/inflation-federal-reserve-interest-rates-economy-unemployment-85ac93672416e7e4115f5c9bd8089754
+INFO:root:Validating link: https://www.economist.com/finance-and-economics/2022/09/21/as-america-raises-rates-the-rest-of-the-world-bears-the-pain
+INFO:root:Validating link: https://www.npr.org/2023/03/19/1164531413/bank-fail-how-government-bonds-turned-toxic-for-silicon-valley-bank)
+INFO:root:Validating links: ['https://youtu.be/Gc6E6_-Q-0E?si=FJt96__MimhpSbkO', 'https://youtu.be/mFI58RRCDbs?si=OMIaHMH3kDqg5xsd', 'https://youtu.be/5A3KCaaTT2I?si=mIDcFnn4nW8ksFdn', 'https://youtu.be/R8VBRCs2jTU?si=1j7G2QzxUODYO58T']
+INFO:root:Validating link: https://youtu.be/Gc6E6_-Q-0E?si=FJt96__MimhpSbkO
+INFO:root:Validating link: https://youtu.be/mFI58RRCDbs?si=OMIaHMH3kDqg5xsd
+INFO:root:Validating link: https://youtu.be/5A3KCaaTT2I?si=mIDcFnn4nW8ksFdn
+INFO:root:Validating link: https://youtu.be/R8VBRCs2jTU?si=1j7G2QzxUODYO58T
+INFO:root:Successfully saved Understanding the Natural Rate of Interest and Its Impacts to MongoDB.

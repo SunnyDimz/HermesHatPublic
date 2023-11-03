@@ -1,0 +1,17 @@
+[2023-11-02T15:37:40.720-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-11-01T00:00:00+00:00 [queued]>
+[2023-11-02T15:37:40.723-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-11-01T00:00:00+00:00 [queued]>
+[2023-11-02T15:37:40.723-0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-11-02T15:37:40.729-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): pull_and_save_fred_data> on 2023-11-01 00:00:00+00:00
+[2023-11-02T15:37:40.735-0500] {standard_task_runner.py:57} INFO - Started process 1311 to run task
+[2023-11-02T15:37:40.742-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-11-01T00:00:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py', '--cfg-path', '/var/folders/3l/sjtljk5j23ng0k_w12x41kh80000gn/T/tmpvz7u666x']
+[2023-11-02T15:37:40.742-0500] {standard_task_runner.py:85} INFO - Job 37: Subtask pull_and_save_fred_data
+[2023-11-02T15:37:40.766-0500] {task_command.py:416} INFO - Running <TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-11-01T00:00:00+00:00 [running]> on host macbook-pro-207.local
+[2023-11-02T15:37:40.795-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='hermesadmin' AIRFLOW_CTX_DAG_ID='economics_data_pipeline' AIRFLOW_CTX_TASK_ID='pull_and_save_fred_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-01T00:00:00+00:00'
+[2023-11-02T15:37:40.797-0500] {fred_utils.py:34} INFO - Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=GDP&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+[2023-11-02T16:32:39.139-0500] {local_task_job_runner.py:274} WARNING - Recorded pid 4433 does not match the current pid 1311
+[2023-11-02T16:32:39.144-0500] {process_utils.py:131} INFO - Sending Signals.SIGTERM to group 1311. PIDs of all processes in the group: [1311]
+[2023-11-02T16:32:39.144-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 1311
+[2023-11-02T16:33:39.168-0500] {process_utils.py:149} WARNING - process psutil.Process(pid=1311, name='Python', status='running', started='15:37:40') did not respond to SIGTERM. Trying SIGKILL
+[2023-11-02T16:33:39.171-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 1311
+[2023-11-02T16:33:39.179-0500] {process_utils.py:79} INFO - Process psutil.Process(pid=1311, name='Python', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='15:37:40') (1311) terminated with exit code Negsignal.SIGKILL
+[2023-11-02T16:33:39.180-0500] {standard_task_runner.py:172} ERROR - Job 39 was killed before it finished (likely due to running out of memory)

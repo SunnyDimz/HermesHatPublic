@@ -1,0 +1,933 @@
+[2023-11-01T21:45:06.165-0500] {processor.py:157} INFO - Started process (PID=88764) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:45:06.169-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:45:06.169-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:45:06.169-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:45:06.188-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:45:06.187-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:45:06.188-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:45:06.261-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.096 seconds
+[2023-11-01T21:46:17.463-0500] {processor.py:157} INFO - Started process (PID=88904) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:46:17.469-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:46:17.469-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:46:17.469-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:46:17.491-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:46:17.490-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:46:17.491-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:46:17.564-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.102 seconds
+[2023-11-01T21:47:18.317-0500] {processor.py:157} INFO - Started process (PID=89054) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:47:18.322-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:47:18.323-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:47:18.323-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:47:18.341-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:47:18.340-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:47:18.341-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:47:18.414-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.097 seconds
+[2023-11-01T21:48:19.470-0500] {processor.py:157} INFO - Started process (PID=89127) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:48:19.476-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:48:19.476-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:48:19.476-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:48:19.496-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:48:19.495-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:48:19.496-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:48:19.574-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.104 seconds
+[2023-11-01T21:49:19.569-0500] {processor.py:157} INFO - Started process (PID=89199) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:49:19.574-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:49:19.575-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:49:19.575-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:49:19.594-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:49:19.593-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:49:19.594-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:49:19.670-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.101 seconds
+[2023-11-01T21:50:19.008-0500] {processor.py:157} INFO - Started process (PID=89303) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:50:19.013-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:50:19.013-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:50:19.013-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:50:19.034-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:50:19.033-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:50:19.034-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:50:19.113-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.105 seconds
+[2023-11-01T21:51:19.730-0500] {processor.py:157} INFO - Started process (PID=89377) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:51:19.735-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:51:19.735-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:51:19.735-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:51:19.757-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:51:19.756-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:51:19.757-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:51:19.838-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.109 seconds
+[2023-11-01T21:52:16.818-0500] {processor.py:157} INFO - Started process (PID=89449) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:52:16.823-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:52:16.824-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:52:16.824-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:52:16.844-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:52:16.843-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 4, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:52:16.844-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:52:16.921-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.104 seconds
+[2023-11-01T21:53:13.141-0500] {processor.py:157} INFO - Started process (PID=89539) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:53:13.146-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:53:13.147-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:53:13.147-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:53:13.166-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:53:13.165-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:53:13.166-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:53:13.239-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.098 seconds
+[2023-11-01T21:54:14.058-0500] {processor.py:157} INFO - Started process (PID=89625) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:54:14.064-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:54:14.064-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:54:14.064-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:54:14.083-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:54:14.082-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:54:14.083-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:54:14.158-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.100 seconds
+[2023-11-01T21:55:16.985-0500] {processor.py:157} INFO - Started process (PID=89715) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:55:16.990-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:55:16.990-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:55:16.990-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:55:17.009-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:55:17.008-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:55:17.009-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:55:17.080-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.096 seconds
+[2023-11-01T21:56:14.790-0500] {processor.py:157} INFO - Started process (PID=89781) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:56:14.795-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:56:14.795-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:56:14.795-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:56:14.813-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:56:14.813-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:56:14.813-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:56:14.885-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.096 seconds
+[2023-11-01T21:57:11.982-0500] {processor.py:157} INFO - Started process (PID=89910) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:57:11.987-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:57:11.987-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:57:11.987-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:57:12.006-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:57:12.005-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:57:12.006-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:57:12.081-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.099 seconds
+[2023-11-01T21:58:13.005-0500] {processor.py:157} INFO - Started process (PID=90000) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:58:13.010-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:58:13.011-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:58:13.011-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:58:13.029-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:58:13.028-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:58:13.029-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:58:13.101-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.096 seconds
+[2023-11-01T21:59:14.278-0500] {processor.py:157} INFO - Started process (PID=90067) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:59:14.282-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T21:59:14.283-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:59:14.283-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:59:14.305-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:59:14.304-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T21:59:14.305-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T21:59:14.383-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.105 seconds
+[2023-11-01T22:00:13.351-0500] {processor.py:157} INFO - Started process (PID=90152) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:00:13.355-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:00:13.356-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:00:13.356-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:00:13.378-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:00:13.378-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:00:13.379-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:00:13.459-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.109 seconds
+[2023-11-01T22:01:14.015-0500] {processor.py:157} INFO - Started process (PID=90235) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:01:14.020-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:01:14.020-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:01:14.020-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:01:14.041-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:01:14.040-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:01:14.041-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:01:14.119-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.104 seconds
+[2023-11-01T22:02:15.797-0500] {processor.py:157} INFO - Started process (PID=90319) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:02:15.802-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:02:15.803-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:02:15.803-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:02:15.825-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:02:15.824-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:02:15.825-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:02:15.899-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.102 seconds
+[2023-11-01T22:03:16.879-0500] {processor.py:157} INFO - Started process (PID=90396) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:03:16.884-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:03:16.884-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:03:16.884-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:03:16.904-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:03:16.903-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:03:16.905-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:03:16.980-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.102 seconds
+[2023-11-01T22:04:14.295-0500] {processor.py:157} INFO - Started process (PID=90497) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:04:14.299-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:04:14.300-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:04:14.300-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:04:14.318-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:04:14.317-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:04:14.318-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:04:14.390-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.095 seconds
+[2023-11-01T22:05:10.114-0500] {processor.py:157} INFO - Started process (PID=90613) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:05:10.119-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:05:10.119-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:05:10.119-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:05:10.138-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:05:10.137-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:05:10.138-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:05:10.210-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.097 seconds
+[2023-11-01T22:06:08.978-0500] {processor.py:157} INFO - Started process (PID=90718) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:06:08.983-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:06:08.983-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:06:08.983-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:06:09.004-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:06:09.003-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:06:09.004-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:06:09.093-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.116 seconds
+[2023-11-01T22:07:12.442-0500] {processor.py:157} INFO - Started process (PID=90810) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:07:12.446-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:07:12.446-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:07:12.446-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:07:12.466-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:07:12.465-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:07:12.466-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:07:12.540-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.098 seconds
+[2023-11-01T22:08:14.865-0500] {processor.py:157} INFO - Started process (PID=90945) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:08:14.869-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:08:14.870-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:08:14.870-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:08:14.888-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:08:14.888-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:08:14.888-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:08:14.961-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.097 seconds
+[2023-11-01T22:09:16.190-0500] {processor.py:157} INFO - Started process (PID=91047) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:09:16.195-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:09:16.195-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:09:16.195-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:09:16.214-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:09:16.213-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:09:16.214-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:09:16.288-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.099 seconds
+[2023-11-01T22:13:03.685-0500] {processor.py:157} INFO - Started process (PID=91372) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:13:03.690-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:13:03.690-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:13:03.690-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:13:03.713-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:13:03.712-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:13:03.713-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:13:03.788-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.104 seconds
+[2023-11-01T22:13:49.780-0500] {processor.py:157} INFO - Started process (PID=91505) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:13:49.785-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:13:49.785-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:13:49.785-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:13:49.803-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:13:49.803-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:13:49.804-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:13:49.876-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.097 seconds
+[2023-11-01T22:14:52.735-0500] {processor.py:157} INFO - Started process (PID=91575) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:14:52.741-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:14:52.741-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:14:52.741-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:14:52.763-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:14:52.762-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:14:52.763-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:14:52.847-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.112 seconds
+[2023-11-01T22:15:51.731-0500] {processor.py:157} INFO - Started process (PID=91680) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:15:51.736-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:15:51.736-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:15:51.736-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:15:51.754-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:15:51.754-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+ModuleNotFoundError: No module named 'utils'
+[2023-11-01T22:15:51.755-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:15:51.830-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.099 seconds
+[2023-11-01T22:16:52.077-0500] {processor.py:157} INFO - Started process (PID=91798) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:16:52.082-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:16:52.082-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:16:52.082-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:16:52.104-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:16:52.103-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 1, in <module>
+    from models.models import BlogPost, FredData, mongo, db
+ModuleNotFoundError: No module named 'models'
+[2023-11-01T22:16:52.104-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:16:52.182-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.105 seconds
+[2023-11-01T22:17:51.136-0500] {processor.py:157} INFO - Started process (PID=91962) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:17:51.141-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:17:51.141-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:17:51.141-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:17:51.160-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:17:51.159-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 1, in <module>
+    from models.models import BlogPost, FredData, mongo, db
+ModuleNotFoundError: No module named 'models'
+[2023-11-01T22:17:51.160-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:17:51.235-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.099 seconds
+[2023-11-01T22:18:49.888-0500] {processor.py:157} INFO - Started process (PID=92114) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:18:49.893-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:18:49.893-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:18:49.893-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:18:50.084-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:18:50.083-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 1, in <module>
+    from models.models import BlogPost, FredData, mongo, db
+  File "/Users/dimz/EconWizard/airflow/dags/models/models.py", line 15, in <module>
+    from config import app
+ModuleNotFoundError: No module named 'config'
+[2023-11-01T22:18:50.084-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:18:50.158-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.271 seconds
+[2023-11-01T22:19:45.404-0500] {processor.py:157} INFO - Started process (PID=92235) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:19:45.409-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:19:45.409-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:19:45.409-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:19:45.528-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:19:45.527-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 1, in <module>
+    from models.models import BlogPost, FredData, mongo, db
+  File "/Users/dimz/EconWizard/airflow/dags/models/models.py", line 15, in <module>
+    from config import app
+ModuleNotFoundError: No module named 'config'
+[2023-11-01T22:19:45.528-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:19:45.605-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.201 seconds
+[2023-11-01T22:20:37.872-0500] {processor.py:157} INFO - Started process (PID=92353) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:20:37.876-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:20:37.877-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:20:37.876-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:20:37.979-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:20:37.979-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 1, in <module>
+    from models.models import BlogPost, FredData, mongo, db
+  File "/Users/dimz/EconWizard/airflow/dags/models/models.py", line 15, in <module>
+    from config import app
+ModuleNotFoundError: No module named 'config'
+[2023-11-01T22:20:37.979-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:20:38.054-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.183 seconds
+[2023-11-01T22:21:35.148-0500] {processor.py:157} INFO - Started process (PID=92512) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:21:35.154-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:21:35.154-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:21:35.154-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:21:35.270-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:21:35.268-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 1, in <module>
+    from models.models import BlogPost, FredData, mongo, db
+  File "/Users/dimz/EconWizard/airflow/dags/models/models.py", line 15, in <module>
+    from config import app
+ModuleNotFoundError: No module named 'config'
+[2023-11-01T22:21:35.271-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:21:35.346-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 0.198 seconds
+[2023-11-01T22:22:35.669-0500] {processor.py:157} INFO - Started process (PID=92679) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:22:35.675-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:22:35.675-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:22:35.675-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:22:36.589-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-01T22:22:36.591-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:22:36.590-0500] {dagbag.py:346} ERROR - Failed to import: /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 5, in <module>
+    from utils.fredmongo import fetch_data_from_fred_and_save_to_db  # Import your function
+  File "/Users/dimz/EconWizard/airflow/dags/utils/fredmongo.py", line 7, in <module>
+    from api_resources.EconomicsChatResource import *
+ModuleNotFoundError: No module named 'api_resources'
+[2023-11-01T22:22:36.591-0500] {processor.py:841} WARNING - No viable dags retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:22:36.700-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.031 seconds
+[2023-11-01T22:23:34.409-0500] {processor.py:157} INFO - Started process (PID=92853) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:23:34.414-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-01T22:23:34.415-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:23:34.414-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:40:24.559-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-01T22:40:24.775-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:24.775-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-01T22:40:24.783-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-01T22:40:25.149-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:25.148-0500] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-01T22:40:25.154-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:25.153-0500] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-01T22:40:25.157-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:25.157-0500] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-01T22:40:25.157-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:25.157-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:40:25.164-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:25.164-0500] {dag.py:2963} INFO - Creating ORM DAG for economics_data_pipeline
+[2023-11-01T22:40:25.169-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:40:25.169-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-01T22:40:25.180-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 7.975 seconds
+[2023-11-02T01:12:12.731-0500] {processor.py:157} INFO - Started process (PID=93000) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T01:12:12.736-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T01:12:12.736-0500] {logging_mixin.py:151} INFO - [2023-11-02T01:12:12.736-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T01:12:13.723-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T01:12:13.947-0500] {logging_mixin.py:151} INFO - [2023-11-02T01:12:13.947-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T01:12:13.954-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T01:12:14.063-0500] {logging_mixin.py:151} INFO - [2023-11-02T01:12:14.063-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T01:12:14.074-0500] {logging_mixin.py:151} INFO - [2023-11-02T01:12:14.074-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T01:12:14.084-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.353 seconds
+[2023-11-02T05:26:02.476-0500] {processor.py:157} INFO - Started process (PID=93211) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T05:26:02.481-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T05:26:02.481-0500] {logging_mixin.py:151} INFO - [2023-11-02T05:26:02.481-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T05:26:05.039-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T05:26:05.259-0500] {logging_mixin.py:151} INFO - [2023-11-02T05:26:05.259-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T05:26:05.267-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T05:26:05.374-0500] {logging_mixin.py:151} INFO - [2023-11-02T05:26:05.374-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T05:26:05.385-0500] {logging_mixin.py:151} INFO - [2023-11-02T05:26:05.384-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T05:26:05.396-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 2.917 seconds
+[2023-11-02T07:28:29.760-0500] {processor.py:157} INFO - Started process (PID=93336) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T07:28:29.765-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T07:28:29.766-0500] {logging_mixin.py:151} INFO - [2023-11-02T07:28:29.766-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T07:44:38.078-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T07:44:38.275-0500] {logging_mixin.py:151} INFO - [2023-11-02T07:44:38.275-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T07:44:38.282-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T07:44:38.390-0500] {logging_mixin.py:151} INFO - [2023-11-02T07:44:38.390-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T07:44:38.401-0500] {logging_mixin.py:151} INFO - [2023-11-02T07:44:38.401-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T07:44:38.412-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 3.057 seconds
+[2023-11-02T08:29:38.844-0500] {processor.py:157} INFO - Started process (PID=93443) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T08:29:38.849-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T08:29:38.850-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:29:38.850-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T08:29:40.492-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T08:29:40.709-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:29:40.709-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T08:29:40.716-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T08:29:40.823-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:29:40.823-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T08:29:40.834-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:29:40.834-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T08:29:40.845-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 2.002 seconds
+[2023-11-02T08:48:11.115-0500] {processor.py:157} INFO - Started process (PID=93518) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T08:48:11.120-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T08:48:11.120-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:48:11.120-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T08:48:12.196-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T08:48:12.407-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:48:12.407-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T08:48:12.415-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T08:48:12.523-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:48:12.522-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T08:48:12.533-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:48:12.533-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T08:48:12.545-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.430 seconds
+[2023-11-02T09:03:46.562-0500] {processor.py:157} INFO - Started process (PID=93652) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:03:46.568-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:03:46.568-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:46.568-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:03:48.097-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:03:48.316-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:48.315-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:03:48.323-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:03:48.430-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:48.429-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:03:48.441-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:48.441-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:03:48.453-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.891 seconds
+[2023-11-02T09:04:47.951-0500] {processor.py:157} INFO - Started process (PID=93748) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:04:47.956-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:04:47.957-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:47.957-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:04:48.954-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:04:49.182-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:49.181-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:04:49.189-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:04:49.298-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:49.298-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:04:49.309-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:49.309-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:04:49.320-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.370 seconds
+[2023-11-02T09:05:43.639-0500] {processor.py:157} INFO - Started process (PID=93824) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:05:43.643-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:05:43.643-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:05:43.643-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:05:44.709-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:05:44.871-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:05:44.871-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:05:44.878-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:05:44.985-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:05:44.985-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:05:44.996-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:05:44.995-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:05:45.006-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.368 seconds
+[2023-11-02T09:06:44.631-0500] {processor.py:157} INFO - Started process (PID=93885) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:06:44.636-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:06:44.637-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:44.637-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:06:45.656-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:06:45.865-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:45.865-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:06:45.873-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:06:45.981-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:45.981-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:06:45.992-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:45.992-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:06:46.003-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.372 seconds
+[2023-11-02T09:07:47.188-0500] {processor.py:157} INFO - Started process (PID=93953) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:07:47.193-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:07:47.193-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:07:47.193-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:07:48.187-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:07:48.383-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:07:48.383-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:07:48.391-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:07:48.499-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:07:48.498-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:07:48.509-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:07:48.509-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:07:48.520-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.332 seconds
+[2023-11-02T09:08:49.593-0500] {processor.py:157} INFO - Started process (PID=94102) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:08:49.598-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:08:49.599-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:49.599-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:08:50.794-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:08:51.022-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:51.022-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:08:51.030-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:08:51.151-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:51.151-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:08:51.162-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:51.162-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:08:51.174-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.582 seconds
+[2023-11-02T09:09:55.194-0500] {processor.py:157} INFO - Started process (PID=94257) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:09:55.199-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:09:55.200-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:09:55.200-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:09:56.274-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:09:56.493-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:09:56.493-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:09:56.500-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:09:56.608-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:09:56.607-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:09:56.618-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:09:56.618-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:09:56.630-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.437 seconds
+[2023-11-02T09:10:58.688-0500] {processor.py:157} INFO - Started process (PID=94371) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:10:58.693-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:10:58.693-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:10:58.693-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:10:59.701-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:10:59.903-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:10:59.903-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:10:59.911-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:11:00.020-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:11:00.020-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:11:00.031-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:11:00.031-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:11:00.043-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.356 seconds
+[2023-11-02T09:12:03.517-0500] {processor.py:157} INFO - Started process (PID=94448) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:12:03.523-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:12:03.523-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:03.523-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:12:04.552-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:12:04.771-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:04.771-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:12:04.779-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:12:04.898-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:04.897-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:12:04.910-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:04.910-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:12:04.922-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.406 seconds
+[2023-11-02T09:13:07.858-0500] {processor.py:157} INFO - Started process (PID=94518) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:13:07.863-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:13:07.863-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:13:07.863-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:13:08.990-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:13:09.184-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:13:09.183-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:13:09.191-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:13:09.300-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:13:09.300-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:13:09.311-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:13:09.311-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:13:09.322-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.464 seconds
+[2023-11-02T09:14:10.201-0500] {processor.py:157} INFO - Started process (PID=94587) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:14:10.206-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:14:10.207-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:10.207-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:14:11.179-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:14:11.399-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:11.399-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:14:11.407-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:14:11.514-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:11.513-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:14:11.524-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:11.524-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:14:11.535-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.334 seconds
+[2023-11-02T09:15:14.530-0500] {processor.py:157} INFO - Started process (PID=94652) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:15:14.535-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:15:14.535-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:15:14.535-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:15:15.676-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:15:15.861-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:15:15.861-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:15:15.868-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:15:15.976-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:15:15.975-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:15:15.986-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:15:15.986-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:15:15.997-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.467 seconds
+[2023-11-02T09:16:16.523-0500] {processor.py:157} INFO - Started process (PID=94727) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:16:16.528-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:16:16.528-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:16:16.528-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:16:17.559-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:16:17.773-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:16:17.773-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:16:17.780-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:16:17.892-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:16:17.892-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:16:17.903-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:16:17.903-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:16:17.913-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.391 seconds
+[2023-11-02T09:17:16.085-0500] {processor.py:157} INFO - Started process (PID=94792) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:17:16.090-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:17:16.091-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:16.091-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:17:17.168-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:17:17.397-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:17.397-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:17:17.405-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:17:17.516-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:17.515-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:17:17.527-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:17.527-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:17:17.538-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.454 seconds
+[2023-11-02T09:18:17.800-0500] {processor.py:157} INFO - Started process (PID=94859) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:18:17.805-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:18:17.805-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:18:17.805-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:18:18.925-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:18:19.168-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:18:19.168-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:18:19.175-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:18:19.281-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:18:19.281-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:18:19.292-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:18:19.292-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:18:19.302-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.503 seconds
+[2023-11-02T09:19:23.314-0500] {processor.py:157} INFO - Started process (PID=94976) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:19:23.319-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:19:23.320-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:23.320-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:19:24.336-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:19:24.557-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:24.557-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:19:24.565-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:19:24.672-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:24.671-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:19:24.682-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:24.682-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:19:24.693-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.379 seconds
+[2023-11-02T09:20:26.979-0500] {processor.py:157} INFO - Started process (PID=95056) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:20:26.984-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:20:26.984-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:20:26.984-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:20:27.951-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:20:28.159-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:20:28.158-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:20:28.166-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:20:28.274-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:20:28.274-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:20:28.285-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:20:28.285-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:20:28.297-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.319 seconds
+[2023-11-02T09:21:31.814-0500] {processor.py:157} INFO - Started process (PID=95122) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:21:31.820-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:21:31.820-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:31.820-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:21:33.634-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:21:33.867-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:33.867-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:21:33.874-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:21:33.982-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:33.981-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:21:33.992-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:33.992-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:21:34.004-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 2.190 seconds
+[2023-11-02T09:22:36.786-0500] {processor.py:157} INFO - Started process (PID=95215) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:22:36.791-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:22:36.792-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:22:36.792-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:22:37.783-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:22:37.971-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:22:37.971-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:22:37.978-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:22:38.085-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:22:38.084-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:22:38.095-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:22:38.095-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:22:38.106-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.320 seconds
+[2023-11-02T09:23:39.946-0500] {processor.py:157} INFO - Started process (PID=95325) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:23:39.951-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:23:39.952-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:39.952-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:23:40.867-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:23:41.104-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:41.104-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:23:41.112-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:23:41.219-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:41.219-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:23:41.230-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:41.230-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:23:41.241-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.295 seconds
+[2023-11-02T09:24:43.689-0500] {processor.py:157} INFO - Started process (PID=95437) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:24:43.694-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:24:43.694-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:24:43.694-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:24:44.733-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:24:44.928-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:24:44.928-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:24:44.935-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:24:45.042-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:24:45.042-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:24:45.053-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:24:45.053-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:24:45.064-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.375 seconds
+[2023-11-02T09:25:46.078-0500] {processor.py:157} INFO - Started process (PID=95563) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:25:46.083-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:25:46.084-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:46.084-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:25:47.138-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:25:47.374-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:47.374-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:25:47.383-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:25:47.504-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:47.503-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:25:47.515-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:47.515-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:25:47.526-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.449 seconds
+[2023-11-02T09:26:50.852-0500] {processor.py:157} INFO - Started process (PID=95658) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:26:50.857-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:26:50.858-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:26:50.858-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:26:51.967-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:26:52.211-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:26:52.211-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:26:52.220-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:26:52.349-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:26:52.349-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:26:52.363-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:26:52.363-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-01T00:00:00+00:00, run_after=2023-01-08T00:00:00+00:00
+[2023-11-02T09:26:52.376-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.524 seconds
+[2023-11-02T09:28:34.115-0500] {processor.py:157} INFO - Started process (PID=95803) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:28:34.120-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:28:34.120-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:28:34.120-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:28:35.136-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:28:35.381-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:28:35.381-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:28:35.388-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:28:35.498-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:28:35.498-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:28:35.518-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.404 seconds
+[2023-11-02T09:29:46.106-0500] {processor.py:157} INFO - Started process (PID=95902) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:29:46.111-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:29:46.111-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:29:46.111-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:29:47.227-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:29:47.468-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:29:47.468-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:29:47.475-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:29:47.584-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:29:47.584-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:29:47.605-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.499 seconds
+[2023-11-02T09:30:51.925-0500] {processor.py:157} INFO - Started process (PID=95987) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:30:51.930-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:30:51.930-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:30:51.930-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:30:53.040-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:30:53.284-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:30:53.284-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:30:53.291-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:30:53.398-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:30:53.398-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:30:53.419-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.494 seconds
+[2023-11-02T09:31:57.455-0500] {processor.py:157} INFO - Started process (PID=96060) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:31:57.460-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:31:57.461-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:31:57.461-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:31:58.583-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:31:58.814-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:31:58.814-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:31:58.822-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:31:58.929-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:31:58.929-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:31:58.950-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.495 seconds
+[2023-11-02T09:54:21.845-0500] {processor.py:157} INFO - Started process (PID=96896) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:54:21.849-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T09:54:21.849-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:54:21.849-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:54:23.013-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T09:54:23.203-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:54:23.203-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T09:54:23.212-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T09:54:23.328-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:54:23.327-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:54:23.339-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:54:23.339-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-09T00:00:00+00:00, run_after=2023-04-16T00:00:00+00:00
+[2023-11-02T09:54:23.351-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.507 seconds
+[2023-11-02T10:07:08.786-0500] {processor.py:157} INFO - Started process (PID=97253) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:07:08.791-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:07:08.791-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:07:08.791-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:07:09.837-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:07:09.999-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:07:09.999-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:07:10.009-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:07:10.409-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:07:10.409-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:07:10.420-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:07:10.420-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-16T00:00:00+00:00, run_after=2023-04-23T00:00:00+00:00
+[2023-11-02T10:07:10.431-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.646 seconds
+[2023-11-02T10:12:38.833-0500] {processor.py:157} INFO - Started process (PID=97502) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:12:38.842-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:12:38.842-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:12:38.842-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:12:39.704-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:12:39.880-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:12:39.880-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:12:39.888-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:12:40.267-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:12:40.267-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:12:40.272-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:12:40.272-0500] {dag.py:2963} INFO - Creating ORM DAG for economics_data_pipeline
+[2023-11-02T10:12:40.278-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:12:40.278-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:12:40.288-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.456 seconds
+[2023-11-02T10:14:10.654-0500] {processor.py:157} INFO - Started process (PID=97600) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:14:10.661-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:14:10.662-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:10.661-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:14:11.731-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:14:12.005-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:12.005-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:14:12.012-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:14:12.120-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:12.119-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:14:12.130-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:12.130-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:14:12.142-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.488 seconds
+[2023-11-02T10:15:13.733-0500] {processor.py:157} INFO - Started process (PID=97671) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:15:13.738-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:15:13.738-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:15:13.738-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:15:14.804-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:15:14.998-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:15:14.998-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:15:15.007-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:15:15.127-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:15:15.127-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:15:15.139-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:15:15.139-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:15:15.151-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.418 seconds
+[2023-11-02T10:38:24.238-0500] {processor.py:157} INFO - Started process (PID=99809) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:38:24.244-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:38:24.244-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:38:24.244-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:38:25.781-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:38:25.963-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:38:25.963-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:38:25.973-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:38:26.100-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:38:26.100-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:38:26.112-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:38:26.112-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:38:26.125-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.887 seconds
+[2023-11-02T10:39:58.373-0500] {processor.py:157} INFO - Started process (PID=99948) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:39:58.380-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:39:58.380-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:58.380-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:39:59.501-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:39:59.713-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:59.713-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:39:59.721-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:39:59.843-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:59.842-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:39:59.855-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:59.855-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:39:59.868-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.495 seconds
+[2023-11-02T10:41:03.532-0500] {processor.py:157} INFO - Started process (PID=120) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:41:03.537-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:41:03.538-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:41:03.538-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:41:04.652-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:41:04.885-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:41:04.885-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:41:04.892-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:41:05.000-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:41:05.000-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:41:05.011-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:41:05.011-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:41:05.024-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.492 seconds
+[2023-11-02T10:42:05.036-0500] {processor.py:157} INFO - Started process (PID=212) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:42:05.042-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:42:05.042-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:05.042-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:42:06.205-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:42:06.418-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:06.417-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:42:06.425-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:42:06.541-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:06.541-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:42:06.553-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:06.552-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:42:06.564-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.528 seconds
+[2023-11-02T10:43:06.103-0500] {processor.py:157} INFO - Started process (PID=414) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:43:06.109-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T10:43:06.109-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:43:06.109-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:43:07.209-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T10:43:07.452-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:43:07.452-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T10:43:07.459-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T10:43:07.585-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:43:07.585-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:43:07.597-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:43:07.597-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+[2023-11-02T10:43:07.609-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.506 seconds
+[2023-11-02T15:36:29.979-0500] {processor.py:157} INFO - Started process (PID=1281) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T15:36:29.984-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T15:36:29.984-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:36:29.984-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T15:36:31.991-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T15:36:32.182-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:36:32.182-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T15:36:32.190-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T15:36:32.536-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:36:32.535-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T15:36:32.546-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:36:32.546-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-01T00:00:00+00:00, run_after=2023-11-02T00:00:00+00:00
+[2023-11-02T15:36:32.558-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 2.580 seconds
+[2023-11-02T15:37:36.409-0500] {processor.py:157} INFO - Started process (PID=1302) to work on /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T15:37:36.413-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py for tasks to queue
+[2023-11-02T15:37:36.414-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:37:36.414-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T15:37:37.423-0500] {logging_mixin.py:151} INFO - MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
+[2023-11-02T15:37:37.565-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:37:37.565-0500] {EconomicsChatResource.py:30} INFO - Rate limiter initialized
+[2023-11-02T15:37:37.572-0500] {processor.py:839} INFO - DAG(s) dict_keys(['economics_data_pipeline']) retrieved from /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py
+[2023-11-02T15:37:37.680-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:37:37.680-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T15:37:37.691-0500] {logging_mixin.py:151} INFO - [2023-11-02T15:37:37.691-0500] {dag.py:3722} INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-01T00:00:00+00:00, run_after=2023-11-02T00:00:00+00:00
+[2023-11-02T15:37:37.701-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py took 1.293 seconds

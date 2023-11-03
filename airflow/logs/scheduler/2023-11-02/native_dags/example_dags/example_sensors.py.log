@@ -1,0 +1,333 @@
+[2023-11-01T21:35:50.183-0500] {processor.py:157} INFO - Started process (PID=87712) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:35:50.187-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:35:50.187-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.187-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:35:50.207-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:35:50.554-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.553-0500] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-01T21:35:50.558-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.558-0500] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-01T21:35:50.561-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.561-0500] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-01T21:35:50.561-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.561-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:35:50.567-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.567-0500] {dag.py:2963} INFO - Creating ORM DAG for example_sensors
+[2023-11-01T21:35:50.567-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:35:50.567-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:35:50.577-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.394 seconds
+[2023-11-01T21:37:18.729-0500] {processor.py:157} INFO - Started process (PID=87869) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:37:18.735-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:37:18.735-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:37:18.735-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:37:18.760-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:37:18.885-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:37:18.885-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:37:18.891-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:37:18.891-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:37:18.903-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.174 seconds
+[2023-11-01T21:39:10.650-0500] {processor.py:157} INFO - Started process (PID=88062) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:39:10.655-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:39:10.655-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:39:10.655-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:39:10.675-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:39:10.788-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:39:10.788-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:39:10.793-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:39:10.793-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:39:10.803-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.153 seconds
+[2023-11-01T21:41:07.829-0500] {processor.py:157} INFO - Started process (PID=88329) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:41:07.834-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:41:07.834-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:41:07.834-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:41:07.856-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:41:07.969-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:41:07.969-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:41:07.974-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:41:07.974-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:41:07.985-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.157 seconds
+[2023-11-01T21:43:03.401-0500] {processor.py:157} INFO - Started process (PID=88598) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:43:03.406-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:43:03.407-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:43:03.407-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:43:03.426-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:43:03.538-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:43:03.538-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:43:03.543-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:43:03.543-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:43:03.553-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.152 seconds
+[2023-11-01T21:44:56.648-0500] {processor.py:157} INFO - Started process (PID=88754) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:44:56.653-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:44:56.654-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:44:56.654-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:44:56.674-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:44:56.788-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:44:56.788-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:44:56.793-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:44:56.793-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:44:56.804-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.156 seconds
+[2023-11-01T21:47:01.310-0500] {processor.py:157} INFO - Started process (PID=89010) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:47:01.315-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:47:01.315-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:47:01.315-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:47:01.334-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:47:01.447-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:47:01.447-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:47:01.452-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:47:01.452-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:47:01.462-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.153 seconds
+[2023-11-01T21:49:02.649-0500] {processor.py:157} INFO - Started process (PID=89174) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:49:02.654-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:49:02.654-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:49:02.654-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:49:02.678-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:49:02.802-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:49:02.802-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:49:02.808-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:49:02.808-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:49:02.820-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.172 seconds
+[2023-11-01T21:51:01.507-0500] {processor.py:157} INFO - Started process (PID=89358) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:51:01.512-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:51:01.512-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:51:01.512-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:51:01.534-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:51:01.657-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:51:01.657-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:51:01.663-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:51:01.663-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:51:01.676-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.170 seconds
+[2023-11-01T21:52:56.962-0500] {processor.py:157} INFO - Started process (PID=89518) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:52:56.968-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:52:56.968-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:52:56.968-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:52:56.991-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:52:57.120-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:52:57.120-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:52:57.126-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:52:57.125-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:52:57.137-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.175 seconds
+[2023-11-01T21:54:59.793-0500] {processor.py:157} INFO - Started process (PID=89697) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:54:59.798-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:54:59.798-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:54:59.798-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:54:59.822-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:54:59.957-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:54:59.956-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:54:59.962-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:54:59.962-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:54:59.975-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.183 seconds
+[2023-11-01T21:56:55.615-0500] {processor.py:157} INFO - Started process (PID=89853) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:56:55.620-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:56:55.621-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:56:55.621-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:56:55.641-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:56:55.764-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:56:55.764-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:56:55.770-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:56:55.770-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:56:55.781-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.167 seconds
+[2023-11-01T21:58:58.217-0500] {processor.py:157} INFO - Started process (PID=90048) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:58:58.221-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T21:58:58.222-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:58:58.222-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:58:58.245-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T21:58:58.370-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:58:58.370-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T21:58:58.375-0500] {logging_mixin.py:151} INFO - [2023-11-01T21:58:58.375-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T21:58:58.387-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.171 seconds
+[2023-11-01T22:00:56.942-0500] {processor.py:157} INFO - Started process (PID=90217) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:00:56.948-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:00:56.948-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:00:56.948-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:00:56.968-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:00:57.093-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:00:57.093-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:00:57.099-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:00:57.098-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:00:57.110-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.168 seconds
+[2023-11-01T22:02:58.954-0500] {processor.py:157} INFO - Started process (PID=90369) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:02:58.958-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:02:58.958-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:02:58.958-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:02:58.979-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:02:59.098-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:02:59.098-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:02:59.104-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:02:59.104-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:02:59.114-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.161 seconds
+[2023-11-01T22:04:53.037-0500] {processor.py:157} INFO - Started process (PID=90566) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:04:53.042-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:04:53.042-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:04:53.042-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:04:53.065-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:04:53.189-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:04:53.189-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:04:53.195-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:04:53.195-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:04:53.206-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.169 seconds
+[2023-11-01T22:06:54.354-0500] {processor.py:157} INFO - Started process (PID=90788) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:06:54.359-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:06:54.360-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:06:54.360-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:06:54.380-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:06:54.493-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:06:54.493-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:06:54.498-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:06:54.498-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:06:54.509-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.155 seconds
+[2023-11-01T22:08:58.179-0500] {processor.py:157} INFO - Started process (PID=91017) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:08:58.184-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:08:58.185-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:08:58.185-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:08:58.208-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:08:58.328-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:08:58.328-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:08:58.334-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:08:58.334-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:08:58.345-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.167 seconds
+[2023-11-01T22:14:26.124-0500] {processor.py:157} INFO - Started process (PID=91549) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:14:26.129-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:14:26.129-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:14:26.129-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:14:26.149-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:14:26.494-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:14:26.494-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:14:26.499-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:14:26.499-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:14:26.511-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.387 seconds
+[2023-11-01T22:16:26.936-0500] {processor.py:157} INFO - Started process (PID=91738) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:16:26.941-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:16:26.942-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:16:26.942-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:16:26.962-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:16:27.074-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:16:27.074-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:16:27.079-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:16:27.079-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:16:27.090-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.154 seconds
+[2023-11-01T22:18:25.432-0500] {processor.py:157} INFO - Started process (PID=92035) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:18:25.437-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:18:25.437-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:18:25.437-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:18:25.458-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:18:25.580-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:18:25.580-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:18:25.586-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:18:25.586-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:18:25.598-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.167 seconds
+[2023-11-01T22:20:14.350-0500] {processor.py:157} INFO - Started process (PID=92301) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:20:14.355-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:20:14.355-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:20:14.355-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:20:14.374-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:20:14.489-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:20:14.489-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:20:14.494-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:20:14.494-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:20:14.504-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.155 seconds
+[2023-11-01T22:22:11.320-0500] {processor.py:157} INFO - Started process (PID=92621) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:22:11.325-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-01T22:22:11.325-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:22:11.325-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:22:11.345-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-01T22:22:11.468-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:22:11.468-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-01T22:22:11.474-0500] {logging_mixin.py:151} INFO - [2023-11-01T22:22:11.474-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-01T22:22:11.486-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.166 seconds
+[2023-11-02T00:34:49.166-0500] {processor.py:157} INFO - Started process (PID=92947) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T00:34:49.171-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T00:34:49.171-0500] {logging_mixin.py:151} INFO - [2023-11-02T00:34:49.171-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T00:34:49.193-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T00:34:49.314-0500] {logging_mixin.py:151} INFO - [2023-11-02T00:34:49.313-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T00:34:49.319-0500] {logging_mixin.py:151} INFO - [2023-11-02T00:34:49.319-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T00:34:49.329-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.163 seconds
+[2023-11-02T03:28:08.612-0500] {processor.py:157} INFO - Started process (PID=93088) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T03:28:08.617-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T03:28:08.617-0500] {logging_mixin.py:151} INFO - [2023-11-02T03:28:08.617-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T03:28:08.641-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T03:28:08.769-0500] {logging_mixin.py:151} INFO - [2023-11-02T03:28:08.769-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T03:28:08.775-0500] {logging_mixin.py:151} INFO - [2023-11-02T03:28:08.775-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T03:28:08.785-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.174 seconds
+[2023-11-02T06:53:42.503-0500] {processor.py:157} INFO - Started process (PID=93284) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T06:53:42.508-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T06:53:42.509-0500] {logging_mixin.py:151} INFO - [2023-11-02T06:53:42.509-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T06:53:42.530-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T06:53:42.645-0500] {logging_mixin.py:151} INFO - [2023-11-02T06:53:42.645-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T06:53:42.650-0500] {logging_mixin.py:151} INFO - [2023-11-02T06:53:42.650-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T06:53:42.661-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.158 seconds
+[2023-11-02T08:28:54.476-0500] {processor.py:157} INFO - Started process (PID=93399) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T08:28:54.481-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T08:28:54.481-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:28:54.481-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T08:28:54.503-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T08:28:54.636-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:28:54.635-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T08:28:54.641-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:28:54.641-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T08:28:54.653-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.177 seconds
+[2023-11-02T08:38:06.016-0500] {processor.py:157} INFO - Started process (PID=93495) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T08:38:06.021-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T08:38:06.022-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:38:06.022-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T08:38:06.042-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T08:38:06.154-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:38:06.153-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T08:38:06.159-0500] {logging_mixin.py:151} INFO - [2023-11-02T08:38:06.159-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T08:38:06.169-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.153 seconds
+[2023-11-02T09:03:06.814-0500] {processor.py:157} INFO - Started process (PID=93603) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:03:06.819-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:03:06.819-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:06.819-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:03:06.842-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:03:06.973-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:06.972-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:03:06.979-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:03:06.979-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:03:06.994-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.181 seconds
+[2023-11-02T09:04:31.934-0500] {processor.py:157} INFO - Started process (PID=93723) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:04:31.939-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:04:31.939-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:31.939-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:04:31.961-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:04:32.075-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:32.075-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:04:32.080-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:04:32.080-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:04:32.090-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.157 seconds
+[2023-11-02T09:06:28.543-0500] {processor.py:157} INFO - Started process (PID=93868) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:06:28.548-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:06:28.548-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:28.548-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:06:28.568-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:06:28.681-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:28.681-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:06:28.686-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:06:28.686-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:06:28.697-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.154 seconds
+[2023-11-02T09:08:33.831-0500] {processor.py:157} INFO - Started process (PID=94024) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:08:33.837-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:08:33.837-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:33.837-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:08:33.861-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:08:33.990-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:33.989-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:08:33.995-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:08:33.995-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:08:34.008-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.178 seconds
+[2023-11-02T09:10:40.580-0500] {processor.py:157} INFO - Started process (PID=94337) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:10:40.584-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:10:40.585-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:10:40.585-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:10:40.605-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:10:40.717-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:10:40.717-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:10:40.722-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:10:40.722-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:10:40.733-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.153 seconds
+[2023-11-02T09:12:49.694-0500] {processor.py:157} INFO - Started process (PID=94500) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:12:49.700-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:12:49.700-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:49.700-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:12:49.723-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:12:49.851-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:49.851-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:12:49.856-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:12:49.856-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:12:49.867-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.174 seconds
+[2023-11-02T09:14:56.539-0500] {processor.py:157} INFO - Started process (PID=94634) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:14:56.543-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:14:56.544-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:56.544-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:14:56.564-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:14:56.677-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:56.677-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:14:56.682-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:14:56.682-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:14:56.692-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.154 seconds
+[2023-11-02T09:17:00.712-0500] {processor.py:157} INFO - Started process (PID=94774) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:17:00.717-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:17:00.717-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:00.717-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:17:00.737-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:17:00.852-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:00.852-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:17:00.857-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:17:00.857-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:17:00.868-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.156 seconds
+[2023-11-02T09:19:05.873-0500] {processor.py:157} INFO - Started process (PID=94948) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:19:05.879-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:19:05.879-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:05.879-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:19:05.903-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:19:06.042-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:06.042-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:19:06.048-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:19:06.048-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:19:06.061-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.189 seconds
+[2023-11-02T09:21:13.756-0500] {processor.py:157} INFO - Started process (PID=95104) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:21:13.761-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:21:13.761-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:13.761-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:21:13.782-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:21:13.896-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:13.895-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:21:13.901-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:21:13.901-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:21:13.911-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.155 seconds
+[2023-11-02T09:23:22.900-0500] {processor.py:157} INFO - Started process (PID=95296) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:23:22.905-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:23:22.906-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:22.906-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:23:22.931-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:23:23.061-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:23.061-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:23:23.068-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:23:23.068-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:23:23.081-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.182 seconds
+[2023-11-02T09:25:27.956-0500] {processor.py:157} INFO - Started process (PID=95545) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:25:27.961-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:25:27.961-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:27.961-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:25:27.982-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:25:28.097-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:28.097-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:25:28.102-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:25:28.102-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:25:28.113-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.158 seconds
+[2023-11-02T09:28:16.002-0500] {processor.py:157} INFO - Started process (PID=95784) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:28:16.007-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:28:16.008-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:28:16.008-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:28:16.027-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:28:16.143-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:28:16.143-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:28:16.148-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:28:16.148-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:28:16.158-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.157 seconds
+[2023-11-02T09:30:33.863-0500] {processor.py:157} INFO - Started process (PID=95967) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:30:33.868-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T09:30:33.868-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:30:33.868-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:30:33.889-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T09:30:34.001-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:30:34.001-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T09:30:34.006-0500] {logging_mixin.py:151} INFO - [2023-11-02T09:30:34.006-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T09:30:34.017-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.155 seconds
+[2023-11-02T10:13:24.199-0500] {processor.py:157} INFO - Started process (PID=97550) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:13:24.204-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T10:13:24.205-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:13:24.205-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:13:24.224-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:13:24.337-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:13:24.337-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:13:24.342-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:13:24.342-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T10:13:24.353-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.154 seconds
+[2023-11-02T10:14:55.623-0500] {processor.py:157} INFO - Started process (PID=97647) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:14:55.628-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T10:14:55.629-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:55.628-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:14:55.649-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:14:55.761-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:55.761-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:14:55.766-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:14:55.766-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T10:14:55.777-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.154 seconds
+[2023-11-02T10:39:11.575-0500] {processor.py:157} INFO - Started process (PID=99881) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:39:11.581-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T10:39:11.581-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:11.581-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:39:11.601-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:39:11.714-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:11.713-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:39:11.719-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:39:11.719-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T10:39:11.729-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.154 seconds
+[2023-11-02T10:40:45.514-0500] {processor.py:157} INFO - Started process (PID=100) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:40:45.520-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T10:40:45.520-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:40:45.520-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:40:45.541-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:40:45.657-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:40:45.657-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:40:45.663-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:40:45.662-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T10:40:45.673-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.159 seconds
+[2023-11-02T10:42:48.066-0500] {processor.py:157} INFO - Started process (PID=335) to work on /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:42:48.072-0500] {processor.py:829} INFO - Processing file /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2023-11-02T10:42:48.072-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:48.072-0500] {dagbag.py:536} INFO - Filling up the DagBag from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:42:48.095-0500] {processor.py:839} INFO - DAG(s) dict_keys(['example_sensors']) retrieved from /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py
+[2023-11-02T10:42:48.221-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:48.220-0500] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-02T10:42:48.226-0500] {logging_mixin.py:151} INFO - [2023-11-02T10:42:48.226-0500] {dag.py:3722} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2023-11-02T10:42:48.238-0500] {processor.py:179} INFO - Processing /Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/example_dags/example_sensors.py took 0.172 seconds

@@ -1,7 +1,7 @@
 import re
 import markdown
 import yaml  # Import the yaml library
-from models import BlogPost
+from models.models import BlogPost
 
 def parse_metadata_from_md(md_content):
     pattern = r"^---\n(.+?)\n---"

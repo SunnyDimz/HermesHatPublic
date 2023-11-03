@@ -1,0 +1,524 @@
+2023-11-01 21:35:03,253 INFO - Starting the scheduler
+2023-11-01 21:35:03,254 INFO - Processing each file at most -1 times
+2023-11-01 21:35:03,272 INFO - Launched DagFileProcessorManager with pid: 87618
+2023-11-01 21:35:03,275 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 21:40:03,348 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 21:45:04,411 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 21:50:05,202 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 21:55:05,246 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 22:00:05,622 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 22:05:06,410 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 22:10:06,666 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 22:15:07,194 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-01 22:20:08,192 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 02:01:58,799 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 02:01:58,802 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 08:48:05,535 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 08:48:05,538 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 09:07:14,411 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:12:15,345 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:17:18,302 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:22:18,992 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:27:09,190 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-08T00:00:00+00:00, run_after=2023-01-15T00:00:00+00:00
+2023-11-02 09:27:09,218 INFO - 3 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-01T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:22:17+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:27:08.088916+00:00 [scheduled]>
+2023-11-02 09:27:09,218 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:09,219 INFO - DAG economics_data_pipeline has 1/16 running and queued tasks
+2023-11-02 09:27:09,219 INFO - DAG economics_data_pipeline has 2/16 running and queued tasks
+2023-11-02 09:27:09,219 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-01T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:22:17+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:27:08.088916+00:00 [scheduled]>
+2023-11-02 09:27:09,221 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:09,221 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:09,222 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:09,222 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-01T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:09,223 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:09,223 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:22:17+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:09,224 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:22:17+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:09,224 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:27:08.088916+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:09,224 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:27:08.088916+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:09,225 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:13,409 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:22:17+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:16,712 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:27:08.088916+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:19,975 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-01T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:19,976 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:22:17+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:19,976 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:27:08.088916+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:19,985 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=manual__2023-11-02T14:22:17+00:00, map_index=-1, run_start_date=2023-11-02 14:27:15.853314+00:00, run_end_date=2023-11-02 14:27:15.934191+00:00, run_duration=0.080877, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=3, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:09.220342+00:00, queued_by_job_id=1, pid=95694
+2023-11-02 09:27:19,985 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=manual__2023-11-02T14:27:08.088916+00:00, map_index=-1, run_start_date=2023-11-02 14:27:19.102311+00:00, run_end_date=2023-11-02 14:27:19.188188+00:00, run_duration=0.085877, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:09.220342+00:00, queued_by_job_id=1, pid=95697
+2023-11-02 09:27:19,986 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-01T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:12.590529+00:00, run_end_date=2023-11-02 14:27:12.721594+00:00, run_duration=0.131065, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=2, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:09.220342+00:00, queued_by_job_id=1, pid=95689
+2023-11-02 09:27:20,009 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:27:20,978 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-15T00:00:00+00:00, run_after=2023-01-22T00:00:00+00:00
+2023-11-02 09:27:21,006 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-08T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:21,006 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:21,007 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-08T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:21,009 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:21,009 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-08T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:21,010 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-08T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:21,011 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-08T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:24,280 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-08T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:24,288 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-08T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:23.392218+00:00, run_end_date=2023-11-02 14:27:23.475357+00:00, run_duration=0.083139, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:21.008195+00:00, queued_by_job_id=1, pid=95704
+2023-11-02 09:27:25,256 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-22T00:00:00+00:00, run_after=2023-01-29T00:00:00+00:00
+2023-11-02 09:27:25,279 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-15T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:25,279 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:25,280 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-15T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:25,281 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:25,281 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-15T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:25,282 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-15T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:25,282 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-15T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:28,447 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-15T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:28,453 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-15T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:27.645529+00:00, run_end_date=2023-11-02 14:27:27.733284+00:00, run_duration=0.087755, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=6, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:25.280652+00:00, queued_by_job_id=1, pid=95711
+2023-11-02 09:27:29,407 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-29T00:00:00+00:00, run_after=2023-02-05T00:00:00+00:00
+2023-11-02 09:27:29,432 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-22T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:29,432 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:29,432 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-22T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:29,433 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:29,434 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-22T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:29,434 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-22T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:29,435 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-22T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:32,648 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-22T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:32,659 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-22T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:31.730432+00:00, run_end_date=2023-11-02 14:27:31.812158+00:00, run_duration=0.081726, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=7, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:29.433354+00:00, queued_by_job_id=1, pid=95718
+2023-11-02 09:27:33,699 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-05T00:00:00+00:00, run_after=2023-02-12T00:00:00+00:00
+2023-11-02 09:27:33,726 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:33,727 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:33,727 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:33,728 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:33,729 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-29T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:33,729 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-29T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:33,730 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-29T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:36,942 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-29T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:36,950 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-29T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:36.081089+00:00, run_end_date=2023-11-02 14:27:36.167765+00:00, run_duration=0.086676, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:33.728060+00:00, queued_by_job_id=1, pid=95725
+2023-11-02 09:27:37,995 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-12T00:00:00+00:00, run_after=2023-02-19T00:00:00+00:00
+2023-11-02 09:27:38,029 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-05T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:38,030 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:38,030 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-05T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:38,031 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:38,032 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-05T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:38,032 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:38,033 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:41,158 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-05T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:41,164 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-05T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:40.287481+00:00, run_end_date=2023-11-02 14:27:40.368301+00:00, run_duration=0.08082, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=9, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:38.031053+00:00, queued_by_job_id=1, pid=95732
+2023-11-02 09:27:42,128 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-19T00:00:00+00:00, run_after=2023-02-26T00:00:00+00:00
+2023-11-02 09:27:42,161 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:42,162 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:42,162 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:42,163 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:42,164 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-12T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:42,164 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:42,165 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:45,548 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-12T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:45,554 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-12T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:44.722413+00:00, run_end_date=2023-11-02 14:27:44.806235+00:00, run_duration=0.083822, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=10, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:42.163298+00:00, queued_by_job_id=1, pid=95740
+2023-11-02 09:27:46,536 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-26T00:00:00+00:00, run_after=2023-03-05T00:00:00+00:00
+2023-11-02 09:27:46,569 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:46,569 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:46,570 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:46,571 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:46,571 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-19T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:46,572 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:46,573 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:49,781 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-19T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:49,787 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-19T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:48.966303+00:00, run_end_date=2023-11-02 14:27:49.057020+00:00, run_duration=0.090717, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:46.570854+00:00, queued_by_job_id=1, pid=95745
+2023-11-02 09:27:50,799 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-05T00:00:00+00:00, run_after=2023-03-12T00:00:00+00:00
+2023-11-02 09:27:50,836 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-26T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:50,837 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:50,837 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-26T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:50,838 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:50,839 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-26T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:50,839 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-26T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:50,840 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-26T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:54,251 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-26T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:54,258 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-26T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:53.366489+00:00, run_end_date=2023-11-02 14:27:53.524906+00:00, run_duration=0.158417, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=12, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:50.838225+00:00, queued_by_job_id=1, pid=95754
+2023-11-02 09:27:55,237 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-12T00:00:00+00:00, run_after=2023-03-19T00:00:00+00:00
+2023-11-02 09:27:55,274 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-05T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:55,274 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:55,275 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-05T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:55,276 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:55,276 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-05T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:55,277 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:55,277 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:58,495 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-05T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:27:58,500 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-03-05T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:27:57.670119+00:00, run_end_date=2023-11-02 14:27:57.754542+00:00, run_duration=0.084423, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=13, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:55.275652+00:00, queued_by_job_id=1, pid=95761
+2023-11-02 09:27:59,480 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-19T00:00:00+00:00, run_after=2023-03-26T00:00:00+00:00
+2023-11-02 09:27:59,519 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:59,519 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:27:59,519 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:27:59,520 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:27:59,521 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-12T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:27:59,521 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:27:59,522 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:02,653 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-12T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:28:02,659 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-03-12T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:28:01.845878+00:00, run_end_date=2023-11-02 14:28:01.926890+00:00, run_duration=0.081012, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:27:59.520327+00:00, queued_by_job_id=1, pid=95768
+2023-11-02 09:28:03,622 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-26T00:00:00+00:00, run_after=2023-04-02T00:00:00+00:00
+2023-11-02 09:28:03,663 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:28:03,663 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:28:03,663 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:28:03,664 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:28:03,665 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-19T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:28:03,665 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:03,666 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:06,805 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-19T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:28:06,810 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-03-19T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:28:06.020718+00:00, run_end_date=2023-11-02 14:28:06.100332+00:00, run_duration=0.079614, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=15, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:28:03.664346+00:00, queued_by_job_id=1, pid=95773
+2023-11-02 09:28:07,799 INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-02T00:00:00+00:00, run_after=2023-04-09T00:00:00+00:00
+2023-11-02 09:28:07,842 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-26T00:00:00+00:00 [scheduled]>
+2023-11-02 09:28:07,843 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:28:07,843 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-26T00:00:00+00:00 [scheduled]>
+2023-11-02 09:28:07,844 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:28:07,845 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-26T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:28:07,845 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-26T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:07,846 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-26T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:11,110 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-26T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:28:11,115 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-03-26T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:28:10.220346+00:00, run_end_date=2023-11-02 14:28:10.310823+00:00, run_duration=0.090477, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=16, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:28:07.844163+00:00, queued_by_job_id=1, pid=95778
+2023-11-02 09:28:12,075 INFO - DAG economics_data_pipeline is at (or above) max_active_runs (16 of 16), not creating any more runs
+2023-11-02 09:28:12,119 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-02T00:00:00+00:00 [scheduled]>
+2023-11-02 09:28:12,120 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:28:12,120 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-02T00:00:00+00:00 [scheduled]>
+2023-11-02 09:28:12,121 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:28:12,121 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-02T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:28:12,122 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-02T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:12,123 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-02T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:28:15,303 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-02T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 09:28:15,309 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-04-02T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:28:14.439178+00:00, run_end_date=2023-11-02 14:28:14.523579+00:00, run_duration=0.084401, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=17, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:28:12.120952+00:00, queued_by_job_id=1, pid=95783
+2023-11-02 09:32:13,812 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-01T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:13,813 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:13,813 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-01T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:13,815 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-01T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:13,815 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:13,816 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:17,736 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-01T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:17,742 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-01T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:16.889267+00:00, run_end_date=2023-11-02 14:32:17.017698+00:00, run_duration=0.128431, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=18, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:13.814308+00:00, queued_by_job_id=1, pid=96084
+2023-11-02 09:32:18,776 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-01-01 00:00:00+00:00: scheduled__2023-01-01T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:09.183415+00:00. externally triggered: False> failed
+2023-11-02 09:32:18,778 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-01-01 00:00:00+00:00, run_id=scheduled__2023-01-01T00:00:00+00:00, run_start_date=2023-11-02 14:27:09.195948+00:00, run_end_date=2023-11-02 14:32:18.777919+00:00, run_duration=309.581971, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-01 00:00:00+00:00, data_interval_end=2023-01-08 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:18,782 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-08T00:00:00+00:00, run_after=2023-01-15T00:00:00+00:00
+2023-11-02 09:32:18,792 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:22:17+00:00 [scheduled]>
+2023-11-02 09:32:18,792 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:18,793 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:22:17+00:00 [scheduled]>
+2023-11-02 09:32:18,794 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:22:17+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:18,794 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:22:17+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:18,795 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:22:17+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:21,977 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:22:17+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:21,984 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=manual__2023-11-02T14:22:17+00:00, map_index=-1, run_start_date=2023-11-02 14:32:21.117732+00:00, run_end_date=2023-11-02 14:32:21.216673+00:00, run_duration=0.098941, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=19, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:18.793512+00:00, queued_by_job_id=1, pid=96090
+2023-11-02 09:32:22,000 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:32:22,990 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-15T00:00:00+00:00, run_after=2023-01-22T00:00:00+00:00
+2023-11-02 09:32:23,025 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-11-02 14:22:17+00:00: manual__2023-11-02T14:22:17+00:00, state:running, queued_at: 2023-11-02 14:22:17.850453+00:00. externally triggered: True> failed
+2023-11-02 09:32:23,026 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 14:22:17+00:00, run_id=manual__2023-11-02T14:22:17+00:00, run_start_date=2023-11-02 14:27:09.196206+00:00, run_end_date=2023-11-02 14:32:23.026084+00:00, run_duration=313.829878, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-10-22 00:00:00+00:00, data_interval_end=2023-10-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:23,034 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:27:08.088916+00:00 [scheduled]>
+2023-11-02 09:32:23,035 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:23,035 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:27:08.088916+00:00 [scheduled]>
+2023-11-02 09:32:23,036 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:27:08.088916+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:23,036 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:27:08.088916+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:23,037 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:27:08.088916+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:26,219 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:27:08.088916+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:26,225 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=manual__2023-11-02T14:27:08.088916+00:00, map_index=-1, run_start_date=2023-11-02 14:32:25.365881+00:00, run_end_date=2023-11-02 14:32:25.465545+00:00, run_duration=0.099664, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=20, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:23.036008+00:00, queued_by_job_id=1, pid=96095
+2023-11-02 09:32:27,270 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-22T00:00:00+00:00, run_after=2023-01-29T00:00:00+00:00
+2023-11-02 09:32:27,307 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-11-02 14:27:08.088916+00:00: manual__2023-11-02T14:27:08.088916+00:00, state:running, queued_at: 2023-11-02 14:27:08.105043+00:00. externally triggered: True> failed
+2023-11-02 09:32:27,307 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 14:27:08.088916+00:00, run_id=manual__2023-11-02T14:27:08.088916+00:00, run_start_date=2023-11-02 14:27:09.196259+00:00, run_end_date=2023-11-02 14:32:27.307640+00:00, run_duration=318.111381, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-10-22 00:00:00+00:00, data_interval_end=2023-10-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:27,313 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-08T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:27,314 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:27,314 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-08T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:27,315 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-08T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:27,315 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-08T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:27,316 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-08T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:30,692 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-08T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:30,700 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-08T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:29.902217+00:00, run_end_date=2023-11-02 14:32:30.003830+00:00, run_duration=0.101613, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=21, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:27.314904+00:00, queued_by_job_id=1, pid=96100
+2023-11-02 09:32:31,851 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-29T00:00:00+00:00, run_after=2023-02-05T00:00:00+00:00
+2023-11-02 09:32:31,895 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-01-08 00:00:00+00:00: scheduled__2023-01-08T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:20.975293+00:00. externally triggered: False> failed
+2023-11-02 09:32:31,896 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-01-08 00:00:00+00:00, run_id=scheduled__2023-01-08T00:00:00+00:00, run_start_date=2023-11-02 14:27:20.984494+00:00, run_end_date=2023-11-02 14:32:31.896238+00:00, run_duration=310.911744, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-08 00:00:00+00:00, data_interval_end=2023-01-15 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:31,900 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-15T00:00:00+00:00, run_after=2023-01-22T00:00:00+00:00
+2023-11-02 09:32:31,906 INFO - 2 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-15T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-22T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:31,907 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:31,907 INFO - DAG economics_data_pipeline has 1/16 running and queued tasks
+2023-11-02 09:32:31,908 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-15T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-22T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:31,910 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-15T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:31,910 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-15T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:31,911 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-22T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:31,911 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-22T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:31,913 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-15T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:35,200 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-22T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:38,743 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-15T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:38,746 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-22T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:38,758 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-15T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:34.428688+00:00, run_end_date=2023-11-02 14:32:34.530598+00:00, run_duration=0.10191, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=22, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:31.909077+00:00, queued_by_job_id=1, pid=96105
+2023-11-02 09:32:38,758 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-22T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:37.745742+00:00, run_end_date=2023-11-02 14:32:37.840074+00:00, run_duration=0.094332, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=23, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:31.909077+00:00, queued_by_job_id=1, pid=96108
+2023-11-02 09:32:39,804 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-22T00:00:00+00:00, run_after=2023-01-29T00:00:00+00:00
+2023-11-02 09:32:39,833 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-01-22 00:00:00+00:00: scheduled__2023-01-22T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:29.404387+00:00. externally triggered: False> failed
+2023-11-02 09:32:39,837 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-01-22 00:00:00+00:00, run_id=scheduled__2023-01-22T00:00:00+00:00, run_start_date=2023-11-02 14:27:29.411781+00:00, run_end_date=2023-11-02 14:32:39.837732+00:00, run_duration=310.425951, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-22 00:00:00+00:00, data_interval_end=2023-01-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:39,847 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-29T00:00:00+00:00, run_after=2023-02-05T00:00:00+00:00
+2023-11-02 09:32:39,849 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-01-15 00:00:00+00:00: scheduled__2023-01-15T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:25.253917+00:00. externally triggered: False> failed
+2023-11-02 09:32:39,849 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-01-15 00:00:00+00:00, run_id=scheduled__2023-01-15T00:00:00+00:00, run_start_date=2023-11-02 14:27:25.260974+00:00, run_end_date=2023-11-02 14:32:39.849464+00:00, run_duration=314.58849, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-15 00:00:00+00:00, data_interval_end=2023-01-22 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:39,851 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-22T00:00:00+00:00, run_after=2023-01-29T00:00:00+00:00
+2023-11-02 09:32:39,856 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:39,857 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:39,857 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:39,858 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-29T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:39,858 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-29T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:39,859 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-29T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:43,040 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-01-29T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:43,048 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-01-29T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:42.171477+00:00, run_end_date=2023-11-02 14:32:42.254282+00:00, run_duration=0.082805, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=24, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:39.857914+00:00, queued_by_job_id=1, pid=96113
+2023-11-02 09:32:44,037 INFO - Setting next_dagrun for economics_data_pipeline to 2023-01-29T00:00:00+00:00, run_after=2023-02-05T00:00:00+00:00
+2023-11-02 09:32:44,069 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-01-29 00:00:00+00:00: scheduled__2023-01-29T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:33.696163+00:00. externally triggered: False> failed
+2023-11-02 09:32:44,070 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-01-29 00:00:00+00:00, run_id=scheduled__2023-01-29T00:00:00+00:00, run_start_date=2023-11-02 14:27:33.704474+00:00, run_end_date=2023-11-02 14:32:44.070327+00:00, run_duration=310.365853, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-29 00:00:00+00:00, data_interval_end=2023-02-05 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:44,073 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-05T00:00:00+00:00, run_after=2023-02-12T00:00:00+00:00
+2023-11-02 09:32:44,079 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-05T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:44,079 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:44,080 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-05T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:44,081 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-05T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:44,081 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:44,082 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:47,223 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-05T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:47,230 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-05T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:46.381773+00:00, run_end_date=2023-11-02 14:32:46.464441+00:00, run_duration=0.082668, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=25, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:44.080580+00:00, queued_by_job_id=1, pid=96119
+2023-11-02 09:32:48,210 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-12T00:00:00+00:00, run_after=2023-02-19T00:00:00+00:00
+2023-11-02 09:32:48,235 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-02-05 00:00:00+00:00: scheduled__2023-02-05T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:37.992546+00:00. externally triggered: False> failed
+2023-11-02 09:32:48,235 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-02-05 00:00:00+00:00, run_id=scheduled__2023-02-05T00:00:00+00:00, run_start_date=2023-11-02 14:27:38.001005+00:00, run_end_date=2023-11-02 14:32:48.235911+00:00, run_duration=310.234906, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-02-05 00:00:00+00:00, data_interval_end=2023-02-12 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:48,238 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-12T00:00:00+00:00, run_after=2023-02-19T00:00:00+00:00
+2023-11-02 09:32:48,243 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:48,243 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:48,244 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:48,245 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-12T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:48,245 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:48,246 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:51,836 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-12T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:51,844 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-12T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:50.895380+00:00, run_end_date=2023-11-02 14:32:50.984760+00:00, run_duration=0.08938, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=26, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:48.244698+00:00, queued_by_job_id=1, pid=96125
+2023-11-02 09:32:53,041 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-19T00:00:00+00:00, run_after=2023-02-26T00:00:00+00:00
+2023-11-02 09:32:53,071 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-02-12 00:00:00+00:00: scheduled__2023-02-12T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:42.125017+00:00. externally triggered: False> failed
+2023-11-02 09:32:53,072 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-02-12 00:00:00+00:00, run_id=scheduled__2023-02-12T00:00:00+00:00, run_start_date=2023-11-02 14:27:42.133408+00:00, run_end_date=2023-11-02 14:32:53.072133+00:00, run_duration=310.938725, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-02-12 00:00:00+00:00, data_interval_end=2023-02-19 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:53,075 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-19T00:00:00+00:00, run_after=2023-02-26T00:00:00+00:00
+2023-11-02 09:32:53,083 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:53,084 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:53,084 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:53,086 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-19T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:53,086 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:53,088 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:56,296 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-19T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:32:56,303 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-19T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:55.458573+00:00, run_end_date=2023-11-02 14:32:55.554197+00:00, run_duration=0.095624, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=27, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:53.085133+00:00, queued_by_job_id=1, pid=96134
+2023-11-02 09:32:57,399 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-26T00:00:00+00:00, run_after=2023-03-05T00:00:00+00:00
+2023-11-02 09:32:57,428 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-02-19 00:00:00+00:00: scheduled__2023-02-19T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:46.533924+00:00. externally triggered: False> failed
+2023-11-02 09:32:57,429 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-02-19 00:00:00+00:00, run_id=scheduled__2023-02-19T00:00:00+00:00, run_start_date=2023-11-02 14:27:46.541417+00:00, run_end_date=2023-11-02 14:32:57.429173+00:00, run_duration=310.887756, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-02-19 00:00:00+00:00, data_interval_end=2023-02-26 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:32:57,432 INFO - Setting next_dagrun for economics_data_pipeline to 2023-02-26T00:00:00+00:00, run_after=2023-03-05T00:00:00+00:00
+2023-11-02 09:32:57,438 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-26T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:57,439 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:32:57,439 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-02-26T00:00:00+00:00 [scheduled]>
+2023-11-02 09:32:57,441 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-26T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:32:57,441 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-26T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:32:57,443 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-02-26T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:33:00,886 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-02-26T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:33:00,892 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-02-26T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:32:59.990408+00:00, run_end_date=2023-11-02 14:33:00.090236+00:00, run_duration=0.099828, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=28, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:32:57.440286+00:00, queued_by_job_id=1, pid=96145
+2023-11-02 09:33:01,949 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-05T00:00:00+00:00, run_after=2023-03-12T00:00:00+00:00
+2023-11-02 09:33:01,975 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-02-26 00:00:00+00:00: scheduled__2023-02-26T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:50.796900+00:00. externally triggered: False> failed
+2023-11-02 09:33:01,976 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-02-26 00:00:00+00:00, run_id=scheduled__2023-02-26T00:00:00+00:00, run_start_date=2023-11-02 14:27:50.805259+00:00, run_end_date=2023-11-02 14:33:01.976178+00:00, run_duration=311.170919, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-02-26 00:00:00+00:00, data_interval_end=2023-03-05 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:33:01,979 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-05T00:00:00+00:00, run_after=2023-03-12T00:00:00+00:00
+2023-11-02 09:33:01,985 INFO - 2 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-05T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:33:01,985 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:33:01,985 INFO - DAG economics_data_pipeline has 1/16 running and queued tasks
+2023-11-02 09:33:01,986 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-05T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-12T00:00:00+00:00 [scheduled]>
+2023-11-02 09:33:01,987 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-05T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:33:01,987 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:33:01,988 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-12T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:33:01,988 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:33:01,989 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-05T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:33:05,217 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:33:08,476 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-05T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:33:08,478 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-12T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:33:08,485 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-03-05T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:33:04.342645+00:00, run_end_date=2023-11-02 14:33:04.445469+00:00, run_duration=0.102824, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=29, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:33:01.986729+00:00, queued_by_job_id=1, pid=96155
+2023-11-02 09:33:08,485 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=scheduled__2023-03-12T00:00:00+00:00, map_index=-1, run_start_date=2023-11-02 14:33:07.616527+00:00, run_end_date=2023-11-02 14:33:07.715083+00:00, run_duration=0.098556, state=failed, executor_state=success, try_number=2, max_tries=1, job_id=30, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 14:33:01.986729+00:00, queued_by_job_id=1, pid=96160
+2023-11-02 09:33:09,545 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-12T00:00:00+00:00, run_after=2023-03-19T00:00:00+00:00
+2023-11-02 09:33:09,565 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-03-12 00:00:00+00:00: scheduled__2023-03-12T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:59.477575+00:00. externally triggered: False> failed
+2023-11-02 09:33:09,565 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-03-12 00:00:00+00:00, run_id=scheduled__2023-03-12T00:00:00+00:00, run_start_date=2023-11-02 14:27:59.484673+00:00, run_end_date=2023-11-02 14:33:09.565609+00:00, run_duration=310.080936, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-03-12 00:00:00+00:00, data_interval_end=2023-03-19 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:33:09,568 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-19T00:00:00+00:00, run_after=2023-03-26T00:00:00+00:00
+2023-11-02 09:33:09,571 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-03-05 00:00:00+00:00: scheduled__2023-03-05T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:27:55.234811+00:00. externally triggered: False> failed
+2023-11-02 09:33:09,571 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-03-05 00:00:00+00:00, run_id=scheduled__2023-03-05T00:00:00+00:00, run_start_date=2023-11-02 14:27:55.242252+00:00, run_end_date=2023-11-02 14:33:09.571910+00:00, run_duration=314.329658, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-03-05 00:00:00+00:00, data_interval_end=2023-03-12 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:33:09,575 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-12T00:00:00+00:00, run_after=2023-03-19T00:00:00+00:00
+2023-11-02 09:33:09,581 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:33:09,582 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:33:09,582 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [scheduled]>
+2023-11-02 09:33:09,584 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-19T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:33:09,584 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:33:09,585 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-19T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:54:19,877 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-03-19T00:00:00+00:00', try_number=2, map_index=-1)
+2023-11-02 09:54:19,899 ERROR - DagFileProcessorManager (PID=87618) last sent a heartbeat 1270.32 seconds ago! Restarting it
+2023-11-02 09:54:19,904 INFO - Sending Signals.SIGTERM to group 87618. PIDs of all processes in the group: [87618]
+2023-11-02 09:54:19,904 INFO - Sending the signal Signals.SIGTERM to group 87618
+2023-11-02 09:54:20,124 INFO - Process psutil.Process(pid=87618, status='terminated', exitcode=0, started='21:35:03') (87618) terminated with exit code 0
+2023-11-02 09:54:20,133 INFO - Launched DagFileProcessorManager with pid: 96894
+2023-11-02 09:54:20,155 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 09:54:20,158 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 09:54:24,047 INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-16T00:00:00+00:00, run_after=2023-04-23T00:00:00+00:00
+2023-11-02 09:54:24,060 INFO - Marking run <DagRun economics_data_pipeline @ 2023-11-02 14:34:38.843385+00:00: manual__2023-11-02T14:34:38.843385+00:00, state:running, queued_at: 2023-11-02 14:34:38.856058+00:00. externally triggered: True> successful
+2023-11-02 09:54:24,060 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 14:34:38.843385+00:00, run_id=manual__2023-11-02T14:34:38.843385+00:00, run_start_date=2023-11-02 14:54:24.052658+00:00, run_end_date=2023-11-02 14:54:24.060736+00:00, run_duration=0.008078, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-10-22 00:00:00+00:00, data_interval_end=2023-10-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,062 INFO - Marking run <DagRun economics_data_pipeline @ 2023-11-02 14:40:23.102033+00:00: manual__2023-11-02T14:40:23.102033+00:00, state:running, queued_at: 2023-11-02 14:40:23.112751+00:00. externally triggered: True> successful
+2023-11-02 09:54:24,063 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 14:40:23.102033+00:00, run_id=manual__2023-11-02T14:40:23.102033+00:00, run_start_date=2023-11-02 14:54:24.052708+00:00, run_end_date=2023-11-02 14:54:24.063393+00:00, run_duration=0.010685, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-10-22 00:00:00+00:00, data_interval_end=2023-10-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,065 INFO - Marking run <DagRun economics_data_pipeline @ 2023-11-02 14:45:43.219390+00:00: manual__2023-11-02T14:45:43.219390+00:00, state:running, queued_at: 2023-11-02 14:45:43.228437+00:00. externally triggered: True> successful
+2023-11-02 09:54:24,065 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 14:45:43.219390+00:00, run_id=manual__2023-11-02T14:45:43.219390+00:00, run_start_date=2023-11-02 14:54:24.052754+00:00, run_end_date=2023-11-02 14:54:24.065757+00:00, run_duration=0.013003, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-10-22 00:00:00+00:00, data_interval_end=2023-10-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,067 INFO - Marking run <DagRun economics_data_pipeline @ 2023-11-02 14:51:57.557066+00:00: manual__2023-11-02T14:51:57.557066+00:00, state:running, queued_at: 2023-11-02 14:51:57.568453+00:00. externally triggered: True> successful
+2023-11-02 09:54:24,068 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 14:51:57.557066+00:00, run_id=manual__2023-11-02T14:51:57.557066+00:00, run_start_date=2023-11-02 14:54:24.052798+00:00, run_end_date=2023-11-02 14:54:24.068102+00:00, run_duration=0.015304, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-10-22 00:00:00+00:00, data_interval_end=2023-10-29 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,070 INFO - Marking run <DagRun economics_data_pipeline @ 2023-04-02 00:00:00+00:00: scheduled__2023-04-02T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:28:12.073085+00:00. externally triggered: False> successful
+2023-11-02 09:54:24,070 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-04-02 00:00:00+00:00, run_id=scheduled__2023-04-02T00:00:00+00:00, run_start_date=2023-11-02 14:28:12.079582+00:00, run_end_date=2023-11-02 14:54:24.070431+00:00, run_duration=1571.990849, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-04-02 00:00:00+00:00, data_interval_end=2023-04-09 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,072 INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-09T00:00:00+00:00, run_after=2023-04-16T00:00:00+00:00
+2023-11-02 09:54:24,074 INFO - Marking run <DagRun economics_data_pipeline @ 2023-03-26 00:00:00+00:00: scheduled__2023-03-26T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:28:07.796397+00:00. externally triggered: False> successful
+2023-11-02 09:54:24,074 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-03-26 00:00:00+00:00, run_id=scheduled__2023-03-26T00:00:00+00:00, run_start_date=2023-11-02 14:28:07.804027+00:00, run_end_date=2023-11-02 14:54:24.074473+00:00, run_duration=1576.270446, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-03-26 00:00:00+00:00, data_interval_end=2023-04-02 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,076 INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-02T00:00:00+00:00, run_after=2023-04-09T00:00:00+00:00
+2023-11-02 09:54:24,078 INFO - Marking run <DagRun economics_data_pipeline @ 2023-03-19 00:00:00+00:00: scheduled__2023-03-19T00:00:00+00:00, state:running, queued_at: 2023-11-02 14:28:03.619673+00:00. externally triggered: False> successful
+2023-11-02 09:54:24,078 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-03-19 00:00:00+00:00, run_id=scheduled__2023-03-19T00:00:00+00:00, run_start_date=2023-11-02 14:28:03.627148+00:00, run_end_date=2023-11-02 14:54:24.078553+00:00, run_duration=1580.451405, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-03-19 00:00:00+00:00, data_interval_end=2023-03-26 00:00:00+00:00, dag_hash=d6038f6f976f84ed17a7123662749eb4
+2023-11-02 09:54:24,080 INFO - Setting next_dagrun for economics_data_pipeline to 2023-03-26T00:00:00+00:00, run_after=2023-04-02T00:00:00+00:00
+2023-11-02 09:54:24,085 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-09T00:00:00+00:00 [scheduled]>
+2023-11-02 09:54:24,086 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 09:54:24,086 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-09T00:00:00+00:00 [scheduled]>
+2023-11-02 09:54:24,087 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 09:54:24,088 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-09T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 09:54:24,088 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 09:54:24,089 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:07:06,758 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-09T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 10:07:06,780 ERROR - DagFileProcessorManager (PID=96894) last sent a heartbeat 762.75 seconds ago! Restarting it
+2023-11-02 10:07:06,785 INFO - Sending Signals.SIGTERM to group 96894. PIDs of all processes in the group: [96894]
+2023-11-02 10:07:06,785 INFO - Sending the signal Signals.SIGTERM to group 96894
+2023-11-02 10:07:07,004 INFO - Process psutil.Process(pid=96894, status='terminated', exitcode=0, started='09:54:20') (96894) terminated with exit code 0
+2023-11-02 10:07:07,013 INFO - Launched DagFileProcessorManager with pid: 97250
+2023-11-02 10:07:07,034 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 10:07:07,036 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 10:07:11,012 INFO - Setting next_dagrun for economics_data_pipeline to 2023-04-23T00:00:00+00:00, run_after=2023-04-30T00:00:00+00:00
+2023-11-02 10:07:11,033 INFO - 3 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-09T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-16T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:55:09+00:00 [scheduled]>
+2023-11-02 10:07:11,034 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 10:07:11,034 INFO - DAG economics_data_pipeline has 1/16 running and queued tasks
+2023-11-02 10:07:11,034 INFO - DAG economics_data_pipeline has 2/16 running and queued tasks
+2023-11-02 10:07:11,035 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-09T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-04-16T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T14:55:09+00:00 [scheduled]>
+2023-11-02 10:07:11,036 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 10:07:11,036 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 10:07:11,037 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 10:07:11,037 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-09T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 10:07:11,038 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:07:11,038 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-16T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 10:07:11,038 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:07:11,039 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:55:09+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 10:07:11,039 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:55:09+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:07:11,040 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:12:30,813 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:12:34,075 ERROR - Failed to execute task Command '['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-04-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']' returned non-zero exit status 1..
+2023-11-02 10:12:34,078 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:55:09+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:12:37,040 ERROR - Failed to execute task Command '['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T14:55:09+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']' returned non-zero exit status 1..
+2023-11-02 10:12:37,042 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-09T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 10:12:37,042 INFO - Received executor event with state failed for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-04-16T00:00:00+00:00', try_number=1, map_index=-1)
+2023-11-02 10:12:37,042 INFO - Received executor event with state failed for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T14:55:09+00:00', try_number=1, map_index=-1)
+2023-11-02 10:12:37,060 ERROR - DagFileProcessorManager (PID=97250) last sent a heartbeat 326.06 seconds ago! Restarting it
+2023-11-02 10:12:37,065 INFO - Sending Signals.SIGTERM to group 97250. PIDs of all processes in the group: [97250]
+2023-11-02 10:12:37,065 INFO - Sending the signal Signals.SIGTERM to group 97250
+2023-11-02 10:12:37,285 INFO - Process psutil.Process(pid=97250, status='terminated', exitcode=0, started='10:07:07') (97250) terminated with exit code 0
+2023-11-02 10:12:37,294 INFO - Launched DagFileProcessorManager with pid: 97500
+2023-11-02 10:12:37,313 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 10:12:37,316 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 10:16:11,389 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:16:09.374359+00:00 [scheduled]>
+2023-11-02 10:16:11,390 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 10:16:11,391 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:16:09.374359+00:00 [scheduled]>
+2023-11-02 10:16:11,392 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 10:16:11,393 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T15:16:09.374359+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 10:16:11,393 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:16:09.374359+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:16:11,394 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:16:09.374359+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:38:22,030 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T15:16:09.374359+00:00', try_number=1, map_index=-1)
+2023-11-02 10:38:22,043 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=manual__2023-11-02T15:16:09.374359+00:00, map_index=-1, run_start_date=2023-11-02 15:16:14.083739+00:00, run_end_date=2023-11-02 15:37:14.218633+00:00, run_duration=1260.134894, state=failed, executor_state=success, try_number=1, max_tries=1, job_id=34, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 15:16:11.391828+00:00, queued_by_job_id=1, pid=97827
+2023-11-02 10:38:22,056 ERROR - DagFileProcessorManager (PID=97500) last sent a heartbeat 1330.68 seconds ago! Restarting it
+2023-11-02 10:38:22,060 INFO - Sending Signals.SIGTERM to group 97500. PIDs of all processes in the group: [97500]
+2023-11-02 10:38:22,061 INFO - Sending the signal Signals.SIGTERM to group 97500
+2023-11-02 10:38:22,321 INFO - Process psutil.Process(pid=97500, status='terminated', exitcode=0, started='10:12:37') (97500) terminated with exit code 0
+2023-11-02 10:38:22,330 INFO - Launched DagFileProcessorManager with pid: 99807
+2023-11-02 10:38:22,354 ERROR - Marking run <DagRun economics_data_pipeline @ 2023-11-02 15:16:09.374359+00:00: manual__2023-11-02T15:16:09.374359+00:00, state:running, queued_at: 2023-11-02 15:16:09.385203+00:00. externally triggered: True> failed
+2023-11-02 10:38:22,355 INFO - DagRun Finished: dag_id=economics_data_pipeline, execution_date=2023-11-02 15:16:09.374359+00:00, run_id=manual__2023-11-02T15:16:09.374359+00:00, run_start_date=2023-11-02 15:16:11.379287+00:00, run_end_date=2023-11-02 15:38:22.354888+00:00, run_duration=1330.975601, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-11-01 00:00:00+00:00, data_interval_end=2023-11-02 00:00:00+00:00, dag_hash=08c1a2d0faf7740d9a75e28feaa20f0b
+2023-11-02 10:38:22,360 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 10:38:22,363 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 10:43:16,234 INFO - 1 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:43:14.555222+00:00 [scheduled]>
+2023-11-02 10:43:16,235 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 10:43:16,235 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:43:14.555222+00:00 [scheduled]>
+2023-11-02 10:43:16,236 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 10:43:16,237 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T15:43:14.555222+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 10:43:16,237 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:43:14.555222+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 10:43:16,238 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:43:14.555222+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 15:37:34,690 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T15:43:14.555222+00:00', try_number=1, map_index=-1)
+2023-11-02 15:37:34,699 INFO - TaskInstance Finished: dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, run_id=manual__2023-11-02T15:43:14.555222+00:00, map_index=-1, run_start_date=2023-11-02 15:43:18.723382+00:00, run_end_date=None, run_duration=None, state=None, executor_state=success, try_number=1, max_tries=1, job_id=35, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-11-02 15:43:16.236041+00:00, queued_by_job_id=None, pid=436
+2023-11-02 15:37:34,712 ERROR - DagFileProcessorManager (PID=99807) last sent a heartbeat 1507.47 seconds ago! Restarting it
+2023-11-02 15:37:34,716 INFO - Sending Signals.SIGTERM to group 99807. PIDs of all processes in the group: [99807]
+2023-11-02 15:37:34,716 INFO - Sending the signal Signals.SIGTERM to group 99807
+2023-11-02 15:37:34,936 INFO - Process psutil.Process(pid=99807, status='terminated', exitcode=0, started='10:38:22') (99807) terminated with exit code 0
+2023-11-02 15:37:34,944 INFO - Launched DagFileProcessorManager with pid: 1300
+2023-11-02 15:37:34,956 INFO - Adopting or resetting orphaned tasks for active dag runs
+2023-11-02 15:37:34,959 INFO - Marked 1 SchedulerJob instances as failed
+2023-11-02 15:37:38,340 INFO - Setting next_dagrun for economics_data_pipeline to 2023-11-02T00:00:00+00:00, run_after=2023-11-03T00:00:00+00:00
+2023-11-02 15:37:38,357 INFO - 2 tasks up for execution:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-11-01T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:43:14.555222+00:00 [scheduled]>
+2023-11-02 15:37:38,358 INFO - DAG economics_data_pipeline has 0/16 running and queued tasks
+2023-11-02 15:37:38,358 INFO - DAG economics_data_pipeline has 1/16 running and queued tasks
+2023-11-02 15:37:38,358 INFO - Setting the following tasks to queued state:
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-11-01T00:00:00+00:00 [scheduled]>
+	<TaskInstance: economics_data_pipeline.pull_and_save_fred_data manual__2023-11-02T15:43:14.555222+00:00 [scheduled]>
+2023-11-02 15:37:38,359 WARNING - cannot record scheduled_duration for task pull_and_save_fred_data because previous state change time has not been saved
+2023-11-02 15:37:38,360 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='scheduled__2023-11-01T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 15:37:38,360 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-11-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 15:37:38,361 INFO - Sending TaskInstanceKey(dag_id='economics_data_pipeline', task_id='pull_and_save_fred_data', run_id='manual__2023-11-02T15:43:14.555222+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-11-02 15:37:38,361 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:43:14.555222+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 15:37:38,362 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-11-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']
+2023-11-02 16:33:40,006 ERROR - Failed to execute task Command '['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-11-01T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']' returned non-zero exit status 1..
+2023-11-02 16:33:40,009 INFO - Executing command: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'manual__2023-11-02T15:43:14.555222+00:00', '--local', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py']

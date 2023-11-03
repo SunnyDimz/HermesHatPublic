@@ -1,6 +1,0 @@
-MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
- * Serving Flask app 'config'
- * Debug mode: on
-MongoDB Databases: ['EconWizardDB', 'test', 'admin', 'local']
- * Serving Flask app 'config'
- * Debug mode: on

@@ -1,0 +1,17 @@
+[2023-11-02T09:33:11.981-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-11-02T09:33:11.984-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-11-02T09:33:11.984-0500] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2023-11-02T09:33:11.992-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): pull_and_save_fred_data> on 2023-03-19 00:00:00+00:00
+[2023-11-02T09:33:12.000-0500] {standard_task_runner.py:57} INFO - Started process 96168 to run task
+[2023-11-02T09:33:12.008-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-03-19T00:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py', '--cfg-path', '/var/folders/3l/sjtljk5j23ng0k_w12x41kh80000gn/T/tmpzv9xhcxz']
+[2023-11-02T09:33:12.009-0500] {standard_task_runner.py:85} INFO - Job 31: Subtask pull_and_save_fred_data
+[2023-11-02T09:33:12.040-0500] {task_command.py:416} INFO - Running <TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-03-19T00:00:00+00:00 [running]> on host macbook-pro-207.local
+[2023-11-02T09:33:12.075-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='hermesadmin' AIRFLOW_CTX_DAG_ID='economics_data_pipeline' AIRFLOW_CTX_TASK_ID='pull_and_save_fred_data' AIRFLOW_CTX_EXECUTION_DATE='2023-03-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-03-19T00:00:00+00:00'
+[2023-11-02T09:33:12.077-0500] {fred_utils.py:34} INFO - Fetching data from URL: https://api.stlouisfed.org/fred/series/observations?series_id=GDP&api_key=5c78bd237c041fcf6bebdae4f8e05905&file_type=json
+[2023-11-02T09:53:19.024-0500] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-11-02T09:53:19.029-0500] {process_utils.py:131} INFO - Sending Signals.SIGTERM to group 96168. PIDs of all processes in the group: [96168]
+[2023-11-02T09:53:19.029-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 96168
+[2023-11-02T09:54:19.059-0500] {process_utils.py:149} WARNING - process psutil.Process(pid=96168, name='Python', status='running', started='09:33:11') did not respond to SIGTERM. Trying SIGKILL
+[2023-11-02T09:54:19.071-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 96168
+[2023-11-02T09:54:19.088-0500] {process_utils.py:79} INFO - Process psutil.Process(pid=96168, name='Python', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='09:33:11') (96168) terminated with exit code Negsignal.SIGKILL
+[2023-11-02T09:54:19.088-0500] {standard_task_runner.py:172} ERROR - Job 31 was killed before it finished (likely due to running out of memory)

@@ -1,0 +1,1059 @@
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/lockfile/pidlockfile.py", line 77, in acquire
+    write_pid_to_pidfile(self.path)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/lockfile/pidlockfile.py", line 161, in write_pid_to_pidfile
+    pidfile_fd = os.open(pidfile_path, open_flags, open_mode)
+FileExistsError: [Errno 17] File exists: '/Users/dimz/EconWizard/airflow/airflow-scheduler.pid'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/__main__.py", line 59, in main
+    args.func(args)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/cli.py", line 113, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/cli/commands/scheduler_command.py", line 79, in scheduler
+    with ctx:
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/daemon/daemon.py", line 365, in __enter__
+    self.open()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/daemon/daemon.py", line 357, in open
+    self.pidfile.__enter__()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/lockfile/__init__.py", line 197, in __enter__
+    self.acquire()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/daemon/pidfile.py", line 49, in acquire
+    super().acquire(timeout, *args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/lockfile/pidlockfile.py", line 87, in acquire
+    raise AlreadyLocked("%s is already locked" %
+lockfile.AlreadyLocked: /Users/dimz/EconWizard/airflow/airflow-scheduler.pid is already locked
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/__main__.py", line 59, in main
+    args.func(args)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/cli.py", line 113, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 431, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 209, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 271, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/session.py", line 77, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/jobs/job.py", line 289, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/jobs/job.py", line 318, in execute_job
+    ret = execute_callable()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/jobs/local_task_job_runner.py", line 195, in _execute
+    perform_heartbeat(
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/jobs/job.py", line 350, in perform_heartbeat
+    job.heartbeat(heartbeat_callback=heartbeat_callback, session=session)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/jobs/job.py", line 215, in heartbeat
+    heartbeat_callback(session)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/jobs/local_task_job_runner.py", line 277, in heartbeat_callback
+    raise AirflowException("PID of job runner does not match")
+airflow.exceptions.AirflowException: PID of job runner does not match
+[2023-11-02 20:26:27 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:1073)
+[2023-11-02 20:26:27 -0500] [1073] [INFO] Worker exiting (pid: 1073)
+[2023-11-02 20:26:27 -0500] [87617] [ERROR] Worker (pid:1073) exited with code 1
+[2023-11-02 20:26:27 -0500] [87617] [ERROR] Worker (pid:1073) exited with code 1.
+[2023-11-02 20:26:27 -0500] [7589] [INFO] Booting worker with pid: 7589
+[2023-11-02 21:46:38 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:7589)
+[2023-11-02 21:46:38 -0500] [7589] [INFO] Worker exiting (pid: 7589)
+[2023-11-02 21:46:38 -0500] [87617] [ERROR] Worker (pid:7589) exited with code 1
+[2023-11-02 21:46:38 -0500] [87617] [ERROR] Worker (pid:7589) exited with code 1.
+[2023-11-02 21:46:38 -0500] [13922] [INFO] Booting worker with pid: 13922
+[2023-11-02 22:03:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:1076)
+[2023-11-02 22:03:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:13922)
+[2023-11-02 22:03:10 -0500] [13922] [INFO] Worker exiting (pid: 13922)
+[2023-11-02 22:03:10 -0500] [1076] [INFO] Worker exiting (pid: 1076)
+[2023-11-02 22:03:11 -0500] [87617] [ERROR] Worker (pid:1076) exited with code 1
+[2023-11-02 22:03:11 -0500] [87617] [ERROR] Worker (pid:1076) exited with code 1.
+[2023-11-02 22:03:11 -0500] [87617] [ERROR] Worker (pid:13922) exited with code 1
+[2023-11-02 22:03:11 -0500] [87617] [ERROR] Worker (pid:13922) exited with code 1.
+[2023-11-02 22:03:11 -0500] [13978] [INFO] Booting worker with pid: 13978
+[2023-11-02 22:03:11 -0500] [13980] [INFO] Booting worker with pid: 13980
+[2023-11-02 22:38:56 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:13978)
+[2023-11-02 22:38:56 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:13980)
+[2023-11-02 22:38:56 -0500] [13978] [INFO] Worker exiting (pid: 13978)
+[2023-11-02 22:38:56 -0500] [13980] [INFO] Worker exiting (pid: 13980)
+[2023-11-02 22:38:56 -0500] [87617] [ERROR] Worker (pid:13980) exited with code 1
+[2023-11-02 22:38:56 -0500] [87617] [ERROR] Worker (pid:13980) exited with code 1.
+[2023-11-02 22:38:56 -0500] [87617] [ERROR] Worker (pid:13978) exited with code 1
+[2023-11-02 22:38:56 -0500] [87617] [ERROR] Worker (pid:13978) exited with code 1.
+[2023-11-02 22:38:56 -0500] [15390] [INFO] Booting worker with pid: 15390
+[2023-11-02 22:38:56 -0500] [15391] [INFO] Booting worker with pid: 15391
+[2023-11-02 22:43:25 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15390)
+[2023-11-02 22:43:25 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15391)
+[2023-11-02 22:43:25 -0500] [15390] [INFO] Worker exiting (pid: 15390)
+[2023-11-02 22:43:25 -0500] [15391] [INFO] Worker exiting (pid: 15391)
+[2023-11-02 22:43:25 -0500] [87617] [ERROR] Worker (pid:15391) exited with code 1
+[2023-11-02 22:43:25 -0500] [87617] [ERROR] Worker (pid:15391) exited with code 1.
+[2023-11-02 22:43:25 -0500] [87617] [ERROR] Worker (pid:15390) exited with code 1
+[2023-11-02 22:43:25 -0500] [87617] [ERROR] Worker (pid:15390) exited with code 1.
+[2023-11-02 22:43:25 -0500] [15562] [INFO] Booting worker with pid: 15562
+[2023-11-02 22:43:25 -0500] [15563] [INFO] Booting worker with pid: 15563
+[2023-11-02 22:54:08 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15562)
+[2023-11-02 22:54:08 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15563)
+[2023-11-02 22:54:08 -0500] [15563] [INFO] Worker exiting (pid: 15563)
+[2023-11-02 22:54:08 -0500] [15562] [INFO] Worker exiting (pid: 15562)
+[2023-11-02 22:54:09 -0500] [87617] [ERROR] Worker (pid:15562) exited with code 1
+[2023-11-02 22:54:09 -0500] [87617] [ERROR] Worker (pid:15562) exited with code 1.
+[2023-11-02 22:54:09 -0500] [87617] [ERROR] Worker (pid:15563) exited with code 1
+[2023-11-02 22:54:09 -0500] [87617] [ERROR] Worker (pid:15563) exited with code 1.
+[2023-11-02 22:54:09 -0500] [15669] [INFO] Booting worker with pid: 15669
+[2023-11-02 22:54:09 -0500] [15670] [INFO] Booting worker with pid: 15670
+[2023-11-02 23:10:05 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15669)
+[2023-11-02 23:10:05 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15670)
+[2023-11-02 23:10:05 -0500] [15669] [INFO] Worker exiting (pid: 15669)
+[2023-11-02 23:10:05 -0500] [15670] [INFO] Worker exiting (pid: 15670)
+[2023-11-02 23:10:05 -0500] [87617] [ERROR] Worker (pid:15669) exited with code 1
+[2023-11-02 23:10:05 -0500] [87617] [ERROR] Worker (pid:15669) exited with code 1.
+[2023-11-02 23:10:05 -0500] [87617] [ERROR] Worker (pid:15670) was sent SIGKILL! Perhaps out of memory?
+[2023-11-02 23:10:05 -0500] [15725] [INFO] Booting worker with pid: 15725
+[2023-11-02 23:10:05 -0500] [15727] [INFO] Booting worker with pid: 15727
+[2023-11-02 23:27:20 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15725)
+[2023-11-02 23:27:20 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15727)
+[2023-11-02 23:27:20 -0500] [15727] [INFO] Worker exiting (pid: 15727)
+[2023-11-02 23:27:20 -0500] [15725] [INFO] Worker exiting (pid: 15725)
+[2023-11-02 23:27:20 -0500] [87617] [ERROR] Worker (pid:15727) exited with code 1
+[2023-11-02 23:27:20 -0500] [87617] [ERROR] Worker (pid:15727) exited with code 1.
+[2023-11-02 23:27:20 -0500] [87617] [ERROR] Worker (pid:15725) exited with code 1
+[2023-11-02 23:27:20 -0500] [87617] [ERROR] Worker (pid:15725) exited with code 1.
+[2023-11-02 23:27:20 -0500] [15862] [INFO] Booting worker with pid: 15862
+[2023-11-02 23:27:20 -0500] [15863] [INFO] Booting worker with pid: 15863
+[2023-11-02 23:43:32 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15862)
+[2023-11-02 23:43:32 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15863)
+[2023-11-02 23:43:32 -0500] [15862] [INFO] Worker exiting (pid: 15862)
+[2023-11-02 23:43:32 -0500] [15863] [INFO] Worker exiting (pid: 15863)
+[2023-11-02 23:43:32 -0500] [87617] [ERROR] Worker (pid:15862) exited with code 1
+[2023-11-02 23:43:32 -0500] [87617] [ERROR] Worker (pid:15862) exited with code 1.
+[2023-11-02 23:43:32 -0500] [87617] [ERROR] Worker (pid:15863) exited with code 1
+[2023-11-02 23:43:32 -0500] [87617] [ERROR] Worker (pid:15863) exited with code 1.
+[2023-11-02 23:43:32 -0500] [15934] [INFO] Booting worker with pid: 15934
+[2023-11-02 23:43:32 -0500] [15935] [INFO] Booting worker with pid: 15935
+[2023-11-03 00:00:29 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15934)
+[2023-11-03 00:00:29 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15935)
+[2023-11-03 00:00:29 -0500] [15934] [INFO] Worker exiting (pid: 15934)
+[2023-11-03 00:00:29 -0500] [15935] [INFO] Worker exiting (pid: 15935)
+[2023-11-03 00:00:29 -0500] [87617] [ERROR] Worker (pid:15934) exited with code 1
+[2023-11-03 00:00:29 -0500] [87617] [ERROR] Worker (pid:15934) exited with code 1.
+[2023-11-03 00:00:29 -0500] [87617] [ERROR] Worker (pid:15935) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 00:00:29 -0500] [15998] [INFO] Booting worker with pid: 15998
+[2023-11-03 00:00:29 -0500] [16001] [INFO] Booting worker with pid: 16001
+[2023-11-03 00:16:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:15998)
+[2023-11-03 00:16:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16001)
+[2023-11-03 00:16:31 -0500] [15998] [INFO] Worker exiting (pid: 15998)
+[2023-11-03 00:16:31 -0500] [16001] [INFO] Worker exiting (pid: 16001)
+[2023-11-03 00:16:31 -0500] [87617] [ERROR] Worker (pid:15998) exited with code 1
+[2023-11-03 00:16:31 -0500] [87617] [ERROR] Worker (pid:15998) exited with code 1.
+[2023-11-03 00:16:31 -0500] [87617] [ERROR] Worker (pid:16001) exited with code 1
+[2023-11-03 00:16:31 -0500] [87617] [ERROR] Worker (pid:16001) exited with code 1.
+[2023-11-03 00:16:31 -0500] [16068] [INFO] Booting worker with pid: 16068
+[2023-11-03 00:16:31 -0500] [16069] [INFO] Booting worker with pid: 16069
+[2023-11-03 00:37:11 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16068)
+[2023-11-03 00:37:11 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16069)
+[2023-11-03 00:37:11 -0500] [16069] [INFO] Worker exiting (pid: 16069)
+[2023-11-03 00:37:11 -0500] [16068] [INFO] Worker exiting (pid: 16068)
+[2023-11-03 00:37:11 -0500] [87617] [ERROR] Worker (pid:16069) exited with code 1
+[2023-11-03 00:37:11 -0500] [87617] [ERROR] Worker (pid:16069) exited with code 1.
+[2023-11-03 00:37:11 -0500] [87617] [ERROR] Worker (pid:16068) exited with code 1
+[2023-11-03 00:37:11 -0500] [87617] [ERROR] Worker (pid:16068) exited with code 1.
+[2023-11-03 00:37:11 -0500] [16423] [INFO] Booting worker with pid: 16423
+[2023-11-03 00:37:11 -0500] [16424] [INFO] Booting worker with pid: 16424
+[2023-11-03 00:52:51 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16423)
+[2023-11-03 00:52:51 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16424)
+[2023-11-03 00:52:51 -0500] [16424] [INFO] Worker exiting (pid: 16424)
+[2023-11-03 00:52:51 -0500] [16423] [INFO] Worker exiting (pid: 16423)
+[2023-11-03 00:52:51 -0500] [87617] [ERROR] Worker (pid:16423) exited with code 1
+[2023-11-03 00:52:51 -0500] [87617] [ERROR] Worker (pid:16423) exited with code 1.
+[2023-11-03 00:52:51 -0500] [87617] [ERROR] Worker (pid:16424) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 00:52:51 -0500] [16490] [INFO] Booting worker with pid: 16490
+[2023-11-03 00:52:51 -0500] [16491] [INFO] Booting worker with pid: 16491
+[2023-11-03 01:11:59 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16490)
+[2023-11-03 01:11:59 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16491)
+[2023-11-03 01:11:59 -0500] [16490] [INFO] Worker exiting (pid: 16490)
+[2023-11-03 01:11:59 -0500] [16491] [INFO] Worker exiting (pid: 16491)
+[2023-11-03 01:11:59 -0500] [87617] [ERROR] Worker (pid:16491) exited with code 1
+[2023-11-03 01:11:59 -0500] [87617] [ERROR] Worker (pid:16491) exited with code 1.
+[2023-11-03 01:11:59 -0500] [87617] [ERROR] Worker (pid:16490) exited with code 1
+[2023-11-03 01:11:59 -0500] [87617] [ERROR] Worker (pid:16490) exited with code 1.
+[2023-11-03 01:11:59 -0500] [16576] [INFO] Booting worker with pid: 16576
+[2023-11-03 01:12:00 -0500] [16578] [INFO] Booting worker with pid: 16578
+[2023-11-03 01:13:39 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16576)
+[2023-11-03 01:13:39 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16578)
+[2023-11-03 01:13:39 -0500] [16576] [INFO] Worker exiting (pid: 16576)
+[2023-11-03 01:13:39 -0500] [16578] [INFO] Worker exiting (pid: 16578)
+[2023-11-03 01:13:39 -0500] [87617] [ERROR] Worker (pid:16578) exited with code 1
+[2023-11-03 01:13:39 -0500] [87617] [ERROR] Worker (pid:16578) exited with code 1.
+[2023-11-03 01:13:39 -0500] [87617] [ERROR] Worker (pid:16576) exited with code 1
+[2023-11-03 01:13:39 -0500] [87617] [ERROR] Worker (pid:16576) exited with code 1.
+[2023-11-03 01:13:39 -0500] [16630] [INFO] Booting worker with pid: 16630
+[2023-11-03 01:13:39 -0500] [16631] [INFO] Booting worker with pid: 16631
+[2023-11-03 01:29:27 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16630)
+[2023-11-03 01:29:27 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16631)
+[2023-11-03 01:29:27 -0500] [16630] [INFO] Worker exiting (pid: 16630)
+[2023-11-03 01:29:27 -0500] [16631] [INFO] Worker exiting (pid: 16631)
+[2023-11-03 01:29:27 -0500] [87617] [ERROR] Worker (pid:16630) exited with code 1
+[2023-11-03 01:29:27 -0500] [87617] [ERROR] Worker (pid:16630) exited with code 1.
+[2023-11-03 01:29:27 -0500] [87617] [ERROR] Worker (pid:16631) exited with code 1
+[2023-11-03 01:29:27 -0500] [87617] [ERROR] Worker (pid:16631) exited with code 1.
+[2023-11-03 01:29:27 -0500] [16684] [INFO] Booting worker with pid: 16684
+[2023-11-03 01:29:27 -0500] [16685] [INFO] Booting worker with pid: 16685
+[2023-11-03 01:47:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16684)
+[2023-11-03 01:47:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16685)
+[2023-11-03 01:47:06 -0500] [16684] [INFO] Worker exiting (pid: 16684)
+[2023-11-03 01:47:06 -0500] [16685] [INFO] Worker exiting (pid: 16685)
+[2023-11-03 01:47:06 -0500] [87617] [ERROR] Worker (pid:16685) exited with code 1
+[2023-11-03 01:47:06 -0500] [87617] [ERROR] Worker (pid:16685) exited with code 1.
+[2023-11-03 01:47:06 -0500] [87617] [ERROR] Worker (pid:16684) exited with code 1
+[2023-11-03 01:47:06 -0500] [87617] [ERROR] Worker (pid:16684) exited with code 1.
+[2023-11-03 01:47:06 -0500] [16801] [INFO] Booting worker with pid: 16801
+[2023-11-03 01:47:06 -0500] [16802] [INFO] Booting worker with pid: 16802
+[2023-11-03 02:04:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16801)
+[2023-11-03 02:04:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16802)
+[2023-11-03 02:04:10 -0500] [16801] [INFO] Worker exiting (pid: 16801)
+[2023-11-03 02:04:10 -0500] [16802] [INFO] Worker exiting (pid: 16802)
+[2023-11-03 02:04:10 -0500] [87617] [ERROR] Worker (pid:16802) exited with code 1
+[2023-11-03 02:04:10 -0500] [87617] [ERROR] Worker (pid:16802) exited with code 1.
+[2023-11-03 02:04:10 -0500] [87617] [ERROR] Worker (pid:16801) exited with code 1
+[2023-11-03 02:04:10 -0500] [87617] [ERROR] Worker (pid:16801) exited with code 1.
+[2023-11-03 02:04:10 -0500] [16887] [INFO] Booting worker with pid: 16887
+[2023-11-03 02:04:10 -0500] [16888] [INFO] Booting worker with pid: 16888
+[2023-11-03 02:20:04 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16887)
+[2023-11-03 02:20:04 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16888)
+[2023-11-03 02:20:04 -0500] [16887] [INFO] Worker exiting (pid: 16887)
+[2023-11-03 02:20:04 -0500] [16888] [INFO] Worker exiting (pid: 16888)
+[2023-11-03 02:20:04 -0500] [87617] [ERROR] Worker (pid:16888) exited with code 1
+[2023-11-03 02:20:04 -0500] [87617] [ERROR] Worker (pid:16888) exited with code 1.
+[2023-11-03 02:20:04 -0500] [87617] [ERROR] Worker (pid:16887) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 02:20:04 -0500] [16948] [INFO] Booting worker with pid: 16948
+[2023-11-03 02:20:05 -0500] [16949] [INFO] Booting worker with pid: 16949
+[2023-11-03 02:37:58 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16948)
+[2023-11-03 02:37:58 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:16949)
+[2023-11-03 02:37:58 -0500] [16948] [INFO] Worker exiting (pid: 16948)
+[2023-11-03 02:37:58 -0500] [16949] [INFO] Worker exiting (pid: 16949)
+[2023-11-03 02:37:58 -0500] [87617] [ERROR] Worker (pid:16949) exited with code 1
+[2023-11-03 02:37:58 -0500] [87617] [ERROR] Worker (pid:16949) exited with code 1.
+[2023-11-03 02:37:58 -0500] [87617] [ERROR] Worker (pid:16948) exited with code 1
+[2023-11-03 02:37:58 -0500] [87617] [ERROR] Worker (pid:16948) exited with code 1.
+[2023-11-03 02:37:58 -0500] [17007] [INFO] Booting worker with pid: 17007
+[2023-11-03 02:37:58 -0500] [17008] [INFO] Booting worker with pid: 17008
+[2023-11-03 02:54:48 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17007)
+[2023-11-03 02:54:48 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17008)
+[2023-11-03 02:54:48 -0500] [17007] [INFO] Worker exiting (pid: 17007)
+[2023-11-03 02:54:48 -0500] [17008] [INFO] Worker exiting (pid: 17008)
+[2023-11-03 02:54:48 -0500] [87617] [ERROR] Worker (pid:17008) exited with code 1
+[2023-11-03 02:54:48 -0500] [87617] [ERROR] Worker (pid:17008) exited with code 1.
+[2023-11-03 02:54:48 -0500] [87617] [ERROR] Worker (pid:17007) exited with code 1
+[2023-11-03 02:54:48 -0500] [87617] [ERROR] Worker (pid:17007) exited with code 1.
+[2023-11-03 02:54:48 -0500] [17124] [INFO] Booting worker with pid: 17124
+[2023-11-03 02:54:48 -0500] [17125] [INFO] Booting worker with pid: 17125
+[2023-11-03 03:11:12 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17124)
+[2023-11-03 03:11:12 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17125)
+[2023-11-03 03:11:12 -0500] [17124] [INFO] Worker exiting (pid: 17124)
+[2023-11-03 03:11:12 -0500] [17125] [INFO] Worker exiting (pid: 17125)
+[2023-11-03 03:11:12 -0500] [87617] [ERROR] Worker (pid:17125) exited with code 1
+[2023-11-03 03:11:12 -0500] [87617] [ERROR] Worker (pid:17125) exited with code 1.
+[2023-11-03 03:11:12 -0500] [87617] [ERROR] Worker (pid:17124) exited with code 1
+[2023-11-03 03:11:12 -0500] [87617] [ERROR] Worker (pid:17124) exited with code 1.
+[2023-11-03 03:11:12 -0500] [17186] [INFO] Booting worker with pid: 17186
+[2023-11-03 03:11:12 -0500] [17187] [INFO] Booting worker with pid: 17187
+[2023-11-03 03:26:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17186)
+[2023-11-03 03:26:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17187)
+[2023-11-03 03:26:10 -0500] [17186] [INFO] Worker exiting (pid: 17186)
+[2023-11-03 03:26:10 -0500] [17187] [INFO] Worker exiting (pid: 17187)
+[2023-11-03 03:26:10 -0500] [87617] [ERROR] Worker (pid:17187) exited with code 1
+[2023-11-03 03:26:10 -0500] [87617] [ERROR] Worker (pid:17187) exited with code 1.
+[2023-11-03 03:26:10 -0500] [87617] [ERROR] Worker (pid:17186) exited with code 1
+[2023-11-03 03:26:10 -0500] [87617] [ERROR] Worker (pid:17186) exited with code 1.
+[2023-11-03 03:26:10 -0500] [17239] [INFO] Booting worker with pid: 17239
+[2023-11-03 03:26:10 -0500] [17240] [INFO] Booting worker with pid: 17240
+[2023-11-03 03:42:37 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17239)
+[2023-11-03 03:42:37 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17240)
+[2023-11-03 03:42:37 -0500] [17240] [INFO] Worker exiting (pid: 17240)
+[2023-11-03 03:42:37 -0500] [17239] [INFO] Worker exiting (pid: 17239)
+[2023-11-03 03:42:37 -0500] [87617] [ERROR] Worker (pid:17239) exited with code 1
+[2023-11-03 03:42:37 -0500] [87617] [ERROR] Worker (pid:17239) exited with code 1.
+[2023-11-03 03:42:37 -0500] [87617] [ERROR] Worker (pid:17240) exited with code 1
+[2023-11-03 03:42:37 -0500] [87617] [ERROR] Worker (pid:17240) exited with code 1.
+[2023-11-03 03:42:37 -0500] [17306] [INFO] Booting worker with pid: 17306
+[2023-11-03 03:42:37 -0500] [17307] [INFO] Booting worker with pid: 17307
+[2023-11-03 03:58:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17306)
+[2023-11-03 03:58:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17307)
+[2023-11-03 03:58:06 -0500] [17306] [INFO] Worker exiting (pid: 17306)
+[2023-11-03 03:58:06 -0500] [17307] [INFO] Worker exiting (pid: 17307)
+[2023-11-03 03:58:07 -0500] [87617] [ERROR] Worker (pid:17307) exited with code 1
+[2023-11-03 03:58:07 -0500] [87617] [ERROR] Worker (pid:17307) exited with code 1.
+[2023-11-03 03:58:07 -0500] [87617] [ERROR] Worker (pid:17306) exited with code 1
+[2023-11-03 03:58:07 -0500] [87617] [ERROR] Worker (pid:17306) exited with code 1.
+[2023-11-03 03:58:07 -0500] [17535] [INFO] Booting worker with pid: 17535
+[2023-11-03 03:58:07 -0500] [17536] [INFO] Booting worker with pid: 17536
+[2023-11-03 04:15:00 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17535)
+[2023-11-03 04:15:00 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17536)
+[2023-11-03 04:15:00 -0500] [17535] [INFO] Worker exiting (pid: 17535)
+[2023-11-03 04:15:00 -0500] [17536] [INFO] Worker exiting (pid: 17536)
+[2023-11-03 04:15:00 -0500] [87617] [ERROR] Worker (pid:17535) exited with code 1
+[2023-11-03 04:15:00 -0500] [87617] [ERROR] Worker (pid:17535) exited with code 1.
+[2023-11-03 04:15:00 -0500] [87617] [ERROR] Worker (pid:17536) exited with code 1
+[2023-11-03 04:15:00 -0500] [87617] [ERROR] Worker (pid:17536) exited with code 1.
+[2023-11-03 04:15:00 -0500] [17602] [INFO] Booting worker with pid: 17602
+[2023-11-03 04:15:01 -0500] [17603] [INFO] Booting worker with pid: 17603
+[2023-11-03 04:31:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17602)
+[2023-11-03 04:31:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17603)
+[2023-11-03 04:31:31 -0500] [17602] [INFO] Worker exiting (pid: 17602)
+[2023-11-03 04:31:31 -0500] [17603] [INFO] Worker exiting (pid: 17603)
+[2023-11-03 04:31:31 -0500] [87617] [ERROR] Worker (pid:17603) exited with code 1
+[2023-11-03 04:31:31 -0500] [87617] [ERROR] Worker (pid:17603) exited with code 1.
+[2023-11-03 04:31:31 -0500] [87617] [ERROR] Worker (pid:17602) exited with code 1
+[2023-11-03 04:31:31 -0500] [87617] [ERROR] Worker (pid:17602) exited with code 1.
+[2023-11-03 04:31:31 -0500] [17652] [INFO] Booting worker with pid: 17652
+[2023-11-03 04:31:31 -0500] [17654] [INFO] Booting worker with pid: 17654
+[2023-11-03 04:53:42 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17652)
+[2023-11-03 04:53:42 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:17654)
+[2023-11-03 04:53:42 -0500] [17652] [INFO] Worker exiting (pid: 17652)
+[2023-11-03 04:53:42 -0500] [17654] [INFO] Worker exiting (pid: 17654)
+[2023-11-03 04:53:42 -0500] [87617] [ERROR] Worker (pid:17652) exited with code 1
+[2023-11-03 04:53:42 -0500] [87617] [ERROR] Worker (pid:17652) exited with code 1.
+[2023-11-03 04:53:42 -0500] [87617] [ERROR] Worker (pid:17654) exited with code 1
+[2023-11-03 04:53:42 -0500] [87617] [ERROR] Worker (pid:17654) exited with code 1.
+[2023-11-03 04:53:42 -0500] [18049] [INFO] Booting worker with pid: 18049
+[2023-11-03 04:53:42 -0500] [18050] [INFO] Booting worker with pid: 18050
+[2023-11-03 05:11:49 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18049)
+[2023-11-03 05:11:49 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18050)
+[2023-11-03 05:11:49 -0500] [18049] [INFO] Worker exiting (pid: 18049)
+[2023-11-03 05:11:49 -0500] [18050] [INFO] Worker exiting (pid: 18050)
+[2023-11-03 05:11:49 -0500] [87617] [ERROR] Worker (pid:18049) exited with code 1
+[2023-11-03 05:11:49 -0500] [87617] [ERROR] Worker (pid:18049) exited with code 1.
+[2023-11-03 05:11:49 -0500] [87617] [ERROR] Worker (pid:18050) exited with code 1
+[2023-11-03 05:11:49 -0500] [87617] [ERROR] Worker (pid:18050) exited with code 1.
+[2023-11-03 05:11:49 -0500] [18158] [INFO] Booting worker with pid: 18158
+[2023-11-03 05:11:49 -0500] [18159] [INFO] Booting worker with pid: 18159
+[2023-11-03 05:30:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18158)
+[2023-11-03 05:30:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18159)
+[2023-11-03 05:30:06 -0500] [18158] [INFO] Worker exiting (pid: 18158)
+[2023-11-03 05:30:06 -0500] [18159] [INFO] Worker exiting (pid: 18159)
+[2023-11-03 05:30:06 -0500] [87617] [ERROR] Worker (pid:18159) exited with code 1
+[2023-11-03 05:30:06 -0500] [87617] [ERROR] Worker (pid:18159) exited with code 1.
+[2023-11-03 05:30:06 -0500] [87617] [ERROR] Worker (pid:18158) exited with code 1
+[2023-11-03 05:30:06 -0500] [87617] [ERROR] Worker (pid:18158) exited with code 1.
+[2023-11-03 05:30:06 -0500] [18298] [INFO] Booting worker with pid: 18298
+[2023-11-03 05:30:06 -0500] [18299] [INFO] Booting worker with pid: 18299
+[2023-11-03 05:48:22 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18298)
+[2023-11-03 05:48:22 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18299)
+[2023-11-03 05:48:22 -0500] [18298] [INFO] Worker exiting (pid: 18298)
+[2023-11-03 05:48:22 -0500] [18299] [INFO] Worker exiting (pid: 18299)
+[2023-11-03 05:48:22 -0500] [87617] [ERROR] Worker (pid:18299) exited with code 1
+[2023-11-03 05:48:22 -0500] [87617] [ERROR] Worker (pid:18299) exited with code 1.
+[2023-11-03 05:48:22 -0500] [87617] [ERROR] Worker (pid:18298) exited with code 1
+[2023-11-03 05:48:22 -0500] [87617] [ERROR] Worker (pid:18298) exited with code 1.
+[2023-11-03 05:48:22 -0500] [18386] [INFO] Booting worker with pid: 18386
+[2023-11-03 05:48:22 -0500] [18387] [INFO] Booting worker with pid: 18387
+[2023-11-03 06:05:09 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18386)
+[2023-11-03 06:05:09 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18387)
+[2023-11-03 06:05:09 -0500] [18387] [INFO] Worker exiting (pid: 18387)
+[2023-11-03 06:05:09 -0500] [18386] [INFO] Worker exiting (pid: 18386)
+[2023-11-03 06:05:09 -0500] [87617] [ERROR] Worker (pid:18386) exited with code 1
+[2023-11-03 06:05:09 -0500] [87617] [ERROR] Worker (pid:18386) exited with code 1.
+[2023-11-03 06:05:09 -0500] [87617] [ERROR] Worker (pid:18387) exited with code 1
+[2023-11-03 06:05:09 -0500] [87617] [ERROR] Worker (pid:18387) exited with code 1.
+[2023-11-03 06:05:09 -0500] [18440] [INFO] Booting worker with pid: 18440
+[2023-11-03 06:05:09 -0500] [18441] [INFO] Booting worker with pid: 18441
+[2023-11-03 06:21:00 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18440)
+[2023-11-03 06:21:00 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18441)
+[2023-11-03 06:21:00 -0500] [18440] [INFO] Worker exiting (pid: 18440)
+[2023-11-03 06:21:00 -0500] [18441] [INFO] Worker exiting (pid: 18441)
+[2023-11-03 06:21:01 -0500] [87617] [ERROR] Worker (pid:18441) exited with code 1
+[2023-11-03 06:21:01 -0500] [87617] [ERROR] Worker (pid:18441) exited with code 1.
+[2023-11-03 06:21:01 -0500] [87617] [ERROR] Worker (pid:18440) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 06:21:01 -0500] [18496] [INFO] Booting worker with pid: 18496
+[2023-11-03 06:21:01 -0500] [18497] [INFO] Booting worker with pid: 18497
+[2023-11-03 06:38:48 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18496)
+[2023-11-03 06:38:48 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18497)
+[2023-11-03 06:38:48 -0500] [18496] [INFO] Worker exiting (pid: 18496)
+[2023-11-03 06:38:48 -0500] [18497] [INFO] Worker exiting (pid: 18497)
+[2023-11-03 06:38:48 -0500] [87617] [ERROR] Worker (pid:18497) exited with code 1
+[2023-11-03 06:38:48 -0500] [87617] [ERROR] Worker (pid:18497) exited with code 1.
+[2023-11-03 06:38:48 -0500] [87617] [ERROR] Worker (pid:18496) exited with code 1
+[2023-11-03 06:38:48 -0500] [87617] [ERROR] Worker (pid:18496) exited with code 1.
+[2023-11-03 06:38:48 -0500] [18553] [INFO] Booting worker with pid: 18553
+[2023-11-03 06:38:48 -0500] [18556] [INFO] Booting worker with pid: 18556
+[2023-11-03 06:58:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18553)
+[2023-11-03 06:58:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18556)
+[2023-11-03 06:58:31 -0500] [18556] [INFO] Worker exiting (pid: 18556)
+[2023-11-03 06:58:31 -0500] [18553] [INFO] Worker exiting (pid: 18553)
+[2023-11-03 06:58:31 -0500] [87617] [ERROR] Worker (pid:18556) exited with code 1
+[2023-11-03 06:58:31 -0500] [87617] [ERROR] Worker (pid:18556) exited with code 1.
+[2023-11-03 06:58:31 -0500] [87617] [ERROR] Worker (pid:18553) exited with code 1
+[2023-11-03 06:58:31 -0500] [87617] [ERROR] Worker (pid:18553) exited with code 1.
+[2023-11-03 06:58:31 -0500] [18689] [INFO] Booting worker with pid: 18689
+[2023-11-03 06:58:32 -0500] [18690] [INFO] Booting worker with pid: 18690
+[2023-11-03 07:15:36 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18689)
+[2023-11-03 07:15:36 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18690)
+[2023-11-03 07:15:36 -0500] [18689] [INFO] Worker exiting (pid: 18689)
+[2023-11-03 07:15:36 -0500] [18690] [INFO] Worker exiting (pid: 18690)
+[2023-11-03 07:15:36 -0500] [87617] [ERROR] Worker (pid:18690) exited with code 1
+[2023-11-03 07:15:36 -0500] [87617] [ERROR] Worker (pid:18690) exited with code 1.
+[2023-11-03 07:15:36 -0500] [87617] [ERROR] Worker (pid:18689) exited with code 1
+[2023-11-03 07:15:36 -0500] [87617] [ERROR] Worker (pid:18689) exited with code 1.
+[2023-11-03 07:15:36 -0500] [18758] [INFO] Booting worker with pid: 18758
+[2023-11-03 07:15:36 -0500] [18759] [INFO] Booting worker with pid: 18759
+[2023-11-03 07:31:58 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18758)
+[2023-11-03 07:31:58 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18759)
+[2023-11-03 07:31:58 -0500] [18758] [INFO] Worker exiting (pid: 18758)
+[2023-11-03 07:31:58 -0500] [18759] [INFO] Worker exiting (pid: 18759)
+[2023-11-03 07:31:58 -0500] [87617] [ERROR] Worker (pid:18758) exited with code 1
+[2023-11-03 07:31:58 -0500] [87617] [ERROR] Worker (pid:18758) exited with code 1.
+[2023-11-03 07:31:58 -0500] [87617] [ERROR] Worker (pid:18759) exited with code 1
+[2023-11-03 07:31:58 -0500] [87617] [ERROR] Worker (pid:18759) exited with code 1.
+[2023-11-03 07:31:58 -0500] [18809] [INFO] Booting worker with pid: 18809
+[2023-11-03 07:31:58 -0500] [18810] [INFO] Booting worker with pid: 18810
+[2023-11-03 07:49:04 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18809)
+[2023-11-03 07:49:04 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18810)
+[2023-11-03 07:49:04 -0500] [18810] [INFO] Worker exiting (pid: 18810)
+[2023-11-03 07:49:04 -0500] [18809] [INFO] Worker exiting (pid: 18809)
+[2023-11-03 07:49:04 -0500] [87617] [ERROR] Worker (pid:18810) exited with code 1
+[2023-11-03 07:49:04 -0500] [87617] [ERROR] Worker (pid:18810) exited with code 1.
+[2023-11-03 07:49:04 -0500] [87617] [ERROR] Worker (pid:18809) exited with code 1
+[2023-11-03 07:49:04 -0500] [87617] [ERROR] Worker (pid:18809) exited with code 1.
+[2023-11-03 07:49:04 -0500] [18857] [INFO] Booting worker with pid: 18857
+[2023-11-03 07:49:04 -0500] [18858] [INFO] Booting worker with pid: 18858
+[2023-11-03 08:06:21 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18857)
+[2023-11-03 08:06:21 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18858)
+[2023-11-03 08:06:21 -0500] [18857] [INFO] Worker exiting (pid: 18857)
+[2023-11-03 08:06:21 -0500] [18858] [INFO] Worker exiting (pid: 18858)
+[2023-11-03 08:06:22 -0500] [87617] [ERROR] Worker (pid:18857) exited with code 1
+[2023-11-03 08:06:22 -0500] [87617] [ERROR] Worker (pid:18857) exited with code 1.
+[2023-11-03 08:06:22 -0500] [87617] [ERROR] Worker (pid:18858) exited with code 1
+[2023-11-03 08:06:22 -0500] [87617] [ERROR] Worker (pid:18858) exited with code 1.
+[2023-11-03 08:06:22 -0500] [18912] [INFO] Booting worker with pid: 18912
+[2023-11-03 08:06:22 -0500] [18913] [INFO] Booting worker with pid: 18913
+[2023-11-03 08:24:00 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18912)
+[2023-11-03 08:24:00 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18913)
+[2023-11-03 08:24:00 -0500] [18912] [INFO] Worker exiting (pid: 18912)
+[2023-11-03 08:24:00 -0500] [18913] [INFO] Worker exiting (pid: 18913)
+[2023-11-03 08:24:00 -0500] [87617] [ERROR] Worker (pid:18913) exited with code 1
+[2023-11-03 08:24:00 -0500] [87617] [ERROR] Worker (pid:18913) exited with code 1.
+[2023-11-03 08:24:00 -0500] [87617] [ERROR] Worker (pid:18912) exited with code 1
+[2023-11-03 08:24:00 -0500] [87617] [ERROR] Worker (pid:18912) exited with code 1.
+[2023-11-03 08:24:00 -0500] [18970] [INFO] Booting worker with pid: 18970
+[2023-11-03 08:24:00 -0500] [18971] [INFO] Booting worker with pid: 18971
+[2023-11-03 08:36:39 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18970)
+[2023-11-03 08:36:39 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:18971)
+[2023-11-03 08:36:39 -0500] [18970] [INFO] Worker exiting (pid: 18970)
+[2023-11-03 08:36:39 -0500] [18971] [INFO] Worker exiting (pid: 18971)
+[2023-11-03 08:36:39 -0500] [87617] [ERROR] Worker (pid:18970) exited with code 1
+[2023-11-03 08:36:39 -0500] [87617] [ERROR] Worker (pid:18970) exited with code 1.
+[2023-11-03 08:36:39 -0500] [87617] [ERROR] Worker (pid:18971) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 08:36:39 -0500] [19027] [INFO] Booting worker with pid: 19027
+[2023-11-03 08:36:39 -0500] [19028] [INFO] Booting worker with pid: 19028
+[2023-11-03 08:37:55 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19027)
+[2023-11-03 08:37:55 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19028)
+[2023-11-03 08:37:55 -0500] [19027] [INFO] Worker exiting (pid: 19027)
+[2023-11-03 08:37:55 -0500] [19028] [INFO] Worker exiting (pid: 19028)
+[2023-11-03 08:37:55 -0500] [87617] [ERROR] Worker (pid:19027) exited with code 1
+[2023-11-03 08:37:55 -0500] [87617] [ERROR] Worker (pid:19027) exited with code 1.
+[2023-11-03 08:37:55 -0500] [87617] [ERROR] Worker (pid:19028) exited with code 1
+[2023-11-03 08:37:55 -0500] [87617] [ERROR] Worker (pid:19028) exited with code 1.
+[2023-11-03 08:37:55 -0500] [19121] [INFO] Booting worker with pid: 19121
+[2023-11-03 08:37:55 -0500] [19122] [INFO] Booting worker with pid: 19122
+[2023-11-03 08:40:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19121)
+[2023-11-03 08:40:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19122)
+[2023-11-03 08:40:06 -0500] [19121] [INFO] Worker exiting (pid: 19121)
+[2023-11-03 08:40:06 -0500] [19122] [INFO] Worker exiting (pid: 19122)
+[2023-11-03 08:40:06 -0500] [87617] [ERROR] Worker (pid:19121) exited with code 1
+[2023-11-03 08:40:06 -0500] [87617] [ERROR] Worker (pid:19121) exited with code 1.
+[2023-11-03 08:40:06 -0500] [87617] [ERROR] Worker (pid:19122) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 08:40:06 -0500] [19178] [INFO] Booting worker with pid: 19178
+[2023-11-03 08:40:06 -0500] [19179] [INFO] Booting worker with pid: 19179
+[2023-11-03 08:57:08 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19178)
+[2023-11-03 08:57:08 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19179)
+[2023-11-03 08:57:08 -0500] [19178] [INFO] Worker exiting (pid: 19178)
+[2023-11-03 08:57:08 -0500] [19179] [INFO] Worker exiting (pid: 19179)
+[2023-11-03 08:57:08 -0500] [87617] [ERROR] Worker (pid:19179) exited with code 1
+[2023-11-03 08:57:08 -0500] [87617] [ERROR] Worker (pid:19179) exited with code 1.
+[2023-11-03 08:57:08 -0500] [87617] [ERROR] Worker (pid:19178) exited with code 1
+[2023-11-03 08:57:08 -0500] [87617] [ERROR] Worker (pid:19178) exited with code 1.
+[2023-11-03 08:57:08 -0500] [19232] [INFO] Booting worker with pid: 19232
+[2023-11-03 08:57:08 -0500] [19233] [INFO] Booting worker with pid: 19233
+[2023-11-03 09:00:29 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19232)
+[2023-11-03 09:00:29 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19233)
+[2023-11-03 09:00:29 -0500] [19233] [INFO] Worker exiting (pid: 19233)
+[2023-11-03 09:00:29 -0500] [19232] [INFO] Worker exiting (pid: 19232)
+[2023-11-03 09:00:29 -0500] [87617] [ERROR] Worker (pid:19233) exited with code 1
+[2023-11-03 09:00:29 -0500] [87617] [ERROR] Worker (pid:19233) exited with code 1.
+[2023-11-03 09:00:29 -0500] [87617] [ERROR] Worker (pid:19232) exited with code 1
+[2023-11-03 09:00:29 -0500] [87617] [ERROR] Worker (pid:19232) exited with code 1.
+[2023-11-03 09:00:29 -0500] [19492] [INFO] Booting worker with pid: 19492
+[2023-11-03 09:00:29 -0500] [19493] [INFO] Booting worker with pid: 19493
+[2023-11-03 10:32:20 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19492)
+[2023-11-03 10:32:21 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:19493)
+[2023-11-03 10:32:21 -0500] [19492] [INFO] Worker exiting (pid: 19492)
+[2023-11-03 10:32:21 -0500] [19493] [INFO] Worker exiting (pid: 19493)
+[2023-11-03 10:32:21 -0500] [87617] [ERROR] Worker (pid:19493) exited with code 1
+[2023-11-03 10:32:21 -0500] [87617] [ERROR] Worker (pid:19493) exited with code 1.
+[2023-11-03 10:32:21 -0500] [87617] [ERROR] Worker (pid:19492) exited with code 1
+[2023-11-03 10:32:21 -0500] [87617] [ERROR] Worker (pid:19492) exited with code 1.
+[2023-11-03 10:32:21 -0500] [28016] [INFO] Booting worker with pid: 28016
+[2023-11-03 10:32:21 -0500] [28017] [INFO] Booting worker with pid: 28017
+[2023-11-03 10:33:19 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28016)
+[2023-11-03 10:33:19 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28017)
+[2023-11-03 10:33:19 -0500] [28016] [INFO] Worker exiting (pid: 28016)
+[2023-11-03 10:33:19 -0500] [28017] [INFO] Worker exiting (pid: 28017)
+[2023-11-03 10:33:19 -0500] [87617] [ERROR] Worker (pid:28017) exited with code 1
+[2023-11-03 10:33:19 -0500] [87617] [ERROR] Worker (pid:28017) exited with code 1.
+[2023-11-03 10:33:19 -0500] [87617] [ERROR] Worker (pid:28016) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 10:33:19 -0500] [28055] [INFO] Booting worker with pid: 28055
+[2023-11-03 10:33:19 -0500] [28056] [INFO] Booting worker with pid: 28056
+[2023-11-03 10:34:08 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28055)
+[2023-11-03 10:34:08 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28056)
+[2023-11-03 10:34:08 -0500] [28056] [INFO] Worker exiting (pid: 28056)
+[2023-11-03 10:34:08 -0500] [28055] [INFO] Worker exiting (pid: 28055)
+[2023-11-03 10:34:08 -0500] [87617] [ERROR] Worker (pid:28056) exited with code 1
+[2023-11-03 10:34:08 -0500] [87617] [ERROR] Worker (pid:28056) exited with code 1.
+[2023-11-03 10:34:08 -0500] [87617] [ERROR] Worker (pid:28055) exited with code 1
+[2023-11-03 10:34:08 -0500] [87617] [ERROR] Worker (pid:28055) exited with code 1.
+[2023-11-03 10:34:08 -0500] [28079] [INFO] Booting worker with pid: 28079
+[2023-11-03 10:34:08 -0500] [28080] [INFO] Booting worker with pid: 28080
+[2023-11-03 10:36:27 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28079)
+[2023-11-03 10:36:27 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28080)
+[2023-11-03 10:36:27 -0500] [28079] [INFO] Worker exiting (pid: 28079)
+[2023-11-03 10:36:27 -0500] [28080] [INFO] Worker exiting (pid: 28080)
+[2023-11-03 10:36:27 -0500] [87617] [ERROR] Worker (pid:28080) exited with code 1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/serve_logs.py", line 179, in serve_logs
+    StandaloneGunicornApplication(wsgi_app, options).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 527, in reap_workers
+    self.log.error('Worker (pid:%s) exited with code %s', wpid, exitcode)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:%s) exited with code %s.'
+Arguments: (28079, 1)
+[2023-11-03 10:36:27 -0500] [87617] [ERROR] Worker (pid:28080) exited with code 1.
+[2023-11-03 10:36:27 -0500] [28129] [INFO] Booting worker with pid: 28129
+[2023-11-03 10:36:27 -0500] [28130] [INFO] Booting worker with pid: 28130
+[2023-11-03 10:40:15 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28129)
+[2023-11-03 10:40:15 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28130)
+[2023-11-03 10:40:15 -0500] [28129] [INFO] Worker exiting (pid: 28129)
+[2023-11-03 10:40:15 -0500] [28130] [INFO] Worker exiting (pid: 28130)
+[2023-11-03 10:40:16 -0500] [87617] [ERROR] Worker (pid:28129) exited with code 1
+[2023-11-03 10:40:16 -0500] [87617] [ERROR] Worker (pid:28129) exited with code 1.
+[2023-11-03 10:40:16 -0500] [87617] [ERROR] Worker (pid:28130) exited with code 1
+[2023-11-03 10:40:16 -0500] [87617] [ERROR] Worker (pid:28130) exited with code 1.
+[2023-11-03 10:40:16 -0500] [28155] [INFO] Booting worker with pid: 28155
+[2023-11-03 10:40:16 -0500] [28156] [INFO] Booting worker with pid: 28156
+[2023-11-03 10:44:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28155)
+[2023-11-03 10:44:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28156)
+[2023-11-03 10:44:10 -0500] [28155] [INFO] Worker exiting (pid: 28155)
+[2023-11-03 10:44:10 -0500] [28156] [INFO] Worker exiting (pid: 28156)
+[2023-11-03 10:44:10 -0500] [87617] [ERROR] Worker (pid:28155) exited with code 1
+[2023-11-03 10:44:10 -0500] [87617] [ERROR] Worker (pid:28155) exited with code 1.
+[2023-11-03 10:44:10 -0500] [87617] [ERROR] Worker (pid:28156) exited with code 1
+[2023-11-03 10:44:10 -0500] [87617] [ERROR] Worker (pid:28156) exited with code 1.
+[2023-11-03 10:44:10 -0500] [28166] [INFO] Booting worker with pid: 28166
+[2023-11-03 10:44:10 -0500] [28167] [INFO] Booting worker with pid: 28167
+[2023-11-03 10:45:22 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28166)
+[2023-11-03 10:45:22 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28167)
+[2023-11-03 10:45:22 -0500] [28166] [INFO] Worker exiting (pid: 28166)
+[2023-11-03 10:45:22 -0500] [28167] [INFO] Worker exiting (pid: 28167)
+[2023-11-03 10:45:23 -0500] [87617] [ERROR] Worker (pid:28167) exited with code 1
+[2023-11-03 10:45:23 -0500] [87617] [ERROR] Worker (pid:28167) exited with code 1.
+[2023-11-03 10:45:23 -0500] [87617] [ERROR] Worker (pid:28166) exited with code 1
+[2023-11-03 10:45:23 -0500] [87617] [ERROR] Worker (pid:28166) exited with code 1.
+[2023-11-03 10:45:23 -0500] [28197] [INFO] Booting worker with pid: 28197
+[2023-11-03 10:45:23 -0500] [28198] [INFO] Booting worker with pid: 28198
+[2023-11-03 11:14:16 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28197)
+[2023-11-03 11:14:16 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:28198)
+[2023-11-03 11:14:16 -0500] [28197] [INFO] Worker exiting (pid: 28197)
+[2023-11-03 11:14:16 -0500] [28198] [INFO] Worker exiting (pid: 28198)
+[2023-11-03 11:14:16 -0500] [87617] [ERROR] Worker (pid:28197) exited with code 1
+[2023-11-03 11:14:16 -0500] [87617] [ERROR] Worker (pid:28197) exited with code 1.
+[2023-11-03 11:14:16 -0500] [87617] [ERROR] Worker (pid:28198) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 11:14:16 -0500] [29340] [INFO] Booting worker with pid: 29340
+[2023-11-03 11:14:16 -0500] [29341] [INFO] Booting worker with pid: 29341
+[2023-11-03 11:17:52 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29340)
+[2023-11-03 11:17:52 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29341)
+[2023-11-03 11:17:52 -0500] [29341] [INFO] Worker exiting (pid: 29341)
+[2023-11-03 11:17:52 -0500] [29340] [INFO] Worker exiting (pid: 29340)
+[2023-11-03 11:17:52 -0500] [87617] [ERROR] Worker (pid:29340) exited with code 1
+[2023-11-03 11:17:52 -0500] [87617] [ERROR] Worker (pid:29340) exited with code 1.
+[2023-11-03 11:17:52 -0500] [87617] [ERROR] Worker (pid:29341) exited with code 1
+[2023-11-03 11:17:52 -0500] [87617] [ERROR] Worker (pid:29341) exited with code 1.
+[2023-11-03 11:17:52 -0500] [29342] [INFO] Booting worker with pid: 29342
+[2023-11-03 11:17:52 -0500] [29343] [INFO] Booting worker with pid: 29343
+[2023-11-03 11:20:34 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29342)
+[2023-11-03 11:20:34 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29343)
+[2023-11-03 11:20:34 -0500] [29343] [INFO] Worker exiting (pid: 29343)
+[2023-11-03 11:20:34 -0500] [29342] [INFO] Worker exiting (pid: 29342)
+[2023-11-03 11:20:34 -0500] [87617] [ERROR] Worker (pid:29343) exited with code 1
+[2023-11-03 11:20:34 -0500] [87617] [ERROR] Worker (pid:29343) exited with code 1.
+[2023-11-03 11:20:34 -0500] [87617] [ERROR] Worker (pid:29342) exited with code 1
+[2023-11-03 11:20:34 -0500] [87617] [ERROR] Worker (pid:29342) exited with code 1.
+[2023-11-03 11:20:34 -0500] [29349] [INFO] Booting worker with pid: 29349
+[2023-11-03 11:20:34 -0500] [29350] [INFO] Booting worker with pid: 29350
+[2023-11-03 11:21:35 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29349)
+[2023-11-03 11:21:35 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29350)
+[2023-11-03 11:21:35 -0500] [29350] [INFO] Worker exiting (pid: 29350)
+[2023-11-03 11:21:35 -0500] [29349] [INFO] Worker exiting (pid: 29349)
+[2023-11-03 11:21:35 -0500] [87617] [ERROR] Worker (pid:29350) exited with code 1
+[2023-11-03 11:21:35 -0500] [87617] [ERROR] Worker (pid:29350) exited with code 1.
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/serve_logs.py", line 179, in serve_logs
+    StandaloneGunicornApplication(wsgi_app, options).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:%s) exited with code %s.'
+Arguments: (29349, 1)
+[2023-11-03 11:21:35 -0500] [29355] [INFO] Booting worker with pid: 29355
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/serve_logs.py", line 179, in serve_logs
+    StandaloneGunicornApplication(wsgi_app, options).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:%s) exited with code %s.'
+Arguments: (29349, 1)
+[2023-11-03 11:21:35 -0500] [29356] [INFO] Booting worker with pid: 29356
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "<string>", line 1, in <module>
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/spawn.py", line 129, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/utils/serve_logs.py", line 179, in serve_logs
+    StandaloneGunicornApplication(wsgi_app, options).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/local/Cellar/python@3.8/3.8.18/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 538, in reap_workers
+    self.log.error("Worker (pid:%s) exited with code %s.",
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:%s) exited with code %s.'
+Arguments: (29349, 1)
+[2023-11-03 11:23:22 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29355)
+[2023-11-03 11:23:22 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29356)
+[2023-11-03 11:23:22 -0500] [29356] [INFO] Worker exiting (pid: 29356)
+[2023-11-03 11:23:22 -0500] [29355] [INFO] Worker exiting (pid: 29355)
+[2023-11-03 11:23:22 -0500] [87617] [ERROR] Worker (pid:29356) exited with code 1
+[2023-11-03 11:23:22 -0500] [87617] [ERROR] Worker (pid:29356) exited with code 1.
+[2023-11-03 11:23:22 -0500] [87617] [ERROR] Worker (pid:29355) exited with code 1
+[2023-11-03 11:23:22 -0500] [87617] [ERROR] Worker (pid:29355) exited with code 1.
+[2023-11-03 11:23:22 -0500] [29358] [INFO] Booting worker with pid: 29358
+[2023-11-03 11:23:22 -0500] [29359] [INFO] Booting worker with pid: 29359
+[2023-11-03 11:23:53 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29358)
+[2023-11-03 11:23:53 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29359)
+[2023-11-03 11:23:53 -0500] [29358] [INFO] Worker exiting (pid: 29358)
+[2023-11-03 11:23:53 -0500] [29359] [INFO] Worker exiting (pid: 29359)
+[2023-11-03 11:23:53 -0500] [87617] [ERROR] Worker (pid:29359) exited with code 1
+[2023-11-03 11:23:53 -0500] [87617] [ERROR] Worker (pid:29358) exited with code 1
+[2023-11-03 11:23:53 -0500] [87617] [ERROR] Worker (pid:29358) exited with code 1.
+[2023-11-03 11:23:53 -0500] [87617] [ERROR] Worker (pid:29359) exited with code 1.
+[2023-11-03 11:23:53 -0500] [29360] [INFO] Booting worker with pid: 29360
+[2023-11-03 11:23:53 -0500] [29361] [INFO] Booting worker with pid: 29361
+[2023-11-03 11:24:36 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29360)
+[2023-11-03 11:24:36 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29361)
+[2023-11-03 11:24:36 -0500] [29361] [INFO] Worker exiting (pid: 29361)
+[2023-11-03 11:24:36 -0500] [29360] [INFO] Worker exiting (pid: 29360)
+[2023-11-03 11:24:36 -0500] [87617] [ERROR] Worker (pid:29360) exited with code 1
+[2023-11-03 11:24:36 -0500] [87617] [ERROR] Worker (pid:29360) exited with code 1.
+[2023-11-03 11:24:36 -0500] [87617] [ERROR] Worker (pid:29361) exited with code 1
+[2023-11-03 11:24:36 -0500] [87617] [ERROR] Worker (pid:29361) exited with code 1.
+[2023-11-03 11:24:36 -0500] [29362] [INFO] Booting worker with pid: 29362
+[2023-11-03 11:24:36 -0500] [29363] [INFO] Booting worker with pid: 29363
+[2023-11-03 11:25:29 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29362)
+[2023-11-03 11:25:29 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29363)
+[2023-11-03 11:25:29 -0500] [29363] [INFO] Worker exiting (pid: 29363)
+[2023-11-03 11:25:29 -0500] [29362] [INFO] Worker exiting (pid: 29362)
+[2023-11-03 11:25:29 -0500] [87617] [ERROR] Worker (pid:29362) exited with code 1
+[2023-11-03 11:25:29 -0500] [87617] [ERROR] Worker (pid:29362) exited with code 1.
+[2023-11-03 11:25:29 -0500] [87617] [ERROR] Worker (pid:29363) exited with code 1
+[2023-11-03 11:25:29 -0500] [87617] [ERROR] Worker (pid:29363) exited with code 1.
+[2023-11-03 11:25:29 -0500] [29364] [INFO] Booting worker with pid: 29364
+[2023-11-03 11:25:29 -0500] [29365] [INFO] Booting worker with pid: 29365
+[2023-11-03 11:26:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29364)
+[2023-11-03 11:26:06 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29365)
+[2023-11-03 11:26:06 -0500] [29365] [INFO] Worker exiting (pid: 29365)
+[2023-11-03 11:26:06 -0500] [29364] [INFO] Worker exiting (pid: 29364)
+[2023-11-03 11:26:06 -0500] [87617] [ERROR] Worker (pid:29364) exited with code 1
+[2023-11-03 11:26:06 -0500] [87617] [ERROR] Worker (pid:29364) exited with code 1.
+[2023-11-03 11:26:06 -0500] [87617] [ERROR] Worker (pid:29365) exited with code 1
+[2023-11-03 11:26:06 -0500] [87617] [ERROR] Worker (pid:29365) exited with code 1.
+[2023-11-03 11:26:06 -0500] [29366] [INFO] Booting worker with pid: 29366
+[2023-11-03 11:26:06 -0500] [29367] [INFO] Booting worker with pid: 29367
+[2023-11-03 11:32:52 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29366)
+[2023-11-03 11:32:52 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29367)
+[2023-11-03 11:32:52 -0500] [29366] [INFO] Worker exiting (pid: 29366)
+[2023-11-03 11:32:52 -0500] [29367] [INFO] Worker exiting (pid: 29367)
+[2023-11-03 11:32:52 -0500] [87617] [ERROR] Worker (pid:29367) exited with code 1
+[2023-11-03 11:32:52 -0500] [87617] [ERROR] Worker (pid:29367) exited with code 1.
+[2023-11-03 11:32:52 -0500] [87617] [ERROR] Worker (pid:29366) exited with code 1
+[2023-11-03 11:32:52 -0500] [87617] [ERROR] Worker (pid:29366) exited with code 1.
+[2023-11-03 11:32:52 -0500] [29371] [INFO] Booting worker with pid: 29371
+[2023-11-03 11:32:52 -0500] [29372] [INFO] Booting worker with pid: 29372
+[2023-11-03 11:39:53 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29371)
+[2023-11-03 11:39:53 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29372)
+[2023-11-03 11:39:53 -0500] [29372] [INFO] Worker exiting (pid: 29372)
+[2023-11-03 11:39:53 -0500] [29371] [INFO] Worker exiting (pid: 29371)
+[2023-11-03 11:39:53 -0500] [87617] [ERROR] Worker (pid:29371) exited with code 1
+[2023-11-03 11:39:53 -0500] [87617] [ERROR] Worker (pid:29371) exited with code 1.
+[2023-11-03 11:39:53 -0500] [87617] [ERROR] Worker (pid:29372) exited with code 1
+[2023-11-03 11:39:53 -0500] [87617] [ERROR] Worker (pid:29372) exited with code 1.
+[2023-11-03 11:39:53 -0500] [29373] [INFO] Booting worker with pid: 29373
+[2023-11-03 11:39:54 -0500] [29374] [INFO] Booting worker with pid: 29374
+[2023-11-03 11:45:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29373)
+[2023-11-03 11:45:10 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29374)
+[2023-11-03 11:45:10 -0500] [29373] [INFO] Worker exiting (pid: 29373)
+[2023-11-03 11:45:10 -0500] [29374] [INFO] Worker exiting (pid: 29374)
+[2023-11-03 11:45:11 -0500] [87617] [ERROR] Worker (pid:29374) exited with code 1
+[2023-11-03 11:45:11 -0500] [87617] [ERROR] Worker (pid:29374) exited with code 1.
+[2023-11-03 11:45:11 -0500] [87617] [ERROR] Worker (pid:29373) exited with code 1
+[2023-11-03 11:45:11 -0500] [87617] [ERROR] Worker (pid:29373) exited with code 1.
+[2023-11-03 11:45:11 -0500] [29376] [INFO] Booting worker with pid: 29376
+[2023-11-03 11:45:11 -0500] [29377] [INFO] Booting worker with pid: 29377
+[2023-11-03 11:50:18 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29376)
+[2023-11-03 11:50:18 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29377)
+[2023-11-03 11:50:18 -0500] [29377] [INFO] Worker exiting (pid: 29377)
+[2023-11-03 11:50:18 -0500] [29376] [INFO] Worker exiting (pid: 29376)
+[2023-11-03 11:50:18 -0500] [87617] [ERROR] Worker (pid:29377) exited with code 1
+[2023-11-03 11:50:18 -0500] [87617] [ERROR] Worker (pid:29377) exited with code 1.
+[2023-11-03 11:50:18 -0500] [87617] [ERROR] Worker (pid:29376) exited with code 1
+[2023-11-03 11:50:18 -0500] [87617] [ERROR] Worker (pid:29376) exited with code 1.
+[2023-11-03 11:50:18 -0500] [29378] [INFO] Booting worker with pid: 29378
+[2023-11-03 11:50:18 -0500] [29379] [INFO] Booting worker with pid: 29379
+[2023-11-03 11:52:38 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29378)
+[2023-11-03 11:52:38 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29379)
+[2023-11-03 11:52:38 -0500] [29379] [INFO] Worker exiting (pid: 29379)
+[2023-11-03 11:52:38 -0500] [29378] [INFO] Worker exiting (pid: 29378)
+[2023-11-03 11:52:38 -0500] [87617] [ERROR] Worker (pid:29379) exited with code 1
+[2023-11-03 11:52:38 -0500] [87617] [ERROR] Worker (pid:29379) exited with code 1.
+[2023-11-03 11:52:38 -0500] [87617] [ERROR] Worker (pid:29378) exited with code 1
+[2023-11-03 11:52:38 -0500] [87617] [ERROR] Worker (pid:29378) exited with code 1.
+[2023-11-03 11:52:38 -0500] [29380] [INFO] Booting worker with pid: 29380
+[2023-11-03 11:52:38 -0500] [29381] [INFO] Booting worker with pid: 29381
+[2023-11-03 12:09:25 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29380)
+[2023-11-03 12:09:25 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29381)
+[2023-11-03 12:09:25 -0500] [29381] [INFO] Worker exiting (pid: 29381)
+[2023-11-03 12:09:25 -0500] [29380] [INFO] Worker exiting (pid: 29380)
+[2023-11-03 12:09:25 -0500] [87617] [ERROR] Worker (pid:29380) exited with code 1
+[2023-11-03 12:09:25 -0500] [87617] [ERROR] Worker (pid:29380) exited with code 1.
+[2023-11-03 12:09:25 -0500] [87617] [ERROR] Worker (pid:29381) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 12:09:25 -0500] [29383] [INFO] Booting worker with pid: 29383
+[2023-11-03 12:09:25 -0500] [29384] [INFO] Booting worker with pid: 29384
+[2023-11-03 12:19:21 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29383)
+[2023-11-03 12:19:21 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29384)
+[2023-11-03 12:19:21 -0500] [29384] [INFO] Worker exiting (pid: 29384)
+[2023-11-03 12:19:21 -0500] [29383] [INFO] Worker exiting (pid: 29383)
+[2023-11-03 12:19:21 -0500] [87617] [ERROR] Worker (pid:29384) exited with code 1
+[2023-11-03 12:19:21 -0500] [87617] [ERROR] Worker (pid:29384) exited with code 1.
+[2023-11-03 12:19:21 -0500] [87617] [ERROR] Worker (pid:29383) exited with code 1
+[2023-11-03 12:19:21 -0500] [87617] [ERROR] Worker (pid:29383) exited with code 1.
+[2023-11-03 12:19:21 -0500] [29388] [INFO] Booting worker with pid: 29388
+[2023-11-03 12:19:21 -0500] [29389] [INFO] Booting worker with pid: 29389
+[2023-11-03 12:33:23 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29388)
+[2023-11-03 12:33:23 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29389)
+[2023-11-03 12:33:23 -0500] [29388] [INFO] Worker exiting (pid: 29388)
+[2023-11-03 12:33:23 -0500] [29389] [INFO] Worker exiting (pid: 29389)
+[2023-11-03 12:33:23 -0500] [87617] [ERROR] Worker (pid:29388) exited with code 1
+[2023-11-03 12:33:23 -0500] [87617] [ERROR] Worker (pid:29388) exited with code 1.
+[2023-11-03 12:33:23 -0500] [87617] [ERROR] Worker (pid:29389) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 12:33:23 -0500] [29397] [INFO] Booting worker with pid: 29397
+[2023-11-03 12:33:24 -0500] [29398] [INFO] Booting worker with pid: 29398
+[2023-11-03 12:34:30 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29397)
+[2023-11-03 12:34:30 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29398)
+[2023-11-03 12:34:30 -0500] [29397] [INFO] Worker exiting (pid: 29397)
+[2023-11-03 12:34:30 -0500] [29398] [INFO] Worker exiting (pid: 29398)
+[2023-11-03 12:34:30 -0500] [87617] [ERROR] Worker (pid:29397) exited with code 1
+[2023-11-03 12:34:30 -0500] [87617] [ERROR] Worker (pid:29397) exited with code 1.
+[2023-11-03 12:34:30 -0500] [87617] [ERROR] Worker (pid:29398) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 12:34:30 -0500] [29405] [INFO] Booting worker with pid: 29405
+[2023-11-03 12:34:30 -0500] [29406] [INFO] Booting worker with pid: 29406
+[2023-11-03 12:35:37 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29405)
+[2023-11-03 12:35:37 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29406)
+[2023-11-03 12:35:37 -0500] [29405] [INFO] Worker exiting (pid: 29405)
+[2023-11-03 12:35:37 -0500] [29406] [INFO] Worker exiting (pid: 29406)
+[2023-11-03 12:35:37 -0500] [87617] [ERROR] Worker (pid:29405) exited with code 1
+[2023-11-03 12:35:37 -0500] [87617] [ERROR] Worker (pid:29405) exited with code 1.
+[2023-11-03 12:35:37 -0500] [87617] [ERROR] Worker (pid:29406) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 12:35:37 -0500] [29410] [INFO] Booting worker with pid: 29410
+[2023-11-03 12:35:37 -0500] [29411] [INFO] Booting worker with pid: 29411
+[2023-11-03 14:23:01 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29410)
+[2023-11-03 14:23:01 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:29411)
+[2023-11-03 14:23:01 -0500] [29410] [INFO] Worker exiting (pid: 29410)
+[2023-11-03 14:23:01 -0500] [29411] [INFO] Worker exiting (pid: 29411)
+[2023-11-03 14:23:01 -0500] [87617] [ERROR] Worker (pid:29411) exited with code 1
+[2023-11-03 14:23:01 -0500] [87617] [ERROR] Worker (pid:29411) exited with code 1.
+[2023-11-03 14:23:01 -0500] [87617] [ERROR] Worker (pid:29410) exited with code 1
+[2023-11-03 14:23:01 -0500] [87617] [ERROR] Worker (pid:29410) exited with code 1.
+[2023-11-03 14:23:01 -0500] [31171] [INFO] Booting worker with pid: 31171
+[2023-11-03 14:23:01 -0500] [31173] [INFO] Booting worker with pid: 31173
+[2023-11-03 14:39:23 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31171)
+[2023-11-03 14:39:23 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31173)
+[2023-11-03 14:39:23 -0500] [31171] [INFO] Worker exiting (pid: 31171)
+[2023-11-03 14:39:23 -0500] [31173] [INFO] Worker exiting (pid: 31173)
+[2023-11-03 14:39:23 -0500] [87617] [ERROR] Worker (pid:31173) exited with code 1
+[2023-11-03 14:39:23 -0500] [87617] [ERROR] Worker (pid:31173) exited with code 1.
+[2023-11-03 14:39:23 -0500] [87617] [ERROR] Worker (pid:31171) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 14:39:23 -0500] [31184] [INFO] Booting worker with pid: 31184
+[2023-11-03 14:39:23 -0500] [31185] [INFO] Booting worker with pid: 31185
+[2023-11-03 14:51:34 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31184)
+[2023-11-03 14:51:34 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31185)
+[2023-11-03 14:51:34 -0500] [31184] [INFO] Worker exiting (pid: 31184)
+[2023-11-03 14:51:34 -0500] [31185] [INFO] Worker exiting (pid: 31185)
+[2023-11-03 14:51:34 -0500] [87617] [ERROR] Worker (pid:31185) exited with code 1
+[2023-11-03 14:51:34 -0500] [87617] [ERROR] Worker (pid:31185) exited with code 1.
+[2023-11-03 14:51:34 -0500] [87617] [ERROR] Worker (pid:31184) exited with code 1
+[2023-11-03 14:51:34 -0500] [87617] [ERROR] Worker (pid:31184) exited with code 1.
+[2023-11-03 14:51:34 -0500] [31306] [INFO] Booting worker with pid: 31306
+[2023-11-03 14:51:34 -0500] [31307] [INFO] Booting worker with pid: 31307
+[2023-11-03 15:07:38 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31306)
+[2023-11-03 15:07:38 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31307)
+[2023-11-03 15:07:38 -0500] [31307] [INFO] Worker exiting (pid: 31307)
+[2023-11-03 15:07:38 -0500] [31306] [INFO] Worker exiting (pid: 31306)
+[2023-11-03 15:07:38 -0500] [87617] [ERROR] Worker (pid:31306) exited with code 1
+[2023-11-03 15:07:38 -0500] [87617] [ERROR] Worker (pid:31306) exited with code 1.
+[2023-11-03 15:07:38 -0500] [87617] [ERROR] Worker (pid:31307) exited with code 1
+[2023-11-03 15:07:38 -0500] [87617] [ERROR] Worker (pid:31307) exited with code 1.
+[2023-11-03 15:07:38 -0500] [31311] [INFO] Booting worker with pid: 31311
+[2023-11-03 15:07:38 -0500] [31312] [INFO] Booting worker with pid: 31312
+[2023-11-03 15:25:07 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31311)
+[2023-11-03 15:25:07 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31312)
+[2023-11-03 15:25:07 -0500] [31311] [INFO] Worker exiting (pid: 31311)
+[2023-11-03 15:25:07 -0500] [31312] [INFO] Worker exiting (pid: 31312)
+[2023-11-03 15:25:07 -0500] [87617] [ERROR] Worker (pid:31312) exited with code 1
+[2023-11-03 15:25:07 -0500] [87617] [ERROR] Worker (pid:31312) exited with code 1.
+[2023-11-03 15:25:07 -0500] [87617] [ERROR] Worker (pid:31311) exited with code 1
+[2023-11-03 15:25:07 -0500] [87617] [ERROR] Worker (pid:31311) exited with code 1.
+[2023-11-03 15:25:07 -0500] [31320] [INFO] Booting worker with pid: 31320
+[2023-11-03 15:25:07 -0500] [31322] [INFO] Booting worker with pid: 31322
+[2023-11-03 15:41:24 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31320)
+[2023-11-03 15:41:24 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31322)
+[2023-11-03 15:41:24 -0500] [31322] [INFO] Worker exiting (pid: 31322)
+[2023-11-03 15:41:24 -0500] [31320] [INFO] Worker exiting (pid: 31320)
+[2023-11-03 15:41:24 -0500] [87617] [ERROR] Worker (pid:31320) exited with code 1
+[2023-11-03 15:41:24 -0500] [87617] [ERROR] Worker (pid:31320) exited with code 1.
+[2023-11-03 15:41:24 -0500] [87617] [ERROR] Worker (pid:31322) exited with code 1
+[2023-11-03 15:41:24 -0500] [87617] [ERROR] Worker (pid:31322) exited with code 1.
+[2023-11-03 15:41:24 -0500] [31377] [INFO] Booting worker with pid: 31377
+[2023-11-03 15:41:24 -0500] [31378] [INFO] Booting worker with pid: 31378
+[2023-11-03 15:45:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31377)
+[2023-11-03 15:45:31 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31378)
+[2023-11-03 15:45:31 -0500] [31377] [INFO] Worker exiting (pid: 31377)
+[2023-11-03 15:45:31 -0500] [31378] [INFO] Worker exiting (pid: 31378)
+[2023-11-03 15:45:31 -0500] [87617] [ERROR] Worker (pid:31377) exited with code 1
+[2023-11-03 15:45:31 -0500] [87617] [ERROR] Worker (pid:31377) exited with code 1.
+[2023-11-03 15:45:31 -0500] [87617] [ERROR] Worker (pid:31378) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 15:45:31 -0500] [31388] [INFO] Booting worker with pid: 31388
+[2023-11-03 15:45:31 -0500] [31389] [INFO] Booting worker with pid: 31389
+[2023-11-03 15:47:47 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31388)
+[2023-11-03 15:47:47 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31389)
+[2023-11-03 15:47:47 -0500] [31388] [INFO] Worker exiting (pid: 31388)
+[2023-11-03 15:47:47 -0500] [31389] [INFO] Worker exiting (pid: 31389)
+[2023-11-03 15:47:47 -0500] [87617] [ERROR] Worker (pid:31389) exited with code 1
+[2023-11-03 15:47:47 -0500] [87617] [ERROR] Worker (pid:31389) exited with code 1.
+[2023-11-03 15:47:47 -0500] [87617] [ERROR] Worker (pid:31388) exited with code 1
+[2023-11-03 15:47:47 -0500] [87617] [ERROR] Worker (pid:31388) exited with code 1.
+[2023-11-03 15:47:47 -0500] [31416] [INFO] Booting worker with pid: 31416
+[2023-11-03 15:47:47 -0500] [31417] [INFO] Booting worker with pid: 31417
+[2023-11-03 16:06:11 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31416)
+[2023-11-03 16:06:11 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31417)
+[2023-11-03 16:06:11 -0500] [31416] [INFO] Worker exiting (pid: 31416)
+[2023-11-03 16:06:11 -0500] [31417] [INFO] Worker exiting (pid: 31417)
+[2023-11-03 16:06:11 -0500] [87617] [ERROR] Worker (pid:31417) exited with code 1
+[2023-11-03 16:06:11 -0500] [87617] [ERROR] Worker (pid:31417) exited with code 1.
+[2023-11-03 16:06:11 -0500] [87617] [ERROR] Worker (pid:31416) was sent SIGKILL! Perhaps out of memory?
+[2023-11-03 16:06:11 -0500] [31428] [INFO] Booting worker with pid: 31428
+[2023-11-03 16:06:11 -0500] [31429] [INFO] Booting worker with pid: 31429
+[2023-11-03 16:21:20 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31428)
+[2023-11-03 16:21:20 -0500] [87617] [CRITICAL] WORKER TIMEOUT (pid:31429)
+[2023-11-03 16:21:20 -0500] [31429] [INFO] Worker exiting (pid: 31429)
+[2023-11-03 16:21:20 -0500] [31428] [INFO] Worker exiting (pid: 31428)
+[2023-11-03 16:21:20 -0500] [87617] [ERROR] Worker (pid:31429) exited with code 1
+[2023-11-03 16:21:20 -0500] [87617] [ERROR] Worker (pid:31429) exited with code 1.
+[2023-11-03 16:21:20 -0500] [87617] [ERROR] Worker (pid:31428) exited with code 1
+[2023-11-03 16:21:20 -0500] [87617] [ERROR] Worker (pid:31428) exited with code 1.
+[2023-11-03 16:21:21 -0500] [31481] [INFO] Booting worker with pid: 31481
+[2023-11-03 16:21:21 -0500] [31482] [INFO] Booting worker with pid: 31482

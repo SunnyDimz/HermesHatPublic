@@ -1,0 +1,24 @@
+[2023-11-02T09:27:36.080-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [queued]>
+[2023-11-02T09:27:36.083-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [queued]>
+[2023-11-02T09:27:36.083-0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-11-02T09:27:36.089-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): pull_and_save_fred_data> on 2023-01-29 00:00:00+00:00
+[2023-11-02T09:27:36.097-0500] {standard_task_runner.py:57} INFO - Started process 95725 to run task
+[2023-11-02T09:27:36.103-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'economics_data_pipeline', 'pull_and_save_fred_data', 'scheduled__2023-01-29T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/economics_data_pipe.py', '--cfg-path', '/var/folders/3l/sjtljk5j23ng0k_w12x41kh80000gn/T/tmpzlfywv4z']
+[2023-11-02T09:27:36.104-0500] {standard_task_runner.py:85} INFO - Job 8: Subtask pull_and_save_fred_data
+[2023-11-02T09:27:36.129-0500] {task_command.py:416} INFO - Running <TaskInstance: economics_data_pipeline.pull_and_save_fred_data scheduled__2023-01-29T00:00:00+00:00 [running]> on host macbook-pro-207.local
+[2023-11-02T09:27:36.161-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='hermesadmin' AIRFLOW_CTX_DAG_ID='economics_data_pipeline' AIRFLOW_CTX_TASK_ID='pull_and_save_fred_data' AIRFLOW_CTX_EXECUTION_DATE='2023-01-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-29T00:00:00+00:00'
+[2023-11-02T09:27:36.165-0500] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/dimz/EconWizard/airflow/dags/economics_data_pipe.py", line 29, in pull_and_save_fred_data
+    airflow_home = Variable.get("AIRFLOW_HOME")
+  File "/Users/dimz/EconWizard/hermesvirtual/lib/python3.8/site-packages/airflow/models/variable.py", line 140, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable AIRFLOW_HOME does not exist'
+[2023-11-02T09:27:36.168-0500] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=economics_data_pipeline, task_id=pull_and_save_fred_data, execution_date=20230129T000000, start_date=20231102T142736, end_date=20231102T142736
+[2023-11-02T09:27:36.173-0500] {standard_task_runner.py:104} ERROR - Failed to execute job 8 for task pull_and_save_fred_data ('Variable AIRFLOW_HOME does not exist'; 95725)
+[2023-11-02T09:27:36.207-0500] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-02T09:27:36.217-0500] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

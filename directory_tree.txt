@@ -3,27 +3,26 @@
     run.py
     .DS_Store
     config.py
-    models.py
     requirements.txt
     directory_tree.txt
+    Dockerfile
     config.pyc
     runtime.txt
+    airflowdownload.py
     updated_index.html
     mongotest.py
     updated_labor_market.html
+    routes.py.disabled
+    web_routes.py
     .gitignore
-    utils.py
     .env
-    chatgpt.py
-    fredmongo.py
-    archive.py
     app.py
     Procfile
-    webhooks.py
+    main.py
+    pull_fred_data_dag.py
     models.log
+    app.log
     playground-2.mongodb.js
-    blogapi.py
-    routes.py
     blog_posts/
         .DS_Store
         technology/
@@ -48,38 +47,243 @@
             cache/
                 lastfailed
                 stepwise
+    utils/
+        fred_utils.py
+        fredvalidation.py
+        youtube_api.py
+        mongo_utils.py
+        aws_utils.py
+        __init__.py
+        fred_codes_test.json
+        markdown_utils.py
+        utils.py
+        fredmongo.py
+        webhooks.py
+        jwt_utils.py
+        fred_codes.json
+    econwizard/
+        README.md
+        .gitignore
+        package-lock.json
+        package.json
+        .env
+        public/
+            favicon.ico
+            index.html
+            logo512.png
+            papyrus.jpeg
+            manifest.json
+            the-school-of-athens.jpeg
+            robots.txt
+            logo192.png
+        build/
+            favicon.ico
+            index.html
+            logo512.png
+            asset-manifest.json
+            papyrus.jpeg
+            style.css
+            manifest.json
+            the-school-of-athens.jpeg
+            robots.txt
+            logo192.png
+            static/
+                css/
+                    main.b525bc66.css.map
+                    main.b525bc66.css
+                js/
+                    787.b4e992bc.chunk.js.map
+                    main.0d8040c0.js.LICENSE.txt
+                    main.0d8040c0.js
+                    787.b4e992bc.chunk.js
+                    main.0d8040c0.js.map
+                media/
+                    papyrus.1fe285124b98591526dc.jpeg
+        src/
+            linechart.js
+            reportWebVitals.js
+            chatresponse.js
+            footerbar.css
+            navbar.js
+            App.css
+            index.js
+            index.css
+            App.test.js
+            footerbar.js
+            barchart.js
+            setupTests.js
+            logo.svg
+            App.js
+            chatinput.js
+    models/
+        models.py
+        models.log
+    airflow/
+        airflow-webserver.log
+        airflow-scheduler.log
+        airflow-webserver.pid
+        airflow-scheduler.pid
+        webserver_config.py
+        airflow.cfg
+        airflow.db
+        airflow-scheduler.err
+        airflow-webserver.err
+        airflow-webserver.out
+        airflow-scheduler.out
+        dags/
+            config.py
+            economics_data_pipe.py
+            pull_fred_data.py
+        logs/
+            scheduler/
+                2023-11-02/
+                    economics_data_pipe.py.log
+                    pull_fred_data.py.log
+                    native_dags/
+                        example_dags/
+                            example_branch_operator.py.log
+                            example_params_ui_tutorial.py.log
+                            example_params_trigger_ui.py.log
+                            example_local_kubernetes_executor.py.log
+                            example_setup_teardown.py.log
+                            example_sensor_decorator.py.log
+                            example_kubernetes_executor.py.log
+                            example_time_delta_sensor_async.py.log
+                            example_datasets.py.log
+                            example_sla_dag.py.log
+                            example_branch_python_dop_operator_3.py.log
+                            example_subdag_operator.py.log
+                            example_sensors.py.log
+                            tutorial_taskflow_api.py.log
+                            example_xcom.py.log
+                            example_branch_day_of_week_operator.py.log
+                            example_external_task_marker_dag.py.log
+                            example_nested_branch_dag.py.log
+                            example_short_circuit_operator.py.log
+                            example_dag_decorator.py.log
+                            example_complex.py.log
+                            example_skip_dag.py.log
+                            example_branch_datetime_operator.py.log
+                            example_python_operator.py.log
+                            example_bash_operator.py.log
+                            tutorial.py.log
+                            example_passing_params_via_test_command.py.log
+                            example_short_circuit_decorator.py.log
+                            example_dynamic_task_mapping.py.log
+                            example_trigger_target_dag.py.log
+                            example_task_group_decorator.py.log
+                            example_setup_teardown_taskflow.py.log
+                            example_branch_operator_decorator.py.log
+                            tutorial_dag.py.log
+                            example_latest_only_with_trigger.py.log
+                            example_xcomargs.py.log
+                            example_latest_only.py.log
+                            example_trigger_controller_dag.py.log
+                            tutorial_taskflow_api_virtualenv.py.log
+                            example_task_group.py.log
+                            example_branch_labels.py.log
+                            example_dynamic_task_mapping_with_no_taskflow_operators.py.log
+                            plugins/
+                                listener_plugin.py.log
+                                workday.py.log
+                                event_listener.py.log
+                            subdags/
+                                subdag.py.log
+                2023-11-03/
+                2023-11-01/
+            dag_id=economics_data_pipeline/
+                run_id=manual__2023-11-02T14:22:17+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-02-26T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-01-22T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-03-26T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                run_id=scheduled__2023-11-01T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=manual__2023-11-02T15:16:09.374359+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                run_id=scheduled__2023-01-29T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=manual__2023-11-02T15:43:14.555222+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-03-19T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-01-08T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-02-05T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-01-15T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-01-01T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-02-19T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-04-09T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                run_id=manual__2023-11-02T14:27:08.088916+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-03-05T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-03-12T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-02-12T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+                        attempt=2.log
+                run_id=scheduled__2023-04-02T00:00:00+00:00/
+                    task_id=pull_and_save_fred_data/
+                        attempt=1.log
+            dag_processor_manager/
+                dag_processor_manager.log
     hermesvirtual/
         .DS_Store
-        watchdog.py
-        requirements.txt
-        directory_tree.txt
-        linkparse.py
         pyvenv.cfg
-        application.py
-        hermeshat.zip
-        models.log
-        main_app.py
-        tests/
-            .DS_Store
-            __init__.py
-            unit/
-                __init__.py
-                test_routes.py
-                test_models.py
-            integration/
-                __init__.py
-                test_models.py
+        generated/
+            provider_dependencies.json
         etc/
             jupyter/
                 nbconfig/
                     notebook.d/
                         jupyterlab-plotly.json
-        models/
-            test.mongodb.js
         share/
-            .DS_Store
+            py4j/
+                py4j0.10.9.7.jar
             jupyter/
-                .DS_Store
                 labextensions/
                     jupyterlab-plotly/
                         package.json
@@ -102,12 +306,12 @@
                         extension.js
     static/
         greektexture.jpeg
-        Fred.jpeg
         favicon.ico
         .DS_Store
         greekvase.jpeg
         blog_image1.jpg
         Blood Sunset.jpg
+        econwizard.js
         dark clouds.jpg
         Sunny Flowers.jpg
         Asian Flower.jpg
@@ -122,6 +326,7 @@
         the-school-of-athens.jpeg
         boot.png
         marble.jpg
+        Fred.png
     templates/
         blog.html
         index.html
@@ -130,6 +335,7 @@
         photographs.html
         economics_test.html
         media.html
+        econwizard.html
         economics.html
         links/
             philosophy.txt
@@ -137,3 +343,20 @@
             politics.txt
             history.txt
             economics.txt
+    api_resources/
+        PhotographyResource.py
+        MongoQuery.py
+        AboutResource.py
+        PaymentResource.py
+        YoutubeDetails.py
+        EconomicsResource.py
+        __init__.py
+        UpdateGraph.py
+        LoginResource.py
+        ChatResource.py
+        HomeResource.py
+        SubmitAnswer.py
+        BlogResource.py
+        MediaResource.py
+        blogapi.py
+        EconomicsChatResource.py
