@@ -19,26 +19,6 @@ def fetch_youtube_video_details(video_id, api_key):
         logging.info(f"Fetching video details from cache for video_id: {video_id}")
         return jsonify(video_cache[video_id])
 
-    url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={api_key}&part=snippet"
-    response = requests.get(url)
-    video_details = []
-    logging.info(f"Fetching video details from URL: {url}")
-
-    if response.status_code == 200:
-        data = response.json()
-        items = data.get("items", [])
-
-        for item in items:
-            snippet = item.get("snippet", {})
-            video_id = item.get("id", "")
-            logging.info(f"Video ID: {video_id}")
-            title = snippet.get("title", "")
-            description = snippet.get("description", "")
-            channel = snippet.get("channelTitle", "")
-            video_details.append({'video_id': video_id, 'title': title, 'description': description, 'channel': channel})
-
-        # Store the video details in cache
-        video_cache[video_id] = video_details
 
     logging.info(f"Fetched {len(video_details)} video details.")
     return video_details
@@ -54,7 +34,6 @@ def fetch_youtube_video_details_batch(video_ids, api_key):
     video_ids_string = ",".join(video_ids)
 
     # Construct the URL for the YouTube API
-    url = f"https://www.googleapis.com/youtube/v3/videos?id={video_ids_string}&key={api_key}&part=snippet"
     response = requests.get(url)
     video_details = []
     logging.info(f"Fetching video details from URL: {url}")

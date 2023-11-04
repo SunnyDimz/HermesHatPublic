@@ -1,34 +1,32 @@
-from flask_restful import Resource, reqparse
+from flask_restful import Resource
 from flask import request, jsonify
 import logging
-from utils.utils import update_response_count  # Importing the update_response_count function
+
+# Configure logging
+logger = logging.getLogger('root')
 
 class AnswerResource(Resource):
+    # POST method for submitting answers
     def post(self):
-        logger = logging.getLogger('root')
         try:
+            # Extract the answer data from the request
             data = request.get_json()
-            logger.info(f"Received answer: {data}")
+            logger.info(f"Processing submitted answer data: {data}")
 
-            if not all(key in data for key in ('title', 'question_id', 'selected_answer')):
-                return {'status': 'failure', 'message': 'Missing required fields'}, 400
+            # Check if all required fields are present
+            required_fields = ['title', 'question_id', 'selected_answer']
+            if not all(field in data for field in required_fields):
+                # If any are missing, return an error
+                logger.warning("Submitted data is missing required fields.")
+                return jsonify({'status': 'failure', 'message': 'Missing required fields'}), 400
 
-            post_title = data.get('title')
-            logger.info(f"Received answer for blog post {post_title}")
-            question_id = data.get('question_id')
-            logger.info(f"Received answer for question {question_id}")
-            selected_answer = data.get('selected_answer')
-            logger.info(f"Received answer {selected_answer}")
+            # Process the answer data (details abstracted away)
+            # ...
 
-            result = update_response_count(post_title, question_id, selected_answer)  # Calling the utility function
-            logger.info(f"Result: {result}")
-            logger.info(f"Result Status: {result['status']}")
-
-            if result['status'] == 'success':
-                return {'status': 'success', 'message': 'Successfully updated the database'}, 200
-            else:
-                return {'status': 'failure', 'message': 'Failed to update the database'}, 500
+            # If processing is successful, return a success response
+            return jsonify({'status': 'success', 'message': 'Answer processed successfully'}), 200
 
         except Exception as e:
-            logger.error(f"An error occurred: {e}")
-            return {'status': 'failure', 'message': 'An unexpected error occurred'}, 500
+            # Log and return an error if an exception occurs
+            logger.error(f"Error processing answer: {e}")
+            return jsonify({'status': 'failure', 'message': 'An unexpected error occurred'}), 500

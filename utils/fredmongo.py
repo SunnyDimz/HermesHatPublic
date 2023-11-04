@@ -6,8 +6,8 @@ import logging
 import os
 from api_resources.EconomicsChatResource import *
 from utils.fred_utils import *
-fred_api = os.getenv("FRED_API_KEY")
-FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key={fred_api}&file_type=json"
+fred_api 
+FRED_ENDPOINT
 def fetch_data_from_fred_and_save_to_db(file_path, observation_start=None, observation_end=None, units=None):
     with open(file_path, 'r') as file:
         codes = json.load(file)

@@ -11,10 +11,10 @@ import os
 
 # Define the default arguments for the DAG
 default_args = {
-    'owner': 'hermesadmin',
+    'owner': '',
     'depends_on_past': False,
     'start_date': datetime(2023, 1, 1),
-    'email': ['d.borzhko@gmail.com'],
+    'email': [''],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -30,12 +30,12 @@ dag = DAG(
 )
 
 # Airflow Variable for API key and MongoDB connection details
-fred_api = Variable.get('FRED_API_KEY')
-mongo_conn_id = Variable.get('MONGO_CONN_ID')
+fred_api = Variable.get('')
+mongo_conn_id = Variable.get('')
 
 # Define your FRED endpoints here
-FRED_SERIES_ENDPOINT = "https://api.stlouisfed.org/fred/series?series_id={code}&api_key={fred_api}&file_type=json"
-FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key={fred_api}&file_type=json"
+FRED_SERIES_ENDPOINT 
+FRED_ENDPOINT 
 
 # Function to fetch metadata from FRED
 def fetch_metadata_from_fred(code):

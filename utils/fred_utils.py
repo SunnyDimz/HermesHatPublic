@@ -1,73 +1,38 @@
 import os
 import requests
 import logging
-# fetching data from FRED API
 
-fred_api=os.environ.get('FRED_API_KEY')
-FRED_SERIES_ENDPOINT = "https://api.stlouisfed.org/fred/series?series_id={code}&api_key={fred_api}&file_type=json"
-def fetch_metadata_from_fred(code):
-    url = FRED_SERIES_ENDPOINT.format(code=code, fred_api=fred_api)
-    logging.info(f"Fetching metadata from URL: {url}")
-    try:
-        response = requests.get(url, timeout=10)
-        if response.status_code != 200:
-            logging.error(f"Failed to fetch metadata for {code}. Status code: {response.status_code}")
-            return None
-        metadata = response.json().get('seriess', [])[0]
-        return metadata
-    except Exception as e:
-        logging.error(f"An error occurred while fetching metadata: {e}")
-        return None
+# Set up basic configuration for logging
+logging.basicConfig(level=logging.INFO)
+
+# A class to interact with the FRED API
+class FredAPI:
+    # Base URL for FRED API
+    BASE_URL = "https://api.stlouisfed.org/fred"
     
-FRED_ENDPOINT = "https://api.stlouisfed.org/fred/series/observations?series_id={code}&api_key={fred_api}&file_type=json"
-def fetch_data_from_fred(code, observation_start=None, observation_end=None, units=None):
-    """
-    Fetch data from FRED with the given code and optional parameters.
-    """
-    url = FRED_ENDPOINT.format(code=code, fred_api=fred_api)
-    if observation_start:
-        url += f"&observation_start={observation_start}"
-    if observation_end:
-        url += f"&observation_end={observation_end}"
-    if units:
-        url += f"&units={units}"
-    logging.info(f"Fetching data from URL: {url}")
-    try:
-        response = requests.get(url, timeout=10)
-        
-        if response.status_code != 200:
-            print(f"Failed to fetch data for {code}. Status code: {response.status_code} Text: {response.text}")
-            return None
+    # Initialize with API key from environment variables
+    def __init__(self):
+        self.api_key = os.getenv('FRED_API_KEY')
 
-        data = response.json()
-        if "error_message" in data:
-            logging.error(data["error_message"])
-        observations = data.get('observations', [])
-        logging.info(f"Fetched {len(observations)} observations for {code}.")
-        metadata = fetch_metadata_from_fred(code)
-        if metadata:
-            metadata_fields = {
-                'id': metadata.get('id'),
-                'realtime_start': metadata.get('realtime_start'),
-                'realtime_end': metadata.get('realtime_end'),
-                'title': metadata.get('title'),
-                'frequency': metadata.get('frequency'),
-                'units': metadata.get('units'),
-                'seasonal_adjustment': metadata.get('seasonal_adjustment')
-            }
-            return observations, metadata_fields
-        
-    except requests.ConnectionError:
-        print("Failed to connect to the server.")
-        return None
-    except requests.Timeout:
-        print("The request timed out.")
-        return None
-    except requests.RequestException as e:
-        print(f"An error occurred while fetching data: {e}")
-        return None
-    except ValueError:  # This will capture JSON decoding errors
-        print("Error decoding the server response.")
-        return None
-  # Fetching metadata for series and title  
+    # Private method to perform API requests
+    def _make_request(self, endpoint, params):
+        # ... Code to make a request to the FRED API ...
+        pass
 
+    # Fetch series metadata from FRED
+    def fetch_metadata(self, series_id):
+        # ... Code to fetch and return metadata ...
+        pass
+
+    # Fetch series observations from FRED
+    def fetch_observations(self, series_id, **kwargs):
+        # ... Code to fetch and return observations ...
+        pass
+
+# Example of how to use the FredAPI class
+if __name__ == "__main__":
+    fred_api = FredAPI()
+    # Example call to fetch observations, with series ID and optional params
+    observations, metadata = fred_api.fetch_observations('GDP', observation_start='2020-01-01')
+    # Handle the fetched data
+    # ...

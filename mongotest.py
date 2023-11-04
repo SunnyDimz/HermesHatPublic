@@ -44,9 +44,3 @@ def upload_markdown_to_mongo(md_file_path):
     )
     blog_post.save_to_mongo()
 
-md_file_path = "blog_posts/economics/natural_rate_of_interest.md"
-#md_file_path = "blog_posts/politics/Americas_Interest_Ukraine.md"
-#md_file_path = "blog_posts/history/Ukraine_Next_Generation.md"
-
-
-upload_markdown_to_mongo(md_file_path)

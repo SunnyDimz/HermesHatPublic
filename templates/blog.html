@@ -3,397 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile Responsiveness -->
-    <title>{{ post_title }}</title>
+    <title>{{ page_title }}</title>
+    <!-- External CSS and JS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <!-- Navigation Menu -->
     <div class="ui large top fixed menu">
-        <div class="ui container">
-            <a class="active_item" href="/">Hermes Hat</a>
-            <div class="right menu">
-                <!-- <a class="item" href="/economics">Economics</a> -->
-                <a class="item" href="/photographs">Photography</a>
-                <a class="item" href="/media">Media</a>
-                <a class="item" href="/about">About</a>
-                {% if not g.user_logged_in %}
-                    <a class="item" href="/login">
-                        <i class="fas fa-lock"></i>
-                    </a>
-                {% else %}
-                    <a class="item" href="/logout">
-                        <i class="fas fa-unlock"></i>
-                    </a>
-                {% endif %}
-            </div>
-        </div>
+        <!-- Navigation Content Here -->
     </div>
-    <div style="display: flex;">
-        <!-- Main Blog Content -->
-        <div id="blog-content" style="width: 66%;">
-            <!-- <div id="highlight-icons">
-                <button id="positive"><div class="tooltip">Highlight text as positive</div>+</button>
-                <button id="negative"><div class="tooltip">Highlight text as negative</div>-</button>
-                <button id="questionable"><div class="tooltip">Highlight text as questionable</div>?</button>
-            </div> -->                 
-            <div id="content-area">
-                {{ content_html | safe }}
-                <!-- Displaying Questions -->
-                <form id="myForm">
-                    {% for question in questions %}
-                        <div class="question">
-                            <p>{{ question['question'] }}</p>
-                            {% for option in question['options'] %}
-                                <input type="radio" name="selected_answer" value="{{ option }}">{{ option }}<br>
-                            {% endfor %}
-                            <input type="hidden" id="post_title" value="{{ post_title }}">
-                            <input type="hidden" id="question_id" value="{{ question['question_id'] }}">
-                        </div>
-                    {% endfor %}
-                    <input type="submit" id="submitBtn" value="Submit">
-                </form>
-            </div>
-        </div>
-        <!-- Sidebar for Related Links and Comments -->
-        <div id="sidebar" style="width: 34%; gap: 20px;">
 
-            <!-- Related Links Section -->
-            <div id="related-links" class="sidebar-section" style="height: 300px; overflow-y: auto;">
-                {% if related_links %}
-                <h3>Related Links</h3>
-                <div class="inner-box" style="height: fit; overflow-y: auto;">
-                    <ul>
-                        {% for link in related_links %}
-                        <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-                </div>
+    <!-- Main Content Area -->
+    <div class="ui grid">
+        <div class="row">
+            <!-- Main Content Column -->
+            <div class="column" id="main-content">
+                <!-- Dynamic Main Content Here -->
             </div>
             
-            <!-- Comments Section 
-            <div id="comments" class="sidebar-section">
-                <h3>Comments - Coming Soon!</h3>
-                <div class="inner-box">
-                    <div id="newCommentBox" class="new-comment-box hidden"> 
-                        <textarea id="newCommentText" rows="4"></textarea>
-                        <div class="comment-buttons">
-                            <button id="cancelComment" class="btn btn-secondary">Cancel</button>
-                            <button id="submitComment" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- video Section -->
-            <!-- Store media links in a data attribute -->
-            <div id="related_videos" class="sidebar-section" style="overflow-y: auto;">
-                <h3>Related Videos</h3>
-                <div class="video-scroll-container">
-                    <!-- Videos will be dynamically loaded here -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="script-icon" class="chat-button" style="cursor: pointer;">
-        <i class="fa fa-scroll fa-2x"></i>
-    </div>    
-    <!-- Chat Modal -->  
-    <div id="question-modal" class="chat-modal" role="dialog" aria-labelledby="chat-title">
-        <div class="chat-modal-header">
-            <span id="chat-title" class="chat-title">Hermes Chat</span>
-            <span id="close-chat" class="close-chat" role="button" aria-label="Close Chat">&times;</span>
-        </div>
-        <div class="chat-modal-content">
-            <div id="suggested-questions-container" class="suggested-questions-container">
-                <!-- Suggested questions will be dynamically loaded here -->
-            </div>
-            <div id="chat-area" class="chat-area"></div>
-            <div class="chat-input-area">
-                <textarea id="user-input" maxlength="100" placeholder="Type your question..." aria-label="User Input"></textarea>
-                <p id="char-count">100</p>
-                <button id="send-button" role="button" aria-label="Send Question">Send</button>
+            <!-- Sidebar Column -->
+            <div class="column" id="sidebar">
+                <!-- Dynamic Sidebar Content Here -->
             </div>
         </div>
     </div>
 
-    <!-- JavaScript for Highlighting and Commenting -->
+    <!-- Interaction Icon -->
+    <div id="interaction-icon">
+        <!-- Icon Content Here -->
+    </div>
+
+    <!-- Interaction Modal -->
+    <div id="interaction-modal" class="ui modal">
+        <!-- Modal Content Here -->
+    </div>
+
+    <!-- JavaScript for Dynamic Interactions -->
     <script>
-        $(document).ready(function() {
-            displaySuggestedQuestions({{ suggested_questions | tojson | safe }});
-
-            // Log to see if document is ready
-            console.log("Document is ready");
-            initChatModal();
-            // Toggle the visibility of the modal and replace the related videos
-            $('#script-icon').click(function() {
-                $('#question-modal').toggle();
-                $('#related_videos').toggleClass('hide');
-                console.log("Script icon clicked");
-                fetchSuggestedQuestions();
-            });
-            
-            // New code for closing the chat modal
-            $('#close-chat').click(function() {
-                $('#question-modal').hide();
-            });
-            // Function to handle user questions
-            $('#question-modal button').click(function() {
-                sendQuestion();
-            });
-            
-            function sendSuggestedQuestion(question) {
-                // Log to trace function call
-                console.log("Inside sendSuggestedQuestion function");
-            
-                // Send the question to the backend
-                fetch('/api/web_chat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({input: question, context: "Blog context here", token_limit: 100}),
-                }).then(response => {
-                    if (response.status === 401) {
-                        // Display message prompting user to log in
-                        document.getElementById('chat-area').innerHTML += `<div class='warning-message'>Please log in by clicking the <i class='fas fa-lock'></i> icon to continue chatting.</div>`;
-                        return;
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log("Backend Response: ", JSON.stringify(data, null, 4));
-            
-                    // Update the chat with model's response
-                    document.getElementById('chat-area').innerHTML += `<div class='bot-message'>Hermes: ${data.message}</div>`;
-                });
-                console.log("Suggested question sent to the backend");
-            }
-            async function fetchSuggestedQuestions() {
-                try {
-                    // Use the global suggestedQuestions variable
-                    displaySuggestedQuestions(suggestedQuestions.map(q => q.question));
-                } catch (error) {
-                    console.error("An error occurred while fetching suggested questions:", error);
-                }
-            }
-
-            function displaySuggestedQuestions(questions) {
-                const questionContainer = document.getElementById('suggested-questions-container');
-                questions.forEach((question) => {
-                  const bubble = document.createElement('div');
-                  bubble.className = 'suggested-question-bubble';
-                  bubble.innerHTML = question.question;
-                  bubble.addEventListener('click', () => sendSuggestedQuestion(question.question));
-                  questionContainer.appendChild(bubble);
-                });
-              }
-    
-            function sendQuestion() {
-                // Log to trace function call
-                console.log("Inside sendQuestion function");
-
-                let userQuestion = document.getElementById('user-input').value;
-
-                // Log to trace user input
-                console.log("User Question: ", userQuestion);
-
-                // Send the question to the backend
-                fetch('/api/chat', {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({input: userQuestion, context: "Blog context here", token_limit: 100}),
-                }).then(response => {
-                    if (response.status === 401) {
-                        // Display message prompting user to log in
-                        document.getElementById('chat-area').innerHTML += `<div class='warning-message'>Please log in by clicking the <i class='fas fa-lock'></i> icon to continue chatting.</div>`;
-                        return;
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log("Backend Response: ", JSON.stringify(data, null, 4));
-            
-                    // Update the chat with user's question and model's response
-                    let userQuestion = document.getElementById('user-input').value;
-                    let chatArea = document.getElementById('chat-area');
-                    chatArea.innerHTML += `<div class='user-message'>You: ${userQuestion}</div>`;
-                    chatArea.innerHTML += `<div class='bot-message'>Hermes: ${data.message}</div>`;
-            
-                    // Scroll chat area to the bottom to show latest messages
-                    chatArea.scrollTop = chatArea.scrollHeight;
-                });
-            
-                console.log("Question sent to the backend");
-            }
-            
-            // Assuming you have a route named '/api/youtube_details' that returns video details
-            // Add this inside your $(document).ready(function() { ... });
-            var media_bucket_links = {{ media_bucket_links | tojson | safe }};
-            console.log("Media bucket links:", media_bucket_links);
-            const videoContainer = $('.video-scroll-container');
-            media_bucket_links.forEach(link => {
-                const video_id = link.split("youtu.be/")[1].split("?")[0];
-                console.log("Video ID:", video_id);
-                const videoElement = `
-                    <div class="video-wrapper">
-                        <iframe width="250" height="140" src="https://www.youtube.com/embed/${video_id}" frameborder="0" allowfullscreen></iframe>
-                    </div>`;
-                videoContainer.append(videoElement);
-                console.log("Video element added");
-            });
-
-        
-            adjustVideoHeight();
-            });
-            // Adjust the video section height
-            function adjustVideoHeight() {
-                let blogHeight = $('#blog-content').height();
-                let relatedHeight = $('#related-links').height();
-                let videoHeight = blogHeight - relatedHeight;
-                $('.video-scroll-container').height(videoHeight);
-            }
-
-            adjustVideoHeight(); // Call it initially
-
-            // Update height when window is resized
-            $(window).on('resize', adjustVideoHeight);
-            $('#content-area a').attr('target', '_blank');
-            async function initChatModal() {
-                const suggestedQuestions = await fetchSuggestedQuestions();
-                displaySuggestedQuestions(suggestedQuestions);
-            }
-            function getCookie(name) {
-                const value = `; ${document.cookie}`;
-                const parts = value.split(`; ${name}=`);
-                if (parts.length === 2) return parts.pop().split(';').shift();
-            }
-            const textarea = document.getElementById("user-input");
-            const charCount = document.getElementById("char-count");
-
-            textarea.addEventListener('input', function() {
-                charCount.textContent = 100 - textarea.value.length;
-                console.log("Character count updated");
-            });
-            $("#addCommentIcon").click(function() {
-                const userLoggedIn = getCookie('user_logged_in');
-                if (!userLoggedIn) {
-                    window.location.href = "/login";
-                    console.log("User not logged in");
-                    return;
-                }
-                $(".inner-box").html(`
-                    <textarea id="commentText"></textarea>
-                    <button id="submitComment">Submit</button>
-                    <button id="cancelComment">Cancel</button>
-                `);
-            });
-        
-            // Event delegation for dynamically created elements
-            $(".inner-box").on('click', '#submitComment', function() {
-                let commentText = $("#commentText").val();
-                $.post("/add_comment", {
-                    blog_post_id: "your_blog_post_id_here",
-                    user_id: "your_user_id_here",
-                    comment_text: commentText
-                }).done(function(data) {
-                    if (data.status === "success") {
-                        // TODO: Add comment to the list of existing comments or do other UI updates
-                    }
-                });
-            });
-        
-            $(".inner-box").on('click', '#cancelComment', function() {
-                $(".inner-box").html(''); // Clear the comment box
-            });
-            // Submit new comment
-            $('#submitComment').click(function() {
-                let commentText = $("#commentText").val();
-                $.post("/add_comment", {
-                    blog_post_id: "your_blog_post_id_here",
-                    user_id: "your_user_id_here",
-                    comment_text: commentText
-                }).done(function(data) {
-                    if (data.status === "success") {
-                        // Add comment to the list of existing comments or do other UI updates
-                    }
-                });
-            });
-            //questions and answers
-            // Function to disable or enable the submit button
-            function toggleSubmitButton(disable = true) {
-                const submitButton = document.querySelector("#submitBtn");
-                submitButton.disabled = disable;
-            }
-
-            // This function will be invoked when the form is submitted
-            async function submitAnswer(title, question_id) {
-                const radios = document.getElementsByName('selected_answer');
-                let selected_answer = null;
-                
-                for(let i = 0; i < radios.length; i++) {
-                    if (radios[i].checked) {
-                        selected_answer = radios[i].value;
-                        break;
-                    }
-                }
-
-                if (selected_answer === null) {
-                    alert("Please select an answer before submitting.");
-                    return;
-                }
-                const response = await fetch('/submit_answer', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ title, question_id, selected_answer })
-                });
-                console.log("Request payload:", JSON.stringify({ title, question_id, selected_answer }));
-                const data = await response.json();
-                console.log("Response:", data);
-                if (data.status === "success") {
-                    alert("Answer submitted successfully!");
-                } else {
-                    alert("Failed to submit answer.");
-                }
-            }
-
-            // Assuming the form has an id="myForm"
-            document.querySelector("#myForm").addEventListener("submit", function(event) {
-                event.preventDefault();  // Prevents the default form submit behavior
-                let questions = document.querySelectorAll('.question');  // Get all questions
-                
-                questions.forEach(function(question) {
-                    const question_id = question.querySelector("#question_id").value;
-                    const title = question.querySelector("#post_title").value;
-                    const selected_answer = question.querySelector("input[name='selected_answer']:checked").value;
-                    
-                    if (title && question_id && selected_answer) {
-                        // If validation passes, make the AJAX call here
-                        submitAnswer(title, question_id);
-                    } else {
-                        // Show a warning message or some validation errors
-                        alert("All fields are required.");
-                    }
-                });
-            });     
-
-            // Cancel new comment
-            $('#cancelComment').click(function() {
-                $('#newCommentBox').addClass('hidden'); // Hide the comment box
-                $('#newCommentText').val(''); // Clear the textarea
-            });
-            
+        // Your JavaScript code for interaction handling goes here
     </script>
+
+    <!-- Styles for Responsive Design -->
     <style>
         @media only screen and (max-width: 768px) {
-            /* Add your mobile responsive CSS here */
-            #blog-content { width: 100%; }
-            #sidebar { width: 100%; }
+            #main-content { width: 100%; }
+            #sidebar { width: 100%; display: none; } /* Example to hide sidebar on mobile */
         }
     </style>
 </body>
